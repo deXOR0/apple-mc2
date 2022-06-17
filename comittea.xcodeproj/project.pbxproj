@@ -27,6 +27,10 @@
 		A1472099285CAE080058C5E3 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1472098285CAE080058C5E3 /* OnboardingViewController.swift */; };
 		A147209B285CAE1F0058C5E3 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = A147209A285CAE1F0058C5E3 /* OnboardingSlide.swift */; };
 		A147209D285CAE250058C5E3 /* UserCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A147209C285CAE250058C5E3 /* UserCallViewController.swift */; };
+		A14720A5285CAFB50058C5E3 /* StaticStoriesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A147209E285CAFB50058C5E3 /* StaticStoriesData.swift */; };
+		A14720A6285CAFB50058C5E3 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14720A0285CAFB50058C5E3 /* Story.swift */; };
+		A14720A7285CAFB50058C5E3 /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14720A2285CAFB50058C5E3 /* Chapter.swift */; };
+		A14720A8285CAFB50058C5E3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14720A4285CAFB50058C5E3 /* User.swift */; };
 		FA2C015E2848F86100F09D9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C015D2848F86100F09D9E /* AppDelegate.swift */; };
 		FA2C01602848F86100F09D9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C015F2848F86100F09D9E /* SceneDelegate.swift */; };
 		FA2C01622848F86100F09D9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C01612848F86100F09D9E /* ViewController.swift */; };
@@ -59,6 +63,10 @@
 		A1472098285CAE080058C5E3 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		A147209A285CAE1F0058C5E3 /* OnboardingSlide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		A147209C285CAE250058C5E3 /* UserCallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCallViewController.swift; sourceTree = "<group>"; };
+		A147209E285CAFB50058C5E3 /* StaticStoriesData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticStoriesData.swift; sourceTree = "<group>"; };
+		A14720A0285CAFB50058C5E3 /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		A14720A2285CAFB50058C5E3 /* Chapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter.swift; sourceTree = "<group>"; };
+		A14720A4285CAFB50058C5E3 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FA2C015A2848F86100F09D9E /* comittea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = comittea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2C015D2848F86100F09D9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA2C015F2848F86100F09D9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +109,10 @@
 		98D7833E285AD8A000542D64 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A14720A1285CAFB50058C5E3 /* Chapter */,
+				A147209E285CAFB50058C5E3 /* StaticStoriesData.swift */,
+				A147209F285CAFB50058C5E3 /* Story */,
+				A14720A3285CAFB50058C5E3 /* User */,
 				A147209A285CAE1F0058C5E3 /* OnboardingSlide.swift */,
 				98D78350285ADDD600542D64 /* Message */,
 				98D78343285AD93C00542D64 /* Model.md */,
@@ -171,6 +183,30 @@
 				98D7835E285AE6D500542D64 /* ReorderMessage.swift */,
 			);
 			path = ActivityMessage;
+			sourceTree = "<group>";
+		};
+		A147209F285CAFB50058C5E3 /* Story */ = {
+			isa = PBXGroup;
+			children = (
+				A14720A0285CAFB50058C5E3 /* Story.swift */,
+			);
+			path = Story;
+			sourceTree = "<group>";
+		};
+		A14720A1285CAFB50058C5E3 /* Chapter */ = {
+			isa = PBXGroup;
+			children = (
+				A14720A2285CAFB50058C5E3 /* Chapter.swift */,
+			);
+			path = Chapter;
+			sourceTree = "<group>";
+		};
+		A14720A3285CAFB50058C5E3 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				A14720A4285CAFB50058C5E3 /* User.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		FA2C01512848F86100F09D9E = {
@@ -294,13 +330,17 @@
 				98D78349285ADBFB00542D64 /* ActivityMessage.swift in Sources */,
 				98D7834B285ADCE100542D64 /* CompyTrueMessage.swift in Sources */,
 				FA2C01682848F86100F09D9E /* comittea.xcdatamodeld in Sources */,
+				A14720A7285CAFB50058C5E3 /* Chapter.swift in Sources */,
 				318CDD5E285C33300076CE9C /* T10-36_Story Intermezzo.swift in Sources */,
 				98D7835B285ADEB600542D64 /* SingleChoiceMessage.swift in Sources */,
 				A147209B285CAE1F0058C5E3 /* OnboardingSlide.swift in Sources */,
 				98D7834F285ADD5A00542D64 /* CompyFalseMessage.swift in Sources */,
 				98D78357285ADE6F00542D64 /* CompyConversationMessage.swift in Sources */,
+				A14720A5285CAFB50058C5E3 /* StaticStoriesData.swift in Sources */,
+				A14720A8285CAFB50058C5E3 /* User.swift in Sources */,
 				98D78359285ADE8700542D64 /* UserConversationMessage.swift in Sources */,
 				98D7835F285AE6D500542D64 /* ReorderMessage.swift in Sources */,
+				A14720A6285CAFB50058C5E3 /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
