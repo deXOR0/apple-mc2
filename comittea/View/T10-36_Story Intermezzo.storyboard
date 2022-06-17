@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nEK-nz-aTn">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-VariableFont_wght.ttf">
+            <string>MontserratRoman-Bold</string>
+            <string>MontserratRoman-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Story Intermezzo-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="T10_36_Story_Intermezzo" customModule="comittea" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulation!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjS-GR-GPa">
+                                <rect key="frame" x="104.5" y="447" width="205" height="31"/>
+                                <fontDescription key="fontDescription" name="MontserratRoman-Bold" family="Montserrat" pointSize="25"/>
+                                <color key="textColor" systemColor="tintColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations, you have completed the Planning Ahead stage" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9u-0y-Jia">
+                                <rect key="frame" x="46" y="502" width="322" height="37"/>
+                                <fontDescription key="fontDescription" name="MontserratRoman-Medium" family="Montserrat" pointSize="15"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="muX-bZ-tgq">
+                                <rect key="frame" x="78" y="646" width="258" height="47"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="T4j-KP-aqO"/>
+                                    <constraint firstAttribute="width" constant="258" id="g2h-aW-B3D"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Continue to Next Chapter">
+                                            <attributes>
+                                                <font key="NSFont" size="15" name="MontserratRoman-Medium"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Continue to Next Chapter">
+                                            <attributes>
+                                                <font key="NSFont" size="15" name="MontserratRoman-Medium"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="Btn_NextChapter:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="VNk-tI-59r"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4UG-YF-srd">
+                                <rect key="frame" x="89.5" y="179" width="235" height="226"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="235" id="Zfm-dd-wL2"/>
+                                    <constraint firstAttribute="height" constant="226" id="spC-ha-ku7"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="u9u-0y-Jia" firstAttribute="top" secondItem="GjS-GR-GPa" secondAttribute="bottom" constant="24" id="PXh-Er-tdz"/>
+                            <constraint firstItem="4UG-YF-srd" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="TbP-zd-TVL"/>
+                            <constraint firstItem="GjS-GR-GPa" firstAttribute="centerX" secondItem="4UG-YF-srd" secondAttribute="centerX" id="V4N-ch-QwQ"/>
+                            <constraint firstItem="GjS-GR-GPa" firstAttribute="top" secondItem="4UG-YF-srd" secondAttribute="bottom" constant="42" id="YhU-jO-j6F"/>
+                            <constraint firstItem="u9u-0y-Jia" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="46" id="ZD0-Y3-FoZ"/>
+                            <constraint firstItem="4UG-YF-srd" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="91" id="aL0-v9-vIc"/>
+                            <constraint firstItem="muX-bZ-tgq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="78" id="h6J-3d-H3Z"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="muX-bZ-tgq" secondAttribute="bottom" constant="169" id="pFY-Er-ReZ"/>
+                            <constraint firstItem="muX-bZ-tgq" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" constant="-78" id="spS-f9-OSH"/>
+                            <constraint firstItem="muX-bZ-tgq" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="yP5-Lt-QdH"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="u9u-0y-Jia" secondAttribute="trailing" constant="46" id="zlS-FN-pzX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="RAf-PG-qPe"/>
+                    <connections>
+                        <outlet property="Btn_NextChapter" destination="muX-bZ-tgq" id="6mA-eH-d8t"/>
+                        <outlet property="Intermezzo_Thumbnail" destination="4UG-YF-srd" id="lpl-TJ-UPl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="818.84057971014499" y="123.88392857142857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="h7v-lE-Y52">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nEK-nz-aTn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wg1-u1-iz1">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="8H9-UT-v2h"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GkL-Fz-Zox" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121.73913043478262" y="123.88392857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
