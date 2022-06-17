@@ -22,6 +22,11 @@
 		98D7835B285ADEB600542D64 /* SingleChoiceMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D7835A285ADEB600542D64 /* SingleChoiceMessage.swift */; };
 		98D7835D285AE5DC00542D64 /* MultiSelectMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D7835C285AE5DC00542D64 /* MultiSelectMessage.swift */; };
 		98D7835F285AE6D500542D64 /* ReorderMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D7835E285AE6D500542D64 /* ReorderMessage.swift */; };
+		A1472095285CADF10058C5E3 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1472094285CADF10058C5E3 /* OnboardingCollectionViewCell.swift */; };
+		A1472097285CAE000058C5E3 /* OnboardingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1472096285CAE000058C5E3 /* OnboardingStoryboard.storyboard */; };
+		A1472099285CAE080058C5E3 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1472098285CAE080058C5E3 /* OnboardingViewController.swift */; };
+		A147209B285CAE1F0058C5E3 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = A147209A285CAE1F0058C5E3 /* OnboardingSlide.swift */; };
+		A147209D285CAE250058C5E3 /* UserCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A147209C285CAE250058C5E3 /* UserCallViewController.swift */; };
 		FA2C015E2848F86100F09D9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C015D2848F86100F09D9E /* AppDelegate.swift */; };
 		FA2C01602848F86100F09D9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C015F2848F86100F09D9E /* SceneDelegate.swift */; };
 		FA2C01622848F86100F09D9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C01612848F86100F09D9E /* ViewController.swift */; };
@@ -49,6 +54,11 @@
 		98D7835A285ADEB600542D64 /* SingleChoiceMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleChoiceMessage.swift; sourceTree = "<group>"; };
 		98D7835C285AE5DC00542D64 /* MultiSelectMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSelectMessage.swift; sourceTree = "<group>"; };
 		98D7835E285AE6D500542D64 /* ReorderMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReorderMessage.swift; sourceTree = "<group>"; };
+		A1472094285CADF10058C5E3 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		A1472096285CAE000058C5E3 /* OnboardingStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OnboardingStoryboard.storyboard; sourceTree = "<group>"; };
+		A1472098285CAE080058C5E3 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		A147209A285CAE1F0058C5E3 /* OnboardingSlide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
+		A147209C285CAE250058C5E3 /* UserCallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCallViewController.swift; sourceTree = "<group>"; };
 		FA2C015A2848F86100F09D9E /* comittea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = comittea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2C015D2848F86100F09D9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA2C015F2848F86100F09D9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +101,7 @@
 		98D7833E285AD8A000542D64 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A147209A285CAE1F0058C5E3 /* OnboardingSlide.swift */,
 				98D78350285ADDD600542D64 /* Message */,
 				98D78343285AD93C00542D64 /* Model.md */,
 			);
@@ -100,6 +111,7 @@
 		98D7833F285AD8B700542D64 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A1472096285CAE000058C5E3 /* OnboardingStoryboard.storyboard */,
 				318CDD5F285C33520076CE9C /* T10-36_Story Intermezzo.storyboard */,
 				FA2C01632848F86100F09D9E /* Main.storyboard */,
 				FA2C016B2848F86400F09D9E /* LaunchScreen.storyboard */,
@@ -110,7 +122,9 @@
 		98D78340285AD8CF00542D64 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A147209C285CAE250058C5E3 /* UserCallViewController.swift */,
 				FA2C01612848F86100F09D9E /* ViewController.swift */,
+				A1472098285CAE080058C5E3 /* OnboardingViewController.swift */,
 				318CDD5D285C33300076CE9C /* T10-36_Story Intermezzo.swift */,
 			);
 			path = ViewController;
@@ -119,6 +133,7 @@
 		98D78341285AD8FD00542D64 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				A1472094285CADF10058C5E3 /* OnboardingCollectionViewCell.swift */,
 				98D78342285AD92600542D64 /* Cell.md */,
 			);
 			path = Cell;
@@ -251,6 +266,7 @@
 			files = (
 				318CDD64285C3C2B0076CE9C /* Montserrat-Italic-VariableFont_wght.ttf in Resources */,
 				FA2C016D2848F86400F09D9E /* LaunchScreen.storyboard in Resources */,
+				A1472097285CAE000058C5E3 /* OnboardingStoryboard.storyboard in Resources */,
 				FA2C016A2848F86400F09D9E /* Assets.xcassets in Resources */,
 				FA2C01652848F86100F09D9E /* Main.storyboard in Resources */,
 				318CDD65285C3C2B0076CE9C /* Montserrat-VariableFont_wght.ttf in Resources */,
@@ -266,17 +282,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA2C01622848F86100F09D9E /* ViewController.swift in Sources */,
+				A147209D285CAE250058C5E3 /* UserCallViewController.swift in Sources */,
 				FA2C015E2848F86100F09D9E /* AppDelegate.swift in Sources */,
 				98D78355285ADE3300542D64 /* NarrationMessage.swift in Sources */,
+				A1472095285CADF10058C5E3 /* OnboardingCollectionViewCell.swift in Sources */,
 				98D7835D285AE5DC00542D64 /* MultiSelectMessage.swift in Sources */,
 				98D78347285ADBAB00542D64 /* TextMessage.swift in Sources */,
 				98D78345285ADB6600542D64 /* Message.swift in Sources */,
+				A1472099285CAE080058C5E3 /* OnboardingViewController.swift in Sources */,
 				FA2C01602848F86100F09D9E /* SceneDelegate.swift in Sources */,
 				98D78349285ADBFB00542D64 /* ActivityMessage.swift in Sources */,
 				98D7834B285ADCE100542D64 /* CompyTrueMessage.swift in Sources */,
 				FA2C01682848F86100F09D9E /* comittea.xcdatamodeld in Sources */,
 				318CDD5E285C33300076CE9C /* T10-36_Story Intermezzo.swift in Sources */,
 				98D7835B285ADEB600542D64 /* SingleChoiceMessage.swift in Sources */,
+				A147209B285CAE1F0058C5E3 /* OnboardingSlide.swift in Sources */,
 				98D7834F285ADD5A00542D64 /* CompyFalseMessage.swift in Sources */,
 				98D78357285ADE6F00542D64 /* CompyConversationMessage.swift in Sources */,
 				98D78359285ADE8700542D64 /* UserConversationMessage.swift in Sources */,
