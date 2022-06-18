@@ -8,7 +8,7 @@
 import Foundation
 
 struct SingleChoiceMessage: ActivityMessage {
-    
+
     typealias Answer = String
     
     var prompt: String
@@ -21,12 +21,15 @@ struct SingleChoiceMessage: ActivityMessage {
     
     var falseResponse: CompyFalseMessage
     
-    init(_ prompt: String, _ options: [String], _ answer: String, _ trueResponse: CompyTrueMessage, _ falseResponse: CompyFalseMessage) {
+    var repeating: Bool
+    
+    init(_ prompt: String, _ options: [String], _ answer: String, _ trueResponse: CompyTrueMessage, _ falseResponse: CompyFalseMessage, _ repeating: Bool = false) {
         self.prompt = prompt
         self.options = options
         self.answer = answer
         self.trueResponse = trueResponse
         self.falseResponse = falseResponse
+        self.repeating = repeating
     }
     
     /**

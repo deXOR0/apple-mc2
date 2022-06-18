@@ -12,9 +12,10 @@ protocol ActivityMessage: Message {
     
     var prompt: String { get }
     var options: [String] { get }
-    var answer: Answer { get set }
+    var answer: Answer { get }
     var trueResponse: CompyTrueMessage { get }
     var falseResponse: CompyFalseMessage { get }
+    var repeating: Bool { get }
     
     func checkAnswer(_ selectedAnswer: Answer) -> Bool
 }
