@@ -16,10 +16,11 @@ struct Story {
     var background: String
     var chapters: [Chapter]
     
-    init(_ title: String, _ intro: String, _ logo: String, _ chapters: [Chapter]) {
+    init(_ title: String, _ intro: String, _ logo: String, _ background: String,  _ chapters: [Chapter]) {
         self.title = title
         self.intro = intro
         self.logo = logo
+        self.background = background
         self.chapters = chapters
     }
 }
