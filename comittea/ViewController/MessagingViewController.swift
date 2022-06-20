@@ -45,8 +45,6 @@ class MessagingViewController: UIViewController {
 
 }
 
-
-
 extension MessagingViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -7,7 +7,6 @@
 
 import UIKit
 
-// TODO: set font as Medium
 class TextMessageTableViewCell: UITableViewCell {
     
     enum TextMessageType {
@@ -47,7 +46,7 @@ class TextMessageTableViewCell: UITableViewCell {
         switch (type) {
         case .narration:
             messageLabel.textColor = .black
-            messageLabel.font = UIFont(name: "Montserrat", size: 10)
+            messageLabel.font = CustomFonts.medium10
             messageBackground.backgroundColor = CustomColors.lightOrange
             messageBackground.layer.cornerRadius = 5
             
@@ -58,7 +57,7 @@ class TextMessageTableViewCell: UITableViewCell {
             ])
         case .compy:
             messageLabel.textColor = .white
-            messageLabel.font = UIFont(name: "Montserrat", size: 12)
+            messageLabel.font = CustomFonts.medium12
             messageBackground.backgroundColor = CustomColors.blue
             messageBackground.layer.cornerRadius = 15
             
@@ -69,7 +68,7 @@ class TextMessageTableViewCell: UITableViewCell {
             ])
         case .user:
             messageLabel.textColor = .black
-            messageLabel.font = UIFont(name: "Montserrat", size: 12)
+            messageLabel.font = CustomFonts.medium12
             messageBackground.backgroundColor = CustomColors.gray
             messageBackground.layer.cornerRadius = 15
             
