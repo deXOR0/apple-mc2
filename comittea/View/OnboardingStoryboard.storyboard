@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2Me-wZ-IYR">
-                                <rect key="frame" x="0.0" y="44" width="390" height="553"/>
+                                <rect key="frame" x="0.0" y="44" width="390" height="573"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="PGg-fi-sEJ">
                                     <size key="itemSize" width="390" height="493"/>
@@ -28,20 +28,20 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OnboardingCellID" id="Lrj-oa-J6A" customClass="OnboardingCollectionViewCell" customModule="comittea" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="30" width="390" height="493"/>
+                                        <rect key="frame" x="0.0" y="40" width="390" height="493"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6g0-uI-mBl">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="493"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TtB-aY-tgv">
-                                                    <rect key="frame" x="10" y="403" width="370" height="36"/>
+                                                    <rect key="frame" x="10" y="393" width="370" height="36"/>
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                                                     <color key="textColor" red="0.29645065739999998" green="0.39120422710000002" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <color key="highlightedColor" red="0.29645065739999998" green="0.39120422710000002" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" scrollEnabled="NO" editable="NO" text="lorem" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsp-ys-iue">
-                                                    <rect key="frame" x="10" y="469" width="370" height="50"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" pagingEnabled="YES" contentInsetAdjustmentBehavior="never" editable="NO" text="lorem" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsp-ys-iue">
+                                                    <rect key="frame" x="10" y="469" width="370" height="80"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <color key="textColor" systemColor="labelColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -58,14 +58,15 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="GsH-vG-JEM" firstAttribute="centerX" secondItem="6g0-uI-mBl" secondAttribute="centerX" id="16z-Hp-vi9"/>
-                                                <constraint firstItem="TtB-aY-tgv" firstAttribute="top" secondItem="GsH-vG-JEM" secondAttribute="bottom" constant="80" id="CPE-Fv-Fww"/>
-                                                <constraint firstAttribute="bottom" secondItem="bsp-ys-iue" secondAttribute="bottom" constant="-26" id="MCk-kg-g1N"/>
+                                                <constraint firstItem="TtB-aY-tgv" firstAttribute="top" secondItem="GsH-vG-JEM" secondAttribute="bottom" constant="70" id="CPE-Fv-Fww"/>
+                                                <constraint firstAttribute="bottom" secondItem="bsp-ys-iue" secondAttribute="bottom" constant="-56" id="MCk-kg-g1N"/>
+                                                <constraint firstItem="GsH-vG-JEM" firstAttribute="centerX" secondItem="6g0-uI-mBl" secondAttribute="centerX" id="PKV-My-l02"/>
                                                 <constraint firstItem="bsp-ys-iue" firstAttribute="centerX" secondItem="6g0-uI-mBl" secondAttribute="centerX" id="RWN-Uy-0sz"/>
                                                 <constraint firstAttribute="trailing" secondItem="TtB-aY-tgv" secondAttribute="trailing" constant="10" id="U63-w8-QmA"/>
                                                 <constraint firstItem="GsH-vG-JEM" firstAttribute="leading" secondItem="6g0-uI-mBl" secondAttribute="leading" constant="10" id="V0M-mN-cPd"/>
                                                 <constraint firstItem="bsp-ys-iue" firstAttribute="leading" secondItem="6g0-uI-mBl" secondAttribute="leading" constant="10" id="Wvx-Ce-Xud"/>
                                                 <constraint firstItem="GsH-vG-JEM" firstAttribute="top" secondItem="6g0-uI-mBl" secondAttribute="top" constant="30" id="dU2-YM-WXc"/>
-                                                <constraint firstItem="bsp-ys-iue" firstAttribute="top" secondItem="TtB-aY-tgv" secondAttribute="bottom" constant="30" id="dXR-Ws-WUL"/>
+                                                <constraint firstItem="bsp-ys-iue" firstAttribute="top" secondItem="TtB-aY-tgv" secondAttribute="bottom" constant="40" id="dXR-Ws-WUL"/>
                                                 <constraint firstAttribute="trailing" secondItem="bsp-ys-iue" secondAttribute="trailing" constant="10" id="dre-Nk-m4Q"/>
                                                 <constraint firstAttribute="trailing" secondItem="GsH-vG-JEM" secondAttribute="trailing" constant="10" id="hPC-0c-CbV"/>
                                                 <constraint firstItem="TtB-aY-tgv" firstAttribute="leading" secondItem="6g0-uI-mBl" secondAttribute="leading" constant="10" id="sjw-Jp-9GF"/>
@@ -94,7 +95,7 @@
                                 </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="m2b-QI-MtD">
-                                <rect key="frame" x="10" y="632" width="370" height="25"/>
+                                <rect key="frame" x="10" y="652" width="370" height="25"/>
                                 <color key="pageIndicatorTintColor" systemColor="systemGray5Color"/>
                                 <color key="currentPageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pageControl>
@@ -122,7 +123,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="m2b-QI-MtD" secondAttribute="trailing" constant="10" id="EL3-tV-0nt"/>
                             <constraint firstItem="98S-pw-EP4" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Jcy-Us-ahg"/>
                             <constraint firstItem="KGH-xv-DYT" firstAttribute="top" secondItem="98S-pw-EP4" secondAttribute="bottom" id="R05-U9-3S7"/>
-                            <constraint firstItem="98S-pw-EP4" firstAttribute="top" secondItem="m2b-QI-MtD" secondAttribute="bottom" constant="35" id="aaJ-OY-PoS"/>
+                            <constraint firstItem="98S-pw-EP4" firstAttribute="top" secondItem="m2b-QI-MtD" secondAttribute="bottom" constant="15" id="aaJ-OY-PoS"/>
                             <constraint firstItem="KGH-xv-DYT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="g2g-7o-Jyy"/>
                             <constraint firstItem="98S-pw-EP4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="70" id="iRu-E6-nUe"/>
                             <constraint firstItem="2Me-wZ-IYR" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="jK2-Se-9rP"/>
@@ -173,6 +174,9 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                                <connections>
+                                    <action selector="nextToHome:" destination="sw2-e2-8uO" eventType="touchUpInside" id="zTQ-60-l1a"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QNW-QS-fVU"/>

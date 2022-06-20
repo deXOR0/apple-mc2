@@ -40,7 +40,7 @@
                                     <attributedString key="attributedTitle">
                                         <fragment content="Continue to Next Chapter">
                                             <attributes>
-                                                <font key="NSFont" size="15" name="MontserratRoman-Medium"/>
+                                                <font key="NSFont" metaFont="system" size="15"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -50,7 +50,7 @@
                                     <attributedString key="attributedTitle">
                                         <fragment content="Continue to Next Chapter">
                                             <attributes>
-                                                <font key="NSFont" size="15" name="MontserratRoman-Medium"/>
+                                                <font key="NSFont" metaFont="system" size="15"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
