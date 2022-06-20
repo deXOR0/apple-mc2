@@ -24,6 +24,12 @@ class UserCallViewController: UIViewController {
         self.hideKeyboardWhenTappedAround()
 
     }
+    @IBAction func nextToHome(_ sender: Any) {
+        let controller = storyboard?.instantiateViewController(identifier: "HomeStoryID") as! HomeViewController
+        controller.modalPresentationStyle = .fullScreen
+//            controller.modalTransitionStyle = .flipHorizontal
+        present(controller, animated: true, completion: nil)
+    }
 }
 
 extension UITextField {
