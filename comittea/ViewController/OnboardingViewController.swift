@@ -68,8 +68,8 @@ class OnboardingViewController: UIViewController, UICollectionViewDelegate, UICo
             present(controller, animated: true, completion: nil)
         } else {
             currentPage += 1
-            let index = IndexPath(item: currentPage, section: 0)
-            onboardingCollView.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
+            let rect = onboardingCollView.layoutAttributesForItem(at:IndexPath(row: currentPage, section: 0))?.frame
+                        onboardingCollView.scrollRectToVisible(rect!, animated: true)
         }
     }
 }
