@@ -9,7 +9,7 @@ import Foundation
 
 class StaticStoriesData {
     static var stories: [Story] = [
-        Story("Judul Story", "Intro Story", "Logo Story", [
+        Story("Judul Story", "Intro Story", "Logo Story", "Background Story", [
             Chapter("Judul Story", "Logo Story", [
                 NarrationMessage("Narration Message"),
             ])
