@@ -13,6 +13,7 @@ struct Story {
     var title: String
     var intro: String
     var logo: String
+    var background: String
     var chapters: [Chapter]
     
     init(_ title: String, _ intro: String, _ logo: String, _ chapters: [Chapter]) {
