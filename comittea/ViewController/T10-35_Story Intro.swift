@@ -33,7 +33,12 @@ extension T10_35_Story_Intro: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "ChapterCellID") as? ChapterCell {
-            cell.Chap_Thumbnail.image = ChapThumbnail[indexPath.row]
+            
+            if  indexPath.row == 0 {
+                cell.Chap_Thumbnail.image = ChapThumbnail[indexPath.row]
+            } else {
+                cell.Chap_Thumbnail.image = grayscale(image: ChapThumbnail[indexPath.row]!)
+            }
             return cell
         }
         return UITableViewCell()
@@ -52,6 +57,19 @@ extension T10_35_Story_Intro: UITableViewDelegate, UITableViewDataSource {
                                   bundle: nil)
         self.ChapTableView.register(textFieldCell,
                                 forCellReuseIdentifier: "ChapterCellID")
+    }
+    
+    func grayscale(image: UIImage) -> UIImage? {
+        let context = CIContext(options: nil)
+        if let filter = CIFilter(name: "CIPhotoEffectNoir") {
+            filter.setValue(CIImage(image: image), forKey: kCIInputImageKey)
+            if let output = filter.outputImage {
+                if let cgImage = context.createCGImage(output, from: output.extent) {
+                    return UIImage(cgImage: cgImage)
+                }
+            }
+        }
+        return nil
     }
     
 }
