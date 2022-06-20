@@ -39,6 +39,7 @@ class MessagingViewController: UIViewController {
             visibleMessages += 1
             
             messagingTableView.insertRows(at: [lastIndex], with: .fade)
+            messagingTableView.scrollToRow(at: lastIndex, at: .bottom, animated: true)
         }
     }
 

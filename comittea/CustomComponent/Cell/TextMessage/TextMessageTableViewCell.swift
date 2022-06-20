@@ -21,15 +21,12 @@ class TextMessageTableViewCell: UITableViewCell {
     lazy var messageLabel: UILabel = {
         var l = UILabel()
         l.numberOfLines = 0
-        l.font = UIFont(name: "Montserrat", size: 12)
-        l.textColor = .black
         l.translatesAutoresizingMaskIntoConstraints = false
         return l
     }()
     
     lazy var messageBackground: UIView = {
         var v = UIView()
-        v.layer.cornerRadius = 15
         v.translatesAutoresizingMaskIntoConstraints = false
         return v
     }()
@@ -49,6 +46,7 @@ class TextMessageTableViewCell: UITableViewCell {
         
         switch (type) {
         case .narration:
+            messageLabel.textColor = .black
             messageLabel.font = UIFont(name: "Montserrat", size: 10)
             messageBackground.backgroundColor = CustomColors.lightOrange
             messageBackground.layer.cornerRadius = 5
@@ -60,7 +58,9 @@ class TextMessageTableViewCell: UITableViewCell {
             ])
         case .compy:
             messageLabel.textColor = .white
+            messageLabel.font = UIFont(name: "Montserrat", size: 12)
             messageBackground.backgroundColor = CustomColors.blue
+            messageBackground.layer.cornerRadius = 15
             
             NSLayoutConstraint.activate([
                 messageBackground.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5),
@@ -68,7 +68,10 @@ class TextMessageTableViewCell: UITableViewCell {
                 messageBackground.trailingAnchor.constraint(lessThanOrEqualTo: contentView.trailingAnchor, constant: 115),
             ])
         case .user:
+            messageLabel.textColor = .black
+            messageLabel.font = UIFont(name: "Montserrat", size: 12)
             messageBackground.backgroundColor = CustomColors.gray
+            messageBackground.layer.cornerRadius = 15
             
             NSLayoutConstraint.activate([
                 messageBackground.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5),
