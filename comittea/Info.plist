@@ -16,7 +16,7 @@
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
-					<string>T10-35_Story Intro</string>
+					<string>HomeStoryboard</string>
 				</dict>
 			</array>
 		</dict>

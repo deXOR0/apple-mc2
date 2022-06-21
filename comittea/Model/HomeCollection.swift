@@ -11,4 +11,5 @@ import UIKit
 struct HomeCollection {
     let title: String
     let image: String
+    let progress: Float
 }
