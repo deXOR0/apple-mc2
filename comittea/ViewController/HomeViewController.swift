@@ -10,12 +10,47 @@ import UIKit
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     var stories: [HomeCollection] = []
+    var user: User = User()
+    var selectedStoryTitle: String = ""
 
+    @IBOutlet weak var userGreetingLabel: UILabel!
     @IBOutlet weak var homeCollView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        stories = [HomeCollection(title: "The Secretary", image: "book"), HomeCollection(title: "Movie Night", image: "movie"), HomeCollection(title: "Supermarket", image: "supermarket")]
+        
+//        Dummy Data
+        user.name = "Awesa"
+        user.progress["The Secretary"]!["Chapter 1"] = User.State.complete
+        user.progress["Movie Night"]!["Chapter 1"] = User.State.complete
+        user.progress["Movie Night"]!["Chapter 2"] = User.State.complete
+//        End of Dummy Data
+        
+        user.loadSavedUserData()
+        
+        StaticStoriesData.stories.forEach { story in
+            stories.append(HomeCollection(title: story.title, image: story.logo, progress: calculateStoryProgress(chapters: user.progress[story.title]!)))
+        }
+        
+        userGreetingLabel.text = "Hey, \(user.name)"
+    }
+    
+    func calculateStoryProgress(chapters: [String:User.State]) -> Float {
+        var chapterDoneCount: Int = 0
+        chapters.forEach { chapter in
+            if (chapter.value == User.State.complete) {
+                chapterDoneCount += 1
+            }
+        }
+        return  Float(chapterDoneCount) / Float(chapters.count)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "gotoStoryIntro" {
+            let nav = segue.destination as? UINavigationController
+            let destinationVC = nav?.topViewController as? T10_35_Story_Intro
+            destinationVC?.storyTitle = self.selectedStoryTitle
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -28,6 +63,10 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.selectedStoryTitle = self.stories[indexPath.row].title
+        performSegue(withIdentifier: "gotoStoryIntro", sender: self)
+    }
 
 
 }

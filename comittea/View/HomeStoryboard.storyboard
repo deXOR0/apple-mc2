@@ -120,11 +120,21 @@
                     </view>
                     <connections>
                         <outlet property="homeCollView" destination="C9i-TE-EbY" id="3Rk-rb-eJt"/>
+                        <outlet property="userGreetingLabel" destination="rmJ-QP-IVM" id="whc-Rh-nMb"/>
+                        <segue destination="HDV-Zw-bO7" kind="presentation" identifier="gotoStoryIntro" modalPresentationStyle="fullScreen" id="IMy-EK-Pf5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="27.69230769230769" y="48.341232227488149"/>
+        </scene>
+        <!--T10-35_Story Intro-->
+        <scene sceneID="syb-tP-teb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="T10-35_Story Intro" id="HDV-Zw-bO7" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5C-pF-IEJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="606" y="33"/>
         </scene>
     </scenes>
     <resources>

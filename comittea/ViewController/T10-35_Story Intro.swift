@@ -9,6 +9,8 @@ import UIKit
 
 class T10_35_Story_Intro: UIViewController {
     
+    var storyTitle: String = ""
+    
     @IBOutlet weak var Story_Thumbnail: UIImageView!
     let ChapThumbnail = [UIImage(named: "Chap_Planning Ahead"), UIImage(named: "Chap_Buying Tickets"), UIImage(named: "Chap_Seating Placement")]
     

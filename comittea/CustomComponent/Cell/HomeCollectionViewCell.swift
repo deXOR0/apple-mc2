@@ -26,5 +26,6 @@ class HomeCollectionViewCell: UICollectionViewCell {
     func setup(story: HomeCollection) {
         image.image = UIImage(named: story.image)
         title.text = story.title
+        progress.progress = story.progress
     }
 }
