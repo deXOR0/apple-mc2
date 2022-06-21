@@ -46,8 +46,8 @@ class TextMessageTableViewCell: UITableViewCell {
         switch (type) {
         case .narration:
             messageLabel.textColor = .black
-            messageLabel.font = CustomFonts.medium10
-            messageBackground.backgroundColor = CustomColors.lightOrange
+            messageLabel.font = .medium10
+            messageBackground.backgroundColor = .lightOrange
             messageBackground.layer.cornerRadius = 5
             
             NSLayoutConstraint.activate([
@@ -57,8 +57,8 @@ class TextMessageTableViewCell: UITableViewCell {
             ])
         case .compy:
             messageLabel.textColor = .white
-            messageLabel.font = CustomFonts.medium12
-            messageBackground.backgroundColor = CustomColors.blue
+            messageLabel.font = .medium12
+            messageBackground.backgroundColor = .blue
             messageBackground.layer.cornerRadius = 15
             
             NSLayoutConstraint.activate([
@@ -68,8 +68,8 @@ class TextMessageTableViewCell: UITableViewCell {
             ])
         case .user:
             messageLabel.textColor = .black
-            messageLabel.font = CustomFonts.medium12
-            messageBackground.backgroundColor = CustomColors.gray
+            messageLabel.font = .medium12
+            messageBackground.backgroundColor = .lightGray
             messageBackground.layer.cornerRadius = 15
             
             NSLayoutConstraint.activate([

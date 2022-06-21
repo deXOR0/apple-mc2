@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct CustomFonts {
-    static let medium12: UIFont? = UIFont(name: "MontserratRoman-Medium", size: 12)
-    static let medium10: UIFont? = UIFont(name: "MontserratRoman-Medium", size: 10)
+extension UIFont {
+    static let medium12 = UIFont(name: "Montserrat-Medium", size: 12)
+    static let medium10 = UIFont(name: "Montserrat-Medium", size: 10)
 }

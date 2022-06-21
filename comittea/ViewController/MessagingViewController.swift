@@ -17,6 +17,12 @@ class MessagingViewController: UIViewController {
         NarrationMessage("What a boring weekend I am having right now. Just sitting and doing nothing. Suddenly it hits me, I could go to the movies with my friends. I ask Cody to help me plan my movie night."),
         CompyConversationMessage("You’re going to the movies?"),
         UserCoversationMessage("Yes I am."),
+        SingleChoiceMessage(
+            "Do you think it is necessary to list and reorder the tasks that we wanted to do?",
+            ["A. Yes it is", "B. I don’t think so"],
+            "A. Yes it is",
+            CompyTrueMessage(""),
+            CompyFalseMessage("")),
     ]
     var visibleMessages = 0
     
@@ -29,7 +35,8 @@ class MessagingViewController: UIViewController {
         
         messagingTableView.dataSource = self
         messagingTableView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onScreenTapped)))
-        messagingTableView.register(TextMessageTableViewCell.self, forCellReuseIdentifier: "MessagingTableViewCellID")
+        messagingTableView.register(TextMessageTableViewCell.self, forCellReuseIdentifier: "TextMessageTableViewCellID")
+        messagingTableView.register(UINib(nibName: "SingleChoiceMessageTableViewCell", bundle: nil), forCellReuseIdentifier: "SingleChoiceMessageTableViewCellID")
     }
     
     @objc func onScreenTapped(_ gesture: UITapGestureRecognizer) {
@@ -53,7 +60,7 @@ extension MessagingViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let message = messages[indexPath.row] as? TextMessage {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "MessagingTableViewCellID", for: indexPath) as! TextMessageTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TextMessageTableViewCellID", for: indexPath) as! TextMessageTableViewCell
             
             cell.messageLabel.text = message.text
             
@@ -67,6 +74,15 @@ extension MessagingViewController: UITableViewDataSource {
             }
             
             cell.layoutSubviews()
+            
+            return cell
+        }
+        
+        if let message = messages[indexPath.row] as? SingleChoiceMessage {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SingleChoiceMessageTableViewCellID", for: indexPath) as! SingleChoiceMessageTableViewCell
+            
+            cell.messageLabel.text = message.prompt
+            cell.options = message.options
             
             return cell
         }
