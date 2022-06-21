@@ -23,8 +23,20 @@
 	</dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Montserrat-Italic-VariableFont_wght.ttf</string>
-		<string>Montserrat-VariableFont_wght.ttf</string>
+		<string>Montserrat-Black</string>
+		<string>Montserrat-BlackItalic</string>
+		<string>Montserrat-Bold</string>
+		<string>Montserrat-BoldItalic</string>
+		<string>Montserrat-Italic.ttf</string>
+		<string>Montserrat-Light</string>
+		<string>Montserrat-LightItalic</string>
+		<string>Montserrat-Medium</string>
+		<string>Montserrat-MediumItalic</string>
+		<string>Montserrat-Regular</string>
+		<string>Montserrat-SemiBold.ttf</string>
+		<string>Montserrat-SemiBoldItalic</string>
+		<string>Montserrat-Thin</string>
+		<string>Montserrat-ThinItalic</string>
 	</array>
 </dict>
 </plist>
