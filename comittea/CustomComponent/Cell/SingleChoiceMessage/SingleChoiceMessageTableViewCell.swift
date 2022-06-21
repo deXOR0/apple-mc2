@@ -9,38 +9,53 @@ import UIKit
 
 class SingleChoiceMessageTableViewCell: UITableViewCell {
     
-    var options = ["A", "B"] {
+    @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var messageOptionsStack: UIStackView!
+    
+    enum State {
+        case ongoing
+        case done
+    }
+    
+    var checkAnswerDelegate: ((String) -> Bool)?
+    var options = [String]() {
         didSet {
+            addOptionViews()
+        }
+    }
+    var state: State = .ongoing
+    
+    override func prepareForReuse() {
+        removeOptionViews()
+    }
+    
+    func addOptionViews() {
+        options.forEach { option in
+            guard let view = SingleChoiceMessageOptionView.fromXib() else { return }
             
+            view.optionLabel.text = option
+            view.onOptionTapped = { [weak self] in
+                guard self?.state == .ongoing else { return }
+                defer { self?.state = .done }
+                
+                if let isCorrect = self?.checkAnswerDelegate?(option) {
+                    if isCorrect {
+                        view.backgroundColor = .myGreen
+                        return
+                    }
+                    
+                    view.backgroundColor = .myRed
+                }
+            }
+            
+            messageOptionsStack.addArrangedSubview(view)
         }
     }
     
-    @IBOutlet weak var messageLabel: UILabel!
-    @IBOutlet weak var messageOptionsTable: UITableView!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-        
-        messageOptionsTable.rowHeight = UITableView.automaticDimension
-        messageOptionsTable.dataSource = self
-        messageOptionsTable.register(UINib(nibName: "SingleChoiceMessageOptionCell", bundle: nil), forCellReuseIdentifier: "SingleChoiceMessageOptionCellID")
+    func removeOptionViews() {
+        messageOptionsStack.arrangedSubviews.forEach { view in
+            messageOptionsStack.removeArrangedSubview(view)
+        }
     }
-
-}
-
-extension SingleChoiceMessageTableViewCell: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        options.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SingleChoiceMessageOptionCellID", for: indexPath) as! SingleChoiceMessageOptionCell
-        
-        cell.optionLabel.text = options[indexPath.row]
-        
-        return cell
-    }
-    
     
 }

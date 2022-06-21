@@ -7,6 +7,7 @@
 
 import UIKit
 
+// TODO: refactor to use polymorphism
 class TextMessageTableViewCell: UITableViewCell {
     
     enum TextMessageType {
@@ -47,7 +48,7 @@ class TextMessageTableViewCell: UITableViewCell {
         case .narration:
             messageLabel.textColor = .black
             messageLabel.font = .medium10
-            messageBackground.backgroundColor = .lightOrange
+            messageBackground.backgroundColor = .myLightOrange
             messageBackground.layer.cornerRadius = 5
             
             NSLayoutConstraint.activate([
@@ -58,7 +59,7 @@ class TextMessageTableViewCell: UITableViewCell {
         case .compy:
             messageLabel.textColor = .white
             messageLabel.font = .medium12
-            messageBackground.backgroundColor = .blue
+            messageBackground.backgroundColor = .myBlue
             messageBackground.layer.cornerRadius = 15
             
             NSLayoutConstraint.activate([
@@ -69,7 +70,7 @@ class TextMessageTableViewCell: UITableViewCell {
         case .user:
             messageLabel.textColor = .black
             messageLabel.font = .medium12
-            messageBackground.backgroundColor = .lightGray
+            messageBackground.backgroundColor = .myLightGray
             messageBackground.layer.cornerRadius = 15
             
             NSLayoutConstraint.activate([

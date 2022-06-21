@@ -26,7 +26,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PPW-rg-PEu">
-                        <rect key="frame" x="174" y="23" width="189" height="192"/>
+                        <rect key="frame" x="174" y="23" width="189" height="181"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ts1-7e-UBl">
                                 <rect key="frame" x="10" y="10" width="169" height="15"/>
@@ -34,21 +34,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xRP-qc-lgY">
-                                <rect key="frame" x="10" y="33" width="169" height="149"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lYv-cl-9vy">
+                                <rect key="frame" x="10" y="33" width="169" height="138"/>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" name="LightGray"/>
                         <constraints>
-                            <constraint firstItem="xRP-qc-lgY" firstAttribute="leading" secondItem="PPW-rg-PEu" secondAttribute="leading" constant="10" id="70E-Nz-fkQ"/>
+                            <constraint firstAttribute="trailing" secondItem="lYv-cl-9vy" secondAttribute="trailing" constant="10" id="0qx-6R-4Ek"/>
                             <constraint firstItem="ts1-7e-UBl" firstAttribute="leading" secondItem="PPW-rg-PEu" secondAttribute="leading" constant="10" id="B1p-OY-M9k"/>
-                            <constraint firstItem="xRP-qc-lgY" firstAttribute="top" secondItem="ts1-7e-UBl" secondAttribute="bottom" constant="8" id="IMU-ec-uTc"/>
-                            <constraint firstAttribute="bottom" secondItem="xRP-qc-lgY" secondAttribute="bottom" constant="10" id="PI3-N9-yen"/>
                             <constraint firstItem="ts1-7e-UBl" firstAttribute="top" secondItem="PPW-rg-PEu" secondAttribute="top" constant="10" id="QLG-Qq-Ylc"/>
                             <constraint firstAttribute="trailing" secondItem="ts1-7e-UBl" secondAttribute="trailing" constant="10" id="Uj3-JL-Ztf"/>
-                            <constraint firstAttribute="trailing" secondItem="xRP-qc-lgY" secondAttribute="trailing" constant="10" id="t7a-uu-ngb"/>
+                            <constraint firstItem="lYv-cl-9vy" firstAttribute="top" secondItem="ts1-7e-UBl" secondAttribute="bottom" constant="8" id="Vtn-NL-Gbs"/>
+                            <constraint firstItem="lYv-cl-9vy" firstAttribute="leading" secondItem="PPW-rg-PEu" secondAttribute="leading" constant="10" id="ZCT-XP-2fS"/>
+                            <constraint firstAttribute="bottom" secondItem="lYv-cl-9vy" secondAttribute="bottom" constant="10" id="beo-vr-b9J"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -65,7 +63,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="PPW-rg-PEu" secondAttribute="trailing" id="AMv-8I-Drb"/>
-                    <constraint firstAttribute="bottom" secondItem="PPW-rg-PEu" secondAttribute="bottom" id="EvJ-1s-fm2"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="PPW-rg-PEu" secondAttribute="bottom" id="EvJ-1s-fm2"/>
                     <constraint firstItem="PPW-rg-PEu" firstAttribute="top" secondItem="Abo-1f-gBh" secondAttribute="bottom" constant="8" id="JMp-iQ-hqA"/>
                     <constraint firstItem="Abo-1f-gBh" firstAttribute="centerX" secondItem="PPW-rg-PEu" secondAttribute="centerX" id="KcJ-2Z-4zc"/>
                     <constraint firstItem="Abo-1f-gBh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Rho-jf-hso"/>
@@ -75,7 +73,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="messageLabel" destination="ts1-7e-UBl" id="Gac-nx-mI2"/>
-                <outlet property="messageOptionsTable" destination="xRP-qc-lgY" id="945-UM-ANG"/>
+                <outlet property="messageOptionsStack" destination="lYv-cl-9vy" id="hKf-af-5Hj"/>
             </connections>
             <point key="canvasLocation" x="858.69565217391312" y="-167.07589285714286"/>
         </tableViewCell>

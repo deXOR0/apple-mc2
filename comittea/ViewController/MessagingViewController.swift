@@ -21,8 +21,8 @@ class MessagingViewController: UIViewController {
             "Do you think it is necessary to list and reorder the tasks that we wanted to do?",
             ["A. Yes it is", "B. I don’t think so"],
             "A. Yes it is",
-            CompyTrueMessage(""),
-            CompyFalseMessage("")),
+            CompyTrueMessage("Yoi"),
+            CompyFalseMessage("Salah lu cuk")),
     ]
     var visibleMessages = 0
     
@@ -40,6 +40,10 @@ class MessagingViewController: UIViewController {
     }
     
     @objc func onScreenTapped(_ gesture: UITapGestureRecognizer) {
+        insertMessage()
+    }
+    
+    func insertMessage() {
         if visibleMessages < messages.count {
             let lastIndex = IndexPath(row: visibleMessages, section: 0)
             
@@ -83,6 +87,25 @@ extension MessagingViewController: UITableViewDataSource {
             
             cell.messageLabel.text = message.prompt
             cell.options = message.options
+            cell.checkAnswerDelegate = { [weak self]
+                option in
+                defer { self?.insertMessage() }
+                
+                if  message.checkAnswer(option) {
+                    // show true response
+                    if let currentIndex = self?.visibleMessages {
+                        self?.messages.insert(message.trueResponse, at: currentIndex)
+                    }
+                    
+                    return true
+                }
+                // show false response
+                if let currentIndex = self?.visibleMessages {
+                    self?.messages.insert(message.falseResponse, at: currentIndex)
+                }
+                
+                return false
+            }
             
             return cell
         }
