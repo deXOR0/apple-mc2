@@ -10,36 +10,68 @@ import UIKit
 class T10_35_Story_Intro: UIViewController {
     
     var storyTitle: String = ""
+    var story: Story = Story("", "", "", "", [Chapter]())
+    var user: User = User()
+    var selectedChapter: Chapter = Chapter("", "", [Message]())
     
+    @IBOutlet weak var storyIntroLabel: UILabel!
+    @IBOutlet weak var storyTitleLabel: UILabel!
     @IBOutlet weak var Story_Thumbnail: UIImageView!
-    let ChapThumbnail = [UIImage(named: "Chap_Planning Ahead"), UIImage(named: "Chap_Buying Tickets"), UIImage(named: "Chap_Seating Placement")]
     
     @IBOutlet weak var ChapTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Story_Thumbnail.image = UIImage(named: "Story_Thumbnail")
+        //        Dummy Data
+                user.name = "Awesa"
+                user.progress["The Secretary"]!["Find Documents"] = User.State.complete
+                user.progress["Movie Night"]!["Planning Ahead"] = User.State.complete
+                user.progress["Movie Night"]!["Buying Tickets"] = User.State.complete
+        //        End of Dummy Data
+        
+        user.loadSavedUserData()
+        loadStoryData()
+        
+        Story_Thumbnail.image = UIImage(named: self.story.background)
+        storyTitleLabel.text = self.story.title
+        storyIntroLabel.text = self.story.intro
 
         self.ChapTableView.dataSource = self
         self.ChapTableView.delegate = self
         self.registerTableViewCells()
     }
+    
+    func loadStoryData() {
+        self.story = StaticStoriesData.findStory(title: storyTitle)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "gotoMessage" {
+            let destinationVC = segue.destination as? MessagingViewController
+            destinationVC?.chapter = self.selectedChapter
+        }
+    }
+    
 }
 
 
 extension T10_35_Story_Intro: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        ChapThumbnail.count
+        self.story.chapters.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "ChapterCellID") as? ChapterCell {
             
-            if  indexPath.row == 0 {
-                cell.Chap_Thumbnail.image = ChapThumbnail[indexPath.row]
+            let chapterProgress: User.State = self.user.progress[self.storyTitle]![self.story.chapters[indexPath.row].title]!
+            
+            if chapterProgress == User.State.unlocked {
+                cell.Chap_Thumbnail.image = UIImage(named: self.story.chapters[indexPath.row].logo)
+            } else if chapterProgress == User.State.locked {
+                cell.Chap_Thumbnail.image = grayscale(image: UIImage(named: self.story.chapters[indexPath.row].logo)!)
             } else {
-                cell.Chap_Thumbnail.image = grayscale(image: ChapThumbnail[indexPath.row]!)
+                cell.Chap_Thumbnail.image = UIImage(named: "\(self.story.chapters[indexPath.row].logo)_Done")
             }
             return cell
         }
@@ -51,6 +83,11 @@ extension T10_35_Story_Intro: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let chapterProgress: User.State = self.user.progress[self.storyTitle]![self.story.chapters[indexPath.row].title]!
+        if chapterProgress != User.State.locked {
+            self.selectedChapter = self.story.chapters[indexPath.row]
+            performSegue(withIdentifier: "gotoMessage", sender: self)
+        }
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
