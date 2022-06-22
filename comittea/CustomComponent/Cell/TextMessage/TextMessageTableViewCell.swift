@@ -7,16 +7,14 @@
 
 import UIKit
 
-// TODO: refactor to use polymorphism
 class TextMessageTableViewCell: UITableViewCell {
     
-    enum TextMessageType {
-        case narration
-        case compy
-        case user
+    var config: TextMessageTableViewCellConfig = CompyMessageConfig() {
+        didSet {
+            config.configureCell(self)
+            layoutSubviews()
+        }
     }
-    
-    var type: TextMessageType = .compy
     
     lazy var messageLabel: UILabel = {
         var l = UILabel()
@@ -31,10 +29,19 @@ class TextMessageTableViewCell: UITableViewCell {
         return v
     }()
     
-    override func layoutSubviews() {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         messageBackground.addSubview(messageLabel)
         contentView.addSubview(messageBackground)
-        
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        messageBackground.addSubview(messageLabel)
+        contentView.addSubview(messageBackground)
+    }
+    
+    override func layoutSubviews() {
         NSLayoutConstraint.activate([
             messageLabel.leadingAnchor.constraint(equalTo: messageBackground.leadingAnchor, constant: 10),
             messageLabel.trailingAnchor.constraint(equalTo: messageBackground.trailingAnchor, constant: -10),
@@ -44,41 +51,7 @@ class TextMessageTableViewCell: UITableViewCell {
             messageBackground.topAnchor.constraint(equalTo: contentView.topAnchor),
         ])
         
-        switch (type) {
-        case .narration:
-            messageLabel.textColor = .black
-            messageLabel.font = .medium10
-            messageBackground.backgroundColor = .myLightOrange
-            messageBackground.layer.cornerRadius = 5
-            
-            NSLayoutConstraint.activate([
-                messageBackground.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
-                messageBackground.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-                messageBackground.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            ])
-        case .compy:
-            messageLabel.textColor = .white
-            messageLabel.font = .medium12
-            messageBackground.backgroundColor = .myBlue
-            messageBackground.layer.cornerRadius = 15
-            
-            NSLayoutConstraint.activate([
-                messageBackground.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5),
-                messageBackground.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-                messageBackground.trailingAnchor.constraint(lessThanOrEqualTo: contentView.trailingAnchor, constant: 115),
-            ])
-        case .user:
-            messageLabel.textColor = .black
-            messageLabel.font = .medium12
-            messageBackground.backgroundColor = .myLightGray
-            messageBackground.layer.cornerRadius = 15
-            
-            NSLayoutConstraint.activate([
-                messageBackground.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5),
-                messageBackground.leadingAnchor.constraint(greaterThanOrEqualTo: contentView.leadingAnchor, constant: 115),
-                messageBackground.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            ])
-        }
+        config.configureLayout(self)
     }
     
     override func prepareForReuse() {

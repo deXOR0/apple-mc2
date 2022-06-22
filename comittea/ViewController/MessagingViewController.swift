@@ -89,14 +89,12 @@ extension MessagingViewController: UITableViewDataSource {
             
             switch message {
             case is NarrationMessage:
-                cell.type = .narration
+                cell.config = NarrationMessageConfig()
             case is UserConversationMessage:
-                cell.type = .user
+                cell.config = UserMessageConfig()
             default:
-                cell.type = .compy
+                cell.config = CompyMessageConfig()
             }
-            
-            cell.layoutSubviews()
             
             return cell
         }
