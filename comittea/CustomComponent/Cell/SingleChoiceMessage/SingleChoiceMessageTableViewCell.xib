@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Medium.ttf">
+            <string>Montserrat-Medium</string>
+        </array>
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SingleChoiceMessageTableViewCellID" rowHeight="215" id="KGk-i7-Jjw" customClass="SingleChoiceMessageTableViewCell" customModule="comittea" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="363" height="215"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="363" height="215"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PPW-rg-PEu">
+                        <rect key="frame" x="174" y="23" width="189" height="181"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ts1-7e-UBl">
+                                <rect key="frame" x="10" y="10" width="169" height="15"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lYv-cl-9vy">
+                                <rect key="frame" x="10" y="33" width="169" height="138"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="LightGray"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="lYv-cl-9vy" secondAttribute="trailing" constant="10" id="0qx-6R-4Ek"/>
+                            <constraint firstItem="ts1-7e-UBl" firstAttribute="leading" secondItem="PPW-rg-PEu" secondAttribute="leading" constant="10" id="B1p-OY-M9k"/>
+                            <constraint firstItem="ts1-7e-UBl" firstAttribute="top" secondItem="PPW-rg-PEu" secondAttribute="top" constant="10" id="QLG-Qq-Ylc"/>
+                            <constraint firstAttribute="trailing" secondItem="ts1-7e-UBl" secondAttribute="trailing" constant="10" id="Uj3-JL-Ztf"/>
+                            <constraint firstItem="lYv-cl-9vy" firstAttribute="top" secondItem="ts1-7e-UBl" secondAttribute="bottom" constant="8" id="Vtn-NL-Gbs"/>
+                            <constraint firstItem="lYv-cl-9vy" firstAttribute="leading" secondItem="PPW-rg-PEu" secondAttribute="leading" constant="10" id="ZCT-XP-2fS"/>
+                            <constraint firstAttribute="bottom" secondItem="lYv-cl-9vy" secondAttribute="bottom" constant="10" id="beo-vr-b9J"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose One Answer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Abo-1f-gBh">
+                        <rect key="frame" x="206" y="0.0" width="125.5" height="15"/>
+                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="12"/>
+                        <color key="textColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="PPW-rg-PEu" secondAttribute="trailing" id="AMv-8I-Drb"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="PPW-rg-PEu" secondAttribute="bottom" id="EvJ-1s-fm2"/>
+                    <constraint firstItem="PPW-rg-PEu" firstAttribute="top" secondItem="Abo-1f-gBh" secondAttribute="bottom" constant="8" id="JMp-iQ-hqA"/>
+                    <constraint firstItem="Abo-1f-gBh" firstAttribute="centerX" secondItem="PPW-rg-PEu" secondAttribute="centerX" id="KcJ-2Z-4zc"/>
+                    <constraint firstItem="Abo-1f-gBh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Rho-jf-hso"/>
+                    <constraint firstItem="PPW-rg-PEu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="115" id="nkq-RW-yEr"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="messageLabel" destination="ts1-7e-UBl" id="Gac-nx-mI2"/>
+                <outlet property="messageOptionsStack" destination="lYv-cl-9vy" id="hKf-af-5Hj"/>
+            </connections>
+            <point key="canvasLocation" x="858.69565217391312" y="-167.07589285714286"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="LightGray">
+            <color red="0.90600001811981201" green="0.90600001811981201" blue="0.90600001811981201" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
