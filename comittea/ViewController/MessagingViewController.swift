@@ -16,7 +16,7 @@ class MessagingViewController: UIViewController {
     var messages: [Message] = [
         NarrationMessage("What a boring weekend I am having right now. Just sitting and doing nothing. Suddenly it hits me, I could go to the movies with my friends. I ask Cody to help me plan my movie night."),
         CompyConversationMessage("You’re going to the movies?"),
-        UserCoversationMessage("Yes I am."),
+        UserConversationMessage("Yes I am."),
         SingleChoiceMessage(
             "Do you think it is necessary to list and reorder the tasks that we wanted to do?",
             ["A. Yes it is", "B. I don’t think so"],
@@ -71,7 +71,7 @@ extension MessagingViewController: UITableViewDataSource {
             switch message {
             case is NarrationMessage:
                 cell.type = .narration
-            case is UserCoversationMessage:
+            case is UserConversationMessage:
                 cell.type = .user
             default:
                 cell.type = .compy
@@ -93,16 +93,13 @@ extension MessagingViewController: UITableViewDataSource {
                 
                 if  message.checkAnswer(option) {
                     // show true response
-                    if let currentIndex = self?.visibleMessages {
-                        self?.messages.insert(message.trueResponse, at: currentIndex)
-                    }
+                    self?.messages.append(message.trueResponse)
                     
                     return true
                 }
+                
                 // show false response
-                if let currentIndex = self?.visibleMessages {
-                    self?.messages.insert(message.falseResponse, at: currentIndex)
-                }
+                self?.messages.append(message.falseResponse)
                 
                 return false
             }

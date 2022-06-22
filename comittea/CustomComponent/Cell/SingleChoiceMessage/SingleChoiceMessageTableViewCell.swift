@@ -26,6 +26,7 @@ class SingleChoiceMessageTableViewCell: UITableViewCell {
     var state: State = .ongoing
     
     override func prepareForReuse() {
+        state = .ongoing
         removeOptionViews()
     }
     
@@ -54,6 +55,8 @@ class SingleChoiceMessageTableViewCell: UITableViewCell {
     
     func removeOptionViews() {
         messageOptionsStack.arrangedSubviews.forEach { view in
+            /// To stop shadow from stacking when cell reuse
+            view.layer.shadowOpacity = 0
             messageOptionsStack.removeArrangedSubview(view)
         }
     }
