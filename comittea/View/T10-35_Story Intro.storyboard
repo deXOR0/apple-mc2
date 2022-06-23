@@ -35,8 +35,8 @@
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="tGF-Yt-FVo"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0BM-eW-gho">
-                                <rect key="frame" x="30" y="277" width="330" height="46"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0BM-eW-gho">
+                                <rect key="frame" x="16" y="266" width="358" height="58"/>
                                 <string key="text">What a boring weekend Benny is having right now. 
 Just sitting and doing nothing. Suddenly it hits him. 
 He could go to the movies with his friends.</string>
@@ -46,8 +46,8 @@ He could go to the movies with his friends.</string>
                                 <color key="shadowColor" white="0.0" alpha="0.17071088579999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="0.0" height="2"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Night" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFk-DL-GZm">
-                                <rect key="frame" x="132" y="243.33333333333334" width="126" height="26.666666666666657"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Movie Night" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFk-DL-GZm">
+                                <rect key="frame" x="37" y="233" width="316" height="25"/>
                                 <fontDescription key="fontDescription" name="MontserratRoman-SemiBold" family="Montserrat" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -79,11 +79,22 @@ He could go to the movies with his friends.</string>
                     <connections>
                         <outlet property="ChapTableView" destination="XB1-d4-i2o" id="3We-ex-KC1"/>
                         <outlet property="Story_Thumbnail" destination="tnh-zK-S5z" id="8Iw-3W-r9r"/>
+                        <outlet property="storyIntroLabel" destination="0BM-eW-gho" id="7ca-NM-v4r"/>
+                        <outlet property="storyTitleLabel" destination="tFk-DL-GZm" id="AJI-YS-Yhg"/>
+                        <segue destination="JpI-LC-Nns" kind="presentation" identifier="gotoMessage" modalPresentationStyle="fullScreen" id="B8q-35-tk6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042.0289855072465" y="109.82142857142857"/>
+            <point key="canvasLocation" x="1041.5384615384614" y="109.47867298578198"/>
+        </scene>
+        <!--Messaging-->
+        <scene sceneID="TQd-II-chd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Messaging" id="JpI-LC-Nns" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eXl-7D-HML" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1581" y="99"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pwz-ic-rXf">
