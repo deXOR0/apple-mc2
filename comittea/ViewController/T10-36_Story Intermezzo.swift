@@ -18,6 +18,10 @@ class T10_36_Story_Intermezzo: UIViewController {
     }
     
     
+    @IBAction func gotoHomeBtn(_ sender: Any) {
+        performSegue(withIdentifier: "unwindFromIntermezzo", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         Intermezzo_Thumbnail.image = UIImage(named: "Intermezzo_Calender")
