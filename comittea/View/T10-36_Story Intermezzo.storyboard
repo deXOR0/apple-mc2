@@ -87,6 +87,7 @@
                     <navigationItem key="navigationItem" id="RAf-PG-qPe"/>
                     <connections>
                         <outlet property="Btn_NextChapter" destination="muX-bZ-tgq" id="6mA-eH-d8t"/>
+                        <outlet property="Intermezzo_Message" destination="u9u-0y-Jia" id="7rD-PC-2it"/>
                         <outlet property="Intermezzo_Thumbnail" destination="4UG-YF-srd" id="lpl-TJ-UPl"/>
                     </connections>
                 </viewController>

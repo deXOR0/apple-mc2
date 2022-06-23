@@ -55,6 +55,13 @@ class MessagingViewController: UIViewController {
             messagingTableView.scrollToRow(at: lastIndex, at: .bottom, animated: true)
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "gotoIntermezzo" {
+            let destinationVC = segue.destination as? T10_36_Story_Intermezzo
+            destinationVC?.chapter = chapter
+        }
+    }
 
 }
 
