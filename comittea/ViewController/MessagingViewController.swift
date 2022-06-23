@@ -13,6 +13,7 @@ import UIKit
 // TODO: handle ActivityMessage
 class MessagingViewController: UIViewController {
 
+    var storyTitle: String = ""
     var chapter: Chapter = Chapter("", "", [Message]())
     var messages: [Message] = [
         NarrationMessage("What a boring weekend I am having right now. Just sitting and doing nothing. Suddenly it hits me, I could go to the movies with my friends. I ask Cody to help me plan my movie night."),

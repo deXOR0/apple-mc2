@@ -24,10 +24,10 @@ class T10_35_Story_Intro: UIViewController {
         super.viewDidLoad()
         
         //        Dummy Data
-                user.name = "Awesa"
-                user.progress["The Secretary"]!["Find Documents"] = User.State.complete
-                user.progress["Movie Night"]!["Planning Ahead"] = User.State.complete
-                user.progress["Movie Night"]!["Buying Tickets"] = User.State.complete
+        user.name = "Awesa"
+        user.progress["The Secretary"]!["Find Documents"] = User.State.complete
+        user.progress["Movie Night"]!["Planning Ahead"] = User.State.complete
+        user.progress["Movie Night"]!["Buying Tickets"] = User.State.complete
         //        End of Dummy Data
         
         user.loadSavedUserData()
@@ -49,6 +49,7 @@ class T10_35_Story_Intro: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "gotoMessage" {
             let destinationVC = segue.destination as? MessagingViewController
+            destinationVC?.storyTitle = self.storyTitle
             destinationVC?.chapter = self.selectedChapter
         }
     }
