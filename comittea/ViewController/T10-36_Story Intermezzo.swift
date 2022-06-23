@@ -8,7 +8,9 @@
 import UIKit
 
 class T10_36_Story_Intermezzo: UIViewController {
-
+    
+    var chapter: Chapter = Chapter("", "", [Message]())
+    
     @IBOutlet weak var Intermezzo_Thumbnail: UIImageView!
     @IBOutlet weak var Btn_NextChapter: UIButton! {
         didSet{
@@ -16,6 +18,7 @@ class T10_36_Story_Intermezzo: UIViewController {
             Btn_NextChapter.layer.masksToBounds = true
         }
     }
+    @IBOutlet weak var Intermezzo_Message: UILabel!
     
     
     @IBAction func gotoHomeBtn(_ sender: Any) {
@@ -25,6 +28,7 @@ class T10_36_Story_Intermezzo: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         Intermezzo_Thumbnail.image = UIImage(named: "Intermezzo_Calender")
+        Intermezzo_Message.text = "Congratulations, you have completed the \(chapter.title) stage"
         
     }
     

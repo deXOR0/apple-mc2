@@ -94,6 +94,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="Btn_NextChapter" destination="muX-bZ-tgq" id="6mA-eH-d8t"/>
+                        <outlet property="Intermezzo_Message" destination="u9u-0y-Jia" id="7rD-PC-2it"/>
                         <outlet property="Intermezzo_Thumbnail" destination="4UG-YF-srd" id="lpl-TJ-UPl"/>
                         <segue destination="4be-67-sJM" kind="unwind" identifier="unwindFromIntermezzo" unwindAction="unwindtoHome:" id="myC-Ys-4CJ"/>
                     </connections>
