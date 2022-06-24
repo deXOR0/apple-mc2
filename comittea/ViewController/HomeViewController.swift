@@ -20,7 +20,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         super.viewDidLoad()
         
 //        Dummy Data
-        user.name = "Awesa"
         user.progress["The Secretary"]!["Find Documents"] = User.State.complete
         user.progress["Movie Night"]!["Planning Ahead"] = User.State.complete
         user.progress["Movie Night"]!["Buying Tickets"] = User.State.complete

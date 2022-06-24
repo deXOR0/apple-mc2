@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Onboarding View Controller-->
+        <!--OnboardingViewController-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="OnboardingViewController" customModule="comittea" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnboardingID" title="OnboardingViewController" id="Y6W-OH-hqX" customClass="OnboardingViewController" customModule="comittea" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -195,11 +195,20 @@
                     <connections>
                         <outlet property="nextButton" destination="8a5-1e-pb1" id="vZt-Fx-L8T"/>
                         <outlet property="userTextField" destination="Zay-CQ-a4f" id="yeg-26-im7"/>
+                        <segue destination="BnU-Od-x27" kind="presentation" identifier="gotoHome" modalPresentationStyle="fullScreen" id="RrU-HI-CPI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0B5-Ze-cZn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1916.9230769230769" y="114.45497630331754"/>
+        </scene>
+        <!--HomeStoryboard-->
+        <scene sceneID="Ym0-qg-9pn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HomeStoryboard" id="BnU-Od-x27" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JzX-Dx-pgh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2890" y="114"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7j8-Hx-evC">

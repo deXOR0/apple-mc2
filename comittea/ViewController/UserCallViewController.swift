@@ -8,6 +8,8 @@
 import UIKit
 
 class UserCallViewController: UIViewController {
+    
+    var user: User = User()
 
     @IBOutlet weak var userTextField: UITextField!
     
@@ -25,11 +27,16 @@ class UserCallViewController: UIViewController {
 
     }
     @IBAction func nextToHome(_ sender: Any) {
-        let controller = storyboard?.instantiateViewController(identifier: "HomeStoryID") as! HomeViewController
-        controller.modalPresentationStyle = .fullScreen
-//            controller.modalTransitionStyle = .flipHorizontal
-        present(controller, animated: true, completion: nil)
+        user.name = userTextField.text ?? ""
+        user.save()
+        performSegue(withIdentifier: "gotoHome", sender: self)
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "gotoHome" {
+//            let destinationVC = segue.destination as? HomeViewController
+//        }
+//    }
 }
 
 extension UITextField {
