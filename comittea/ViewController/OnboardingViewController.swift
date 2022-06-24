@@ -71,6 +71,7 @@ class OnboardingViewController: UIViewController, UICollectionViewDelegate, UICo
             let rect = onboardingCollView.layoutAttributesForItem(at:IndexPath(row: currentPage, section: 0))?.frame
                         onboardingCollView.scrollRectToVisible(rect!, animated: true)
         }
+        
     }
 }
 
@@ -86,3 +87,4 @@ extension UIViewController {
     }
 
 }
+
