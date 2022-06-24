@@ -18,13 +18,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        Dummy Data
-        user.progress["The Secretary"]!["Find Documents"] = User.State.complete
-        user.progress["Movie Night"]!["Planning Ahead"] = User.State.complete
-        user.progress["Movie Night"]!["Buying Tickets"] = User.State.complete
-//        End of Dummy Data
-        
         user.loadSavedUserData()
         
         StaticStoriesData.stories.forEach { story in

@@ -9,7 +9,8 @@ import UIKit
 
 class T10_36_Story_Intermezzo: UIViewController {
     
-    var chapter: Chapter = Chapter("", "", [Message]())
+    var chapter: Chapter = Chapter("", "","", [Message]())
+    var nextChapter: Chapter = Chapter("", "","", [Message]())
     var storyTitle = ""
     
     @IBOutlet weak var Intermezzo_Thumbnail: UIImageView!
@@ -17,6 +18,9 @@ class T10_36_Story_Intermezzo: UIViewController {
         didSet{
             Btn_NextChapter.layer.cornerRadius = 23
             Btn_NextChapter.layer.masksToBounds = true
+            if self.chapter.nextChapterTitle == "" {
+                Btn_NextChapter.setTitle("Complete Story", for: .normal)
+            }
         }
     }
     @IBOutlet weak var Intermezzo_Message: UILabel!
@@ -26,15 +30,31 @@ class T10_36_Story_Intermezzo: UIViewController {
         performSegue(withIdentifier: "unwindFromIntermezzo", sender: self)
     }
     
+    @IBAction func nextChapterBtnTapped(_ sender: Any) {
+        if self.chapter.nextChapterTitle != "" {
+            self.nextChapter = StaticStoriesData.findChapter(story: StaticStoriesData.findStory(title: self.storyTitle), chapterTitle: self.chapter.nextChapterTitle)
+            performSegue(withIdentifier: "unwindFromIntermezzo2", sender: self)
+        } else {
+            performSegue(withIdentifier: "unwindFromIntermezzo", sender: self)
+        }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        saveProgress()
+        
         Intermezzo_Thumbnail.image = UIImage(named: "Intermezzo_Calender")
         Intermezzo_Message.text = "Congratulations, you have completed the \(chapter.title) stage"
         
     }
     
-    @IBAction func Btn_NextChapter(_ sender: Any) {
-        
+    func saveProgress() {
+        var user = User()
+        user.loadSavedUserData()
+        user.progress[self.storyTitle]![self.chapter.title] = User.State.complete
+        user.progress[self.storyTitle]![self.chapter.nextChapterTitle] = User.State.unlocked
+        user.save()
     }
     
 }

@@ -52,7 +52,7 @@
                                     <fontDescription key="titleFontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="15"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="Btn_NextChapter:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="VNk-tI-59r"/>
+                                    <action selector="nextChapterBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="VKj-Do-y3f"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4UG-YF-srd">
@@ -97,6 +97,7 @@
                         <outlet property="Intermezzo_Message" destination="u9u-0y-Jia" id="7rD-PC-2it"/>
                         <outlet property="Intermezzo_Thumbnail" destination="4UG-YF-srd" id="lpl-TJ-UPl"/>
                         <segue destination="4be-67-sJM" kind="unwind" identifier="unwindFromIntermezzo" unwindAction="unwindtoHome:" id="myC-Ys-4CJ"/>
+                        <segue destination="4be-67-sJM" kind="unwind" identifier="unwindFromIntermezzo2" unwindAction="unwindtoMessaging:" id="xHD-2a-NvV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
