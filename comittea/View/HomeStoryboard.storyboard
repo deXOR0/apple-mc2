@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1k0-eE-P5V">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="C9i-TE-EbY">
-                                <rect key="frame" x="20" y="231" width="350" height="460"/>
+                                <rect key="frame" x="20" y="215" width="350" height="476"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Fn1-wl-bcr">
                                     <size key="itemSize" width="170" height="215"/>
@@ -86,14 +86,14 @@
                                 </connections>
                             </collectionView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Start the journey to understand more about computational thinking by choosing one of the story below!" translatesAutoresizingMaskIntoConstraints="NO" id="bab-TT-ZWD">
-                                <rect key="frame" x="20" y="124" width="350" height="77"/>
+                                <rect key="frame" x="20" y="108" width="350" height="77"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" red="0.29645065739999998" green="0.39120422710000002" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmJ-QP-IVM">
-                                <rect key="frame" x="25" y="84" width="345" height="30"/>
+                                <rect key="frame" x="25" y="68" width="345" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
                                 <color key="textColor" red="0.29645065739999998" green="0.39120422710000002" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -111,30 +111,53 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="C9i-TE-EbY" secondAttribute="bottom" constant="119" id="CHD-Rd-ZfC"/>
                             <constraint firstItem="C9i-TE-EbY" firstAttribute="top" secondItem="bab-TT-ZWD" secondAttribute="bottom" constant="30" id="Hbn-fP-f0X"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="C9i-TE-EbY" secondAttribute="trailing" constant="20" id="UaD-CY-2mx"/>
-                            <constraint firstItem="rmJ-QP-IVM" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="40" id="VlR-Ip-B0F"/>
+                            <constraint firstItem="rmJ-QP-IVM" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="-20" id="VlR-Ip-B0F"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="bab-TT-ZWD" secondAttribute="trailing" constant="20" id="Xe3-Ro-2ho"/>
                             <constraint firstItem="bab-TT-ZWD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="oIt-AQ-f6g"/>
                             <constraint firstItem="C9i-TE-EbY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="ove-fW-hhd"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="rmJ-QP-IVM" secondAttribute="trailing" constant="20" id="tkV-Dq-MtF"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="gy2-si-Uli">
+                        <barButtonItem key="backBarButtonItem" title="Home" id="Uia-FL-ndh"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="homeCollView" destination="C9i-TE-EbY" id="3Rk-rb-eJt"/>
                         <outlet property="userGreetingLabel" destination="rmJ-QP-IVM" id="whc-Rh-nMb"/>
-                        <segue destination="HDV-Zw-bO7" kind="presentation" identifier="gotoStoryIntro" modalPresentationStyle="fullScreen" id="IMy-EK-Pf5"/>
+                        <segue destination="Od8-PU-egL" kind="show" identifier="gotoStoryIntro" id="Ytt-kW-v1d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="956.92307692307691" y="48.341232227488149"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iiq-Ir-Vzj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1k0-eE-P5V" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wHt-sj-wPk">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="n9d-1A-fEg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2w2-AT-UbN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="27.69230769230769" y="48.341232227488149"/>
         </scene>
         <!--T10-35_Story Intro-->
-        <scene sceneID="syb-tP-teb">
+        <scene sceneID="K0N-98-6V5">
             <objects>
-                <viewControllerPlaceholder storyboardName="T10-35_Story Intro" id="HDV-Zw-bO7" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5C-pF-IEJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="T10-35_Story Intro" id="Od8-PU-egL" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ldo-q4-VKI"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JuW-Gg-HwE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="606" y="33"/>
+            <point key="canvasLocation" x="1695" y="48"/>
         </scene>
     </scenes>
     <resources>

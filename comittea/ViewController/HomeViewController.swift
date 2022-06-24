@@ -46,8 +46,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "gotoStoryIntro" {
-            let nav = segue.destination as? UINavigationController
-            let destinationVC = nav?.topViewController as? T10_35_Story_Intro
+            let destinationVC = segue.destination as? T10_35_Story_Intro
             destinationVC?.storyTitle = self.selectedStoryTitle
         }
     }

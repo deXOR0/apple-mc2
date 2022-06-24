@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kbq-7X-NNf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -16,7 +16,7 @@
         <!--Story Intro-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="T10_35_Story_Intro" customModule="comittea" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StoryIntroID" id="Y6W-OH-hqX" customClass="T10_35_Story_Intro" customModule="comittea" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,15 +28,15 @@
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XB1-d4-i2o">
-                                <rect key="frame" x="0.0" y="368" width="390" height="476"/>
+                                <rect key="frame" x="0.0" y="358" width="390" height="486"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Y6W-OH-hqX" id="PxJ-ca-McM"/>
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="tGF-Yt-FVo"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0BM-eW-gho">
-                                <rect key="frame" x="16" y="266" width="358" height="58"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0BM-eW-gho">
+                                <rect key="frame" x="16" y="280" width="358" height="44"/>
                                 <string key="text">What a boring weekend Benny is having right now. 
 Just sitting and doing nothing. Suddenly it hits him. 
 He could go to the movies with his friends.</string>
@@ -46,8 +46,8 @@ He could go to the movies with his friends.</string>
                                 <color key="shadowColor" white="0.0" alpha="0.17071088579999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="0.0" height="2"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Movie Night" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFk-DL-GZm">
-                                <rect key="frame" x="37" y="233" width="316" height="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Night" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFk-DL-GZm">
+                                <rect key="frame" x="141.33333333333334" y="247" width="107.66666666666666" height="25"/>
                                 <fontDescription key="fontDescription" name="MontserratRoman-SemiBold" family="Montserrat" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -60,28 +60,31 @@ He could go to the movies with his friends.</string>
                         <constraints>
                             <constraint firstItem="tnh-zK-S5z" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="0EU-KD-SIh"/>
                             <constraint firstAttribute="trailing" secondItem="XB1-d4-i2o" secondAttribute="trailing" id="69a-yL-5fk"/>
-                            <constraint firstItem="0BM-eW-gho" firstAttribute="trailing" secondItem="tnh-zK-S5z" secondAttribute="trailing" constant="-30" id="6Pk-nQ-5AD"/>
-                            <constraint firstItem="0BM-eW-gho" firstAttribute="bottom" secondItem="tnh-zK-S5z" secondAttribute="bottom" constant="-15" id="Kmf-rR-MiN"/>
+                            <constraint firstItem="0BM-eW-gho" firstAttribute="trailing" secondItem="tnh-zK-S5z" secondAttribute="trailing" constant="-16" id="6Pk-nQ-5AD"/>
+                            <constraint firstItem="0BM-eW-gho" firstAttribute="bottom" secondItem="tnh-zK-S5z" secondAttribute="bottom" constant="-14" id="Kmf-rR-MiN"/>
                             <constraint firstItem="tnh-zK-S5z" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Nis-aC-vuu"/>
                             <constraint firstItem="XB1-d4-i2o" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="V7a-cb-S8a"/>
-                            <constraint firstItem="0BM-eW-gho" firstAttribute="leading" secondItem="tnh-zK-S5z" secondAttribute="leading" constant="30" id="VAO-ln-sz3"/>
+                            <constraint firstItem="0BM-eW-gho" firstAttribute="leading" secondItem="tnh-zK-S5z" secondAttribute="leading" constant="16" id="VAO-ln-sz3"/>
                             <constraint firstItem="XB1-d4-i2o" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="eSF-0R-bUs"/>
                             <constraint firstItem="tnh-zK-S5z" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="jH3-OP-8R3"/>
                             <constraint firstAttribute="bottom" secondItem="XB1-d4-i2o" secondAttribute="bottom" id="np5-Ic-8MZ"/>
-                            <constraint firstItem="tFk-DL-GZm" firstAttribute="bottom" secondItem="0BM-eW-gho" secondAttribute="top" constant="-7" id="oRh-4j-qie"/>
+                            <constraint firstItem="tFk-DL-GZm" firstAttribute="bottom" secondItem="0BM-eW-gho" secondAttribute="top" constant="-8" id="oRh-4j-qie"/>
                             <constraint firstItem="0BM-eW-gho" firstAttribute="centerX" secondItem="tnh-zK-S5z" secondAttribute="centerX" id="sMb-I9-KtK"/>
                             <constraint firstItem="tFk-DL-GZm" firstAttribute="centerX" secondItem="tnh-zK-S5z" secondAttribute="centerX" id="xht-ms-8Si"/>
-                            <constraint firstItem="XB1-d4-i2o" firstAttribute="top" secondItem="tnh-zK-S5z" secondAttribute="bottom" constant="30" id="y5g-WE-7qN"/>
+                            <constraint firstItem="XB1-d4-i2o" firstAttribute="top" secondItem="tnh-zK-S5z" secondAttribute="bottom" constant="20" id="y5g-WE-7qN"/>
                             <constraint firstItem="tnh-zK-S5z" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="yRe-fP-z0k"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="1JP-HT-tux"/>
+                    <navigationItem key="navigationItem" id="1JP-HT-tux">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="3cm-xh-FEs"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="ChapTableView" destination="XB1-d4-i2o" id="3We-ex-KC1"/>
                         <outlet property="Story_Thumbnail" destination="tnh-zK-S5z" id="8Iw-3W-r9r"/>
                         <outlet property="storyIntroLabel" destination="0BM-eW-gho" id="7ca-NM-v4r"/>
                         <outlet property="storyTitleLabel" destination="tFk-DL-GZm" id="AJI-YS-Yhg"/>
-                        <segue destination="JpI-LC-Nns" kind="presentation" identifier="gotoMessage" modalPresentationStyle="fullScreen" id="B8q-35-tk6"/>
+                        <segue destination="XGq-sR-R5t" kind="show" identifier="gotoMessage" id="yjJ-f4-Zag"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -89,30 +92,14 @@ He could go to the movies with his friends.</string>
             <point key="canvasLocation" x="1041.5384615384614" y="109.47867298578198"/>
         </scene>
         <!--Messaging-->
-        <scene sceneID="TQd-II-chd">
+        <scene sceneID="NpP-0k-92u">
             <objects>
-                <viewControllerPlaceholder storyboardName="Messaging" id="JpI-LC-Nns" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eXl-7D-HML" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Messaging" id="XGq-sR-R5t" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="pGH-HT-gjS"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qtp-bK-66G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1581" y="99"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="pwz-ic-rXf">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Kbq-7X-NNf" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6WZ-0R-r1O">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="Jga-c8-8Sh"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="axd-Gb-ykj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="167" y="110"/>
+            <point key="canvasLocation" x="1701" y="109"/>
         </scene>
     </scenes>
     <resources>

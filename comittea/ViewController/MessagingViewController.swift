@@ -13,6 +13,9 @@ import UIKit
 // TODO: handle ActivityMessage
 class MessagingViewController: UIViewController {
 
+    @IBAction func skipBtn(_ sender: Any) {
+        performSegue(withIdentifier: "gotoIntermezzo", sender: self)
+    }
     var storyTitle: String = ""
     var chapter: Chapter = Chapter("", "", [Message]())
     var messages: [Message] = [

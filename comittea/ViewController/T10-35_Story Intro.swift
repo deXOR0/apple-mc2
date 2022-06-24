@@ -17,7 +17,6 @@ class T10_35_Story_Intro: UIViewController {
     @IBOutlet weak var storyIntroLabel: UILabel!
     @IBOutlet weak var storyTitleLabel: UILabel!
     @IBOutlet weak var Story_Thumbnail: UIImageView!
-    
     @IBOutlet weak var ChapTableView: UITableView!
     
     override func viewDidLoad() {
@@ -54,6 +53,9 @@ class T10_35_Story_Intro: UIViewController {
         }
     }
     
+    @IBAction func unwindtoHome( _ seg: UIStoryboardSegue) {
+    }
+    
 }
 
 
@@ -85,7 +87,7 @@ extension T10_35_Story_Intro: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let chapterProgress: User.State = self.user.progress[self.storyTitle]![self.story.chapters[indexPath.row].title]!
-        if chapterProgress != User.State.locked {
+            if chapterProgress != User.State.locked {
             self.selectedChapter = self.story.chapters[indexPath.row]
             performSegue(withIdentifier: "gotoMessage", sender: self)
         }
