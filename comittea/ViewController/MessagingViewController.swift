@@ -60,6 +60,7 @@ class MessagingViewController: UIViewController {
         if segue.identifier == "gotoIntermezzo" {
             let destinationVC = segue.destination as? T10_36_Story_Intermezzo
             destinationVC?.chapter = chapter
+            destinationVC?.storyTitle = storyTitle
         }
     }
 

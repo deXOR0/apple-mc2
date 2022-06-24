@@ -10,6 +10,7 @@ import UIKit
 class T10_36_Story_Intermezzo: UIViewController {
     
     var chapter: Chapter = Chapter("", "", [Message]())
+    var storyTitle = ""
     
     @IBOutlet weak var Intermezzo_Thumbnail: UIImageView!
     @IBOutlet weak var Btn_NextChapter: UIButton! {
