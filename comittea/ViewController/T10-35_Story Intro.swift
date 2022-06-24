@@ -22,15 +22,16 @@ class T10_35_Story_Intro: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        user.loadSavedUserData()
+        loadStoryData()
+        
         //        Dummy Data
         user.name = "Awesa"
         user.progress["The Secretary"]!["Find Documents"] = User.State.complete
+        user.progress["The Secretary"]!["Must Go Faster!"] = User.State.unlocked
         user.progress["Movie Night"]!["Planning Ahead"] = User.State.complete
         user.progress["Movie Night"]!["Buying Tickets"] = User.State.complete
         //        End of Dummy Data
-        
-        user.loadSavedUserData()
-        loadStoryData()
         
         Story_Thumbnail.image = UIImage(named: self.story.background)
         storyTitleLabel.text = self.story.title
@@ -72,7 +73,7 @@ extension T10_35_Story_Intro: UITableViewDelegate, UITableViewDataSource {
             if chapterProgress == User.State.unlocked {
                 cell.Chap_Thumbnail.image = UIImage(named: self.story.chapters[indexPath.row].logo)
             } else if chapterProgress == User.State.locked {
-                cell.Chap_Thumbnail.image = grayscale(image: UIImage(named: self.story.chapters[indexPath.row].logo)!)
+                cell.Chap_Thumbnail.image = UIImage(named: "\(self.story.chapters[indexPath.row].logo)_Locked")
             } else {
                 cell.Chap_Thumbnail.image = UIImage(named: "\(self.story.chapters[indexPath.row].logo)_Done")
             }
@@ -99,19 +100,6 @@ extension T10_35_Story_Intro: UITableViewDelegate, UITableViewDataSource {
                                   bundle: nil)
         self.ChapTableView.register(textFieldCell,
                                 forCellReuseIdentifier: "ChapterCellID")
-    }
-    
-    func grayscale(image: UIImage) -> UIImage? {
-        let context = CIContext(options: nil)
-        if let filter = CIFilter(name: "CIPhotoEffectNoir") {
-            filter.setValue(CIImage(image: image), forKey: kCIInputImageKey)
-            if let output = filter.outputImage {
-                if let cgImage = context.createCGImage(output, from: output.extent) {
-                    return UIImage(cgImage: cgImage)
-                }
-            }
-        }
-        return nil
     }
     
 }
