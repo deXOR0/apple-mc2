@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let user = User()
         if user.loadSavedUserData() {
             let storyboard = UIStoryboard(name: "HomeStoryboard", bundle: nil)
-            let HomeViewController = storyboard.instantiateViewController(withIdentifier: "HomeStoryID")
+            let HomeViewController = storyboard.instantiateViewController(withIdentifier: "NavigationControllerID") as! UINavigationController
             self.window?.rootViewController = HomeViewController
             self.window?.makeKeyAndVisible()
         }else{
