@@ -85,7 +85,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RAf-PG-qPe">
-                        <barButtonItem key="leftBarButtonItem" title="Home" id="I12-K7-paB">
+                        <barButtonItem key="leftBarButtonItem" title="Chapters" id="I12-K7-paB">
                             <connections>
                                 <action selector="gotoHomeBtn:" destination="Y6W-OH-hqX" id="R8d-ff-N5k"/>
                             </connections>
