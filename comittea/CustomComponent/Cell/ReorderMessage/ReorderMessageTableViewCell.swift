@@ -48,7 +48,7 @@ class ReorderMessageTableViewCell: UITableViewCell, ActivityMessageCellConfigura
         state = message.selectedAnswer == nil ? .ongoing : .done
         checkSingleAnswer = message.checkSingleAnswer
         
-        messageOptionsTable.reloadData()
+        reloadOptionsTable()
         
         // if activity has selectedAnswer, then finish activity immediately
         // with no callback
@@ -68,7 +68,7 @@ class ReorderMessageTableViewCell: UITableViewCell, ActivityMessageCellConfigura
         state = .done
         
         // show correct and incorrect answers in options table
-        messageOptionsTable.reloadData()
+        reloadOptionsTable()
         
         // run callback
         didActivityFinishedCallback?(answer)
@@ -80,6 +80,12 @@ class ReorderMessageTableViewCell: UITableViewCell, ActivityMessageCellConfigura
     
     override func prepareForReuse() {
         messageOptionsStack.removeAllArrangedSubviews()
+    }
+    
+    func reloadOptionsTable() {
+        DispatchQueue.main.async {
+            self.messageOptionsTable.reloadData()
+        }
     }
 }
 

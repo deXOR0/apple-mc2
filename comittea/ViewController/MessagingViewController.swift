@@ -91,8 +91,10 @@ class MessagingViewController: UIViewController {
         
         visibleMessages += 1
         
-        messagingTableView.insertRows(at: [lastIndex], with: .fade)
-        messagingTableView.scrollToRow(at: lastIndex, at: .bottom, animated: true)
+        DispatchQueue.main.async {
+            self.messagingTableView.insertRows(at: [lastIndex], with: .fade)
+            self.messagingTableView.scrollToRow(at: lastIndex, at: .bottom, animated: true)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
