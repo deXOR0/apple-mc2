@@ -12,7 +12,7 @@ class T10_35_Story_Intro: UIViewController {
     var storyTitle: String = ""
     var story: Story = Story("", "", "", "", [Chapter]())
     var user: User = User()
-    var selectedChapter: Chapter = Chapter("", "", [Message]())
+    var selectedChapter: Chapter = Chapter("", "","", [Message]())
     
     @IBOutlet weak var storyIntroLabel: UILabel!
     @IBOutlet weak var storyTitleLabel: UILabel!
@@ -22,16 +22,7 @@ class T10_35_Story_Intro: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        user.loadSavedUserData()
         loadStoryData()
-        
-        //        Dummy Data
-        user.name = "Awesa"
-        user.progress["The Secretary"]!["Find Documents"] = User.State.complete
-        user.progress["The Secretary"]!["Must Go Faster!"] = User.State.unlocked
-        user.progress["Movie Night"]!["Planning Ahead"] = User.State.complete
-        user.progress["Movie Night"]!["Buying Tickets"] = User.State.complete
-        //        End of Dummy Data
         
         Story_Thumbnail.image = UIImage(named: self.story.background)
         storyTitleLabel.text = self.story.title
@@ -40,6 +31,11 @@ class T10_35_Story_Intro: UIViewController {
         self.ChapTableView.dataSource = self
         self.ChapTableView.delegate = self
         self.registerTableViewCells()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.user.loadSavedUserData()
+        self.ChapTableView.reloadData()
     }
     
     func loadStoryData() {

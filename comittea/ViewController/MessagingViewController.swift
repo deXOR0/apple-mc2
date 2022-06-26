@@ -17,7 +17,7 @@ class MessagingViewController: UIViewController {
         performSegue(withIdentifier: "gotoIntermezzo", sender: self)
     }
     var storyTitle: String = ""
-    var chapter: Chapter = Chapter("", "", [Message]())
+    var chapter: Chapter = Chapter("", "","", [Message]())
     var messages: [Message] = [
         NarrationMessage("What a boring weekend I am having right now. Just sitting and doing nothing. Suddenly it hits me, I could go to the movies with my friends. I ask Cody to help me plan my movie night."),
         CompyConversationMessage("You’re going to the movies?"),
@@ -56,6 +56,20 @@ class MessagingViewController: UIViewController {
             
             messagingTableView.insertRows(at: [lastIndex], with: .fade)
             messagingTableView.scrollToRow(at: lastIndex, at: .bottom, animated: true)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "gotoIntermezzo" {
+            let destinationVC = segue.destination as? T10_36_Story_Intermezzo
+            destinationVC?.chapter = chapter
+            destinationVC?.storyTitle = storyTitle
+        }
+    }
+    
+    @IBAction func unwindtoMessaging( _ seg: UIStoryboardSegue) {
+        if let sourceViewController = seg.source as? T10_36_Story_Intermezzo {
+            self.chapter = sourceViewController.nextChapter
         }
     }
 
