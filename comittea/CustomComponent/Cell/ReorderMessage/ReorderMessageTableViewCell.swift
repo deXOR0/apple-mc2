@@ -44,22 +44,21 @@ class ReorderMessageTableViewCell: UITableViewCell, ActivityMessageCellConfigura
     }
     
     func configure(with message: ReorderMessage, didActivityFinishedCallback: @escaping ([String]) -> Void) {
+        state = .ongoing
         messageLabel.text = message.prompt
-        state = message.selectedAnswer == nil ? .ongoing : .done
+        options = message.options
         checkSingleAnswer = message.checkSingleAnswer
+        self.didActivityFinishedCallback = didActivityFinishedCallback
         
         reloadOptionsTable()
         
         // if activity has selectedAnswer, then finish activity immediately
         // with no callback
         // also, set options as previous order
-        if let prevSelectedAnswer = message.selectedAnswer {
-            options = prevSelectedAnswer
+        if let prevOrder = message.selectedAnswer {
+            options = prevOrder
             self.didActivityFinishedCallback = nil
-            finishActivity(withAnswer: prevSelectedAnswer)
-        } else {
-            options = message.options
-            self.didActivityFinishedCallback = didActivityFinishedCallback
+            finishActivity(withAnswer: prevOrder)
         }
     }
     

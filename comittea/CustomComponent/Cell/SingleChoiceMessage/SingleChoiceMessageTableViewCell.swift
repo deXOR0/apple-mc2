@@ -16,7 +16,7 @@ class SingleChoiceMessageTableViewCell: UITableViewCell, ActivityMessageCellConf
     @IBOutlet weak var submitButton: UIButton!
     
     var didActivityFinishedCallback: ((String) -> Void)?
-    var checkAnswer: ((String) -> Bool)?
+    var checkSingleAnswer: ((String) -> Bool)?
     var selectedAnswer: String?
     var state: ActivityMessageState = .ongoing {
         didSet {
@@ -38,23 +38,23 @@ class SingleChoiceMessageTableViewCell: UITableViewCell, ActivityMessageCellConf
     }
     
     func configure(with message: SingleChoiceMessage, didActivityFinishedCallback: @escaping (String) -> Void) {
+        state = .ongoing
         messageLabel.text = message.prompt
         options = message.options
-        checkAnswer = message.checkAnswer
-        state = message.selectedAnswer == nil ? .ongoing : .done
+        checkSingleAnswer = message.checkAnswer
+        self.didActivityFinishedCallback = didActivityFinishedCallback
         
         // if activity has selectedAnswer, then finish activity immediately
         // with no callback
         if let prevSelectedAnswer = message.selectedAnswer {
+            selectedAnswer = prevSelectedAnswer
             self.didActivityFinishedCallback = nil
             finishActivity(withAnswer: prevSelectedAnswer)
-        } else {
-            self.didActivityFinishedCallback = didActivityFinishedCallback
         }
     }
     
     func finishActivity(withAnswer answer: String) {
-        guard let isCorrect = checkAnswer?(answer) else { return }
+        guard let isCorrect = checkSingleAnswer?(answer) else { return }
         
         // set state as ended
         state = .done

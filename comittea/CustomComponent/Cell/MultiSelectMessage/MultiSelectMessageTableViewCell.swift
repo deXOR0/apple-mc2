@@ -38,21 +38,20 @@ class MultiSelectMessageTableViewCell: UITableViewCell, ActivityMessageCellConfi
     }
     
     func configure(with message: MultiSelectMessage, didActivityFinishedCallback: @escaping ([String]) -> Void) {
+        state = .ongoing
+        selectedAnswers = []
         messageLabel.text = message.prompt
         options = message.options
-        state = message.selectedAnswer == nil ? .ongoing : .done
         checkSingleAnswer = message.checkSingleAnswer
+        self.didActivityFinishedCallback = didActivityFinishedCallback
         
         // if activity already has selectedAnswer, then finish activity immediately
         // with no callback
         // also, set selectedAnswers to previous if there are some
-        if let prevSelectedAnswer = message.selectedAnswer {
-            selectedAnswers = prevSelectedAnswer
+        if let prevSelectedAnswers = message.selectedAnswer {
+            selectedAnswers = prevSelectedAnswers
             self.didActivityFinishedCallback = nil
-            finishActivity(withAnswer: prevSelectedAnswer)
-        } else {
-            selectedAnswers = []
-            self.didActivityFinishedCallback = didActivityFinishedCallback
+            finishActivity(withAnswer: prevSelectedAnswers)
         }
     }
     
