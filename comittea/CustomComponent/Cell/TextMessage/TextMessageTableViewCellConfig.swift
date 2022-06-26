@@ -9,63 +9,75 @@ import Foundation
 import UIKit
 
 protocol TextMessageTableViewCellConfig {
-    func configureCell(_ cell: TextMessageTableViewCell)
-    func configureLayout(_ cell: TextMessageTableViewCell)
+    func setStyle(forCell cell: TextMessageTableViewCell)
+    func setMessageBackgroundConstraints(forCell cell: TextMessageTableViewCell)
 }
 
 class CompyMessageConfig: TextMessageTableViewCellConfig {
     
-    func configureCell(_ cell: TextMessageTableViewCell) {
+    func setStyle(forCell cell: TextMessageTableViewCell) { 
         cell.messageLabel.textColor = .white
-        cell.messageLabel.font = .medium12
+        cell.messageLabel.font = .medium15
         cell.messageBackground.backgroundColor = .myBlue
         cell.messageBackground.layer.cornerRadius = 15
     }
     
-    func configureLayout(_ cell: TextMessageTableViewCell) {
-        NSLayoutConstraint.activate([
+    func setMessageBackgroundConstraints(forCell cell: TextMessageTableViewCell) {
+        cell.messageBackgroundConstraints = [
+            cell.messageBackground.topAnchor.constraint(equalTo: cell.contentView.topAnchor),
             cell.messageBackground.bottomAnchor.constraint(equalTo: cell.contentView.bottomAnchor, constant: -5),
             cell.messageBackground.leadingAnchor.constraint(equalTo: cell.contentView.leadingAnchor),
             cell.messageBackground.trailingAnchor.constraint(lessThanOrEqualTo: cell.contentView.trailingAnchor, constant: 115),
-        ])
+        ]
+        
+        NSLayoutConstraint.activate(cell.messageBackgroundConstraints)
+        cell.layoutIfNeeded()
     }
     
 }
 
 class NarrationMessageConfig: TextMessageTableViewCellConfig {
     
-    func configureCell(_ cell: TextMessageTableViewCell) {
+    func setStyle(forCell cell: TextMessageTableViewCell) {
         cell.messageLabel.textColor = .black
-        cell.messageLabel.font = .medium10
+        cell.messageLabel.font = .medium14
         cell.messageBackground.backgroundColor = .myLightOrange
         cell.messageBackground.layer.cornerRadius = 5
     }
     
-    func configureLayout(_ cell: TextMessageTableViewCell) {
-        NSLayoutConstraint.activate([
+    func setMessageBackgroundConstraints(forCell cell: TextMessageTableViewCell) {
+        cell.messageBackgroundConstraints = [
+            cell.messageBackground.topAnchor.constraint(equalTo: cell.contentView.topAnchor),
             cell.messageBackground.bottomAnchor.constraint(equalTo: cell.contentView.bottomAnchor, constant: -8),
             cell.messageBackground.leadingAnchor.constraint(equalTo: cell.contentView.leadingAnchor),
             cell.messageBackground.trailingAnchor.constraint(equalTo: cell.contentView.trailingAnchor),
-        ])
+        ]
+        
+        NSLayoutConstraint.activate(cell.messageBackgroundConstraints)
+        cell.layoutIfNeeded()
     }
     
 }
 
 class UserMessageConfig: TextMessageTableViewCellConfig {
     
-    func configureCell(_ cell: TextMessageTableViewCell) {
+    func setStyle(forCell cell: TextMessageTableViewCell) {
         cell.messageLabel.textColor = .black
-        cell.messageLabel.font = .medium12
+        cell.messageLabel.font = .medium15
         cell.messageBackground.backgroundColor = .myLightGray
         cell.messageBackground.layer.cornerRadius = 15
     }
     
-    func configureLayout(_ cell: TextMessageTableViewCell) {
-        NSLayoutConstraint.activate([
+    func setMessageBackgroundConstraints(forCell cell: TextMessageTableViewCell) {
+        cell.messageBackgroundConstraints = [
+            cell.messageBackground.topAnchor.constraint(equalTo: cell.contentView.topAnchor),
             cell.messageBackground.bottomAnchor.constraint(equalTo: cell.contentView.bottomAnchor, constant: -5),
             cell.messageBackground.leadingAnchor.constraint(greaterThanOrEqualTo: cell.contentView.leadingAnchor, constant: 115),
             cell.messageBackground.trailingAnchor.constraint(equalTo: cell.contentView.trailingAnchor),
-        ])
+        ]
+        
+        NSLayoutConstraint.activate(cell.messageBackgroundConstraints)
+        cell.layoutIfNeeded()
     }
     
 }
