@@ -1,51 +1,58 @@
 //
-//  SingleChoiceOptionViewController.swift
+//  MultiSelectMessageOptionView.swift
 //  comittea
 //
-//  Created by Mohammad Alfarisi on 21/06/22.
+//  Created by Mohammad Alfarisi on 26/06/22.
 //
 
 import UIKit
 
-class SingleChoiceMessageOptionView: UIView, XibView {
+class MultiSelectMessageOptionView: UIView, XibView {
     
+    @IBOutlet weak var optionCheckbox: UIImageView!
     @IBOutlet weak var optionLabel: UILabel!
     
-    var onOptionTapped: ((SingleChoiceMessageOptionView, String) -> Void)?
+    var onOptionTapped: ((MultiSelectMessageOptionView, String) -> Void)?
+    var option: String? {
+        didSet {
+            option.map { optionLabel.text = $0 }
+        }
+    }
     
-    static var nibName: String = "SingleChoiceMessageOptionView"
+    static var nibName: String = "MultiSelectMessageOptionView"
     
     static func map(
         from options: [String],
-        onOptionTapped: @escaping (SingleChoiceMessageOptionView, String) -> Void) -> [UIView]
+        onOptionTapped: @escaping (MultiSelectMessageOptionView, String) -> Void) -> [UIView]
     {
         options.map { option in
-            guard let view = SingleChoiceMessageOptionView.fromXib() else { return UIView() }
+            guard let view = MultiSelectMessageOptionView.fromXib() else { return UIView() }
             
-            view.optionLabel.text = option
+            view.option = option
             view.onOptionTapped = onOptionTapped
             
             return view
         }
     }
-
+    
     override func awakeFromNib() {
         self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onTap)))
     }
     
     @objc func onTap() {
-        guard let option = optionLabel.text else { return }
-        onOptionTapped?(self, option)
+        option.map { onOptionTapped?(self, $0) }
     }
     
     func setSelected() {
         self.layer.borderColor = UIColor.myBlue.cgColor
         self.layer.borderWidth = 2
+        optionCheckbox.image = .init(systemName: "checkmark.square.fill")
     }
     
     func setUnselect() {
         self.layer.borderColor = nil
         self.layer.borderWidth = 0
+        optionCheckbox.image = .init(systemName: "checkmark.square")
     }
     
     func setCorrect() {
@@ -57,5 +64,4 @@ class SingleChoiceMessageOptionView: UIView, XibView {
         self.layer.borderColor = UIColor.myRed.cgColor
         self.layer.borderWidth = 2
     }
-
 }
