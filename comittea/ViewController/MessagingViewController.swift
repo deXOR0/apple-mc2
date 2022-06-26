@@ -16,6 +16,7 @@ class MessagingViewController: UIViewController {
     @IBAction func skipBtn(_ sender: Any) {
         performSegue(withIdentifier: "gotoIntermezzo", sender: self)
     }
+    
     var storyTitle: String = ""
     var chapter: Chapter = Chapter("", "","", [Message]())
     var messages: [Message] = [
@@ -66,6 +67,7 @@ class MessagingViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.title = storyTitle
         
         messagingTableView.dataSource = self
         messagingTableView.delegate = self
