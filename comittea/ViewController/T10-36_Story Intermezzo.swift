@@ -44,7 +44,7 @@ class T10_36_Story_Intermezzo: UIViewController {
         super.viewDidLoad()
         saveProgress()
         
-        Intermezzo_Thumbnail.image = UIImage(named: "Intermezzo_Calender")
+        Intermezzo_Thumbnail.image = UIImage(named: self.chapter.logo)
         Intermezzo_Message.text = "Congratulations, you have completed the \(chapter.title) stage"
         
     }

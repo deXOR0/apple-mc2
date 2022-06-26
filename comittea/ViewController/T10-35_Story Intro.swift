@@ -22,7 +22,6 @@ class T10_35_Story_Intro: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        user.loadSavedUserData()
         loadStoryData()
         
         Story_Thumbnail.image = UIImage(named: self.story.background)
