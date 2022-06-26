@@ -17,6 +17,8 @@ struct SingleChoiceMessage: ActivityMessage {
     
     var answer: String
     
+    var selectedAnswer: String?
+    
     var trueResponse: CompyTrueMessage
     
     var falseResponse: CompyFalseMessage
