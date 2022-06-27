@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 
 class OnboardingViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
@@ -29,8 +30,8 @@ class OnboardingViewController: UIViewController, UICollectionViewDelegate, UICo
     override func viewDidLoad() {
         super.viewDidLoad()
         slides = [
-            OnboardingSlide(title: "Hello", description: "I’m Compy! I will help you to improve your logical thinking, and makes you understand the basic concept of programming easier. ", image: "artboard"),
-            OnboardingSlide(title: "Understand With Story", description: "With relatable slice of life story, we will learn computational thinking in an interactive way and you also contributed to the story!", image: "artboard2")
+            OnboardingSlide(title: "Hello", description: "I’m Compy! I will help you to improve your logical thinking, and makes you understand the basic concept of programming easier. ", animationName: "Compy"),
+            OnboardingSlide(title: "Understand With Story", description: "With relatable slice of life story, we will learn computational thinking in an interactive way and you also contributed to the story!", animationName:"Chat")
         ]
         pageControl.numberOfPages = slides.count
     }
