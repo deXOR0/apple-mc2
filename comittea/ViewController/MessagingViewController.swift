@@ -67,7 +67,7 @@ class MessagingViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.title = storyTitle
+        self.title = chapter.title
         
         messagingTableView.dataSource = self
         messagingTableView.delegate = self
