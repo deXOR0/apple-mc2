@@ -44,14 +44,12 @@ struct MovieNight: Storiable {
             CompyTrueMessage("Great job! You are going to have a lot of fun in this movie night."),
             CompyFalseMessage("""
             That's not it. Well, the most logical way of planning the movie is:
-
             - Buying tickets online
             - Choosing movie
             - Watch the movie
             - Meet up with friends
             - Taking seats at the cinema
             - Gather Friends
-
             When breaking down the tasks, consider the context and objective that we wanted to do.
             """),
             false
@@ -104,7 +102,7 @@ struct MovieNight: Storiable {
             CompyConversationMessage("Let's say that you, User, are being asked to prepare a sandwich for school lunch."),
             CompyConversationMessage("What are the processes needed to be included so that you can make a sandwich?"),
             MultiSelectMessage(
-                "Select the tasks that needs to be done from the objective: “Having a movie night with friends at the cinema”",
+                "Select the tasks that needs to be done from the objective: “Making Sandwich“",
                 [
                     "Pack sandwich",
                     "Stack ingredients",
@@ -197,9 +195,9 @@ struct MovieNight: Storiable {
                 "What method will you use in choosing one of the movies?",
                 [
                     "Look at each movie one by one, examining its poster, genre, synopsis, and movie length, and keep on looking until one fits our category.",
-                    "Only look at the genre level of every movie, and therefore eliminating movies without action in it's genre",
+                    "Only look at the genre part of the movie list, and therefore eliminating movies without action in it's genre.",
                 ],
-                "Look at each movie one by one, examining its poster, genre, synopsis, and movie length, and keep on looking until one fits our category.",
+                "Only look at the genre part of the movie list, and therefore eliminating movies without action in it's genre.",
                 CompyTrueMessage("Yes, that's the right way to do it. After all we wouldn't want to waste our time looking at movies that doesn't match our category."),
                 CompyFalseMessage("No, that's not the right way to do it. We have established that our group only want to watch action movies, so we can set aside movies with other genre and only focus on action movies."),
                 false
@@ -223,9 +221,9 @@ struct MovieNight: Storiable {
             CompyConversationMessage("Okay then, it's settled. We can now continue with the next task."),
             CompyConversationMessage("But before that, let's discuss what we did so far."),
             CompyConversationMessage("We have managed to choose movie genres and which movie our group will be watching."),
-            CompyConversationMessage("Did you notice what we just did? We have learned what programmers call pattern recognition."),
+            CompyConversationMessage("Did you notice what we just did? We have learned what programmers called pattern recognition."),
             CompyConversationMessage("For example, when deciding which genre to watch, we notice some patterns that relates to action movie, which is guns, explosives, and fights. This is what we're used to seeing when watching action movies."),
-            CompyConversationMessage("Another example is when we buy the tickets in bulk rather than let everyone buy their own tickets. We recognized that there is a repeating pattern to buy one ticket for each person in the group. Not only is this less time consuming, it also means that they can seat together without worrying if any of the seat might be taken by someone else."),
+            CompyConversationMessage("Another example is when we buy the tickets in bulk rather than let everyone buy their own tickets. We recognized that there is a repeating pattern to buy one ticket for each person in the group. Not only is this less time consuming, it also meant that they can seat together without worrying if any of the seat might be taken by someone else."),
             CompyConversationMessage("Recognizing patterns helps us to make a more efficient program when coding by making one method for repeated actions which we can keep on using . This concept is highly educated in basic Object Oriented Programming."),
             CompyConversationMessage("Another technique we have just learned is called abstraction."),
             CompyConversationMessage("This is when we focus only on the important things, and set aside other information that we don't need."),
@@ -237,7 +235,7 @@ struct MovieNight: Storiable {
             CompyConversationMessage("Then, you are giving the first person that comes to you a tea, and the next one coffee, the third person is being given tea, and the fourth person a coffee."),
             CompyConversationMessage("This process keeps on repeating as you distribute all the beverages."),
             CompyConversationMessage("Turns out, the 56th person you were giving drink to, was actually the governor himself."),
-            CompyConversationMessage("The head of the waiters asked you what type of drink did you gave him, this is to ensure they can give the governor the appropriate snack that compliments the drink."),
+            CompyConversationMessage("The headwaiter asked you what type of drink did you gave him, this is to ensure they can give the governor the appropriate snack that compliments the drink."),
             CompyConversationMessage("How would you know what kind of drink did you gave the governor?"),
             SingleChoiceMessage(
                 "Choose the most logical answer:",
@@ -253,18 +251,18 @@ struct MovieNight: Storiable {
             ),
             CompyConversationMessage("Since you knew the governor is the 56th person that took a drink from you, you can calculate what drink you did gave to the governor."),
             CompyConversationMessage("Every even person would certainly get Coffee, and since the pattern repeats itself you can be sure that the governor would have gotten a coffee."),
-            CompyConversationMessage("Then, the head of the waiters asked you to bring the appropriate snacks to the governor."),
+            CompyConversationMessage("Then, the headwaiter asked you to bring the appropriate snacks to the governor."),
             CompyConversationMessage("Now you need to look for the governors table."),
-            CompyConversationMessage("Each table have been assigned a card that contains a number and a name that corresponds to the person sitting on the table."),
+            CompyConversationMessage("Each table has been assigned a card that contains a number and a name that corresponds to the person sitting on the table."),
             CompyConversationMessage("What is the fastest way to look for the governor through out the room?"),
             SingleChoiceMessage(
                 "Which of these is the fastest way to find the governor?",
                 [
                     "Ask each of the table who they are",
-                    "Look for the governors number on the table's card",
+                    "Look for the governor's number on each table's card",
                     "Look for the name of the governor on each table"
                 ],
-                "Look for the governors number on the table's card",
+                "Look for the governor's number on each table's card",
                 CompyTrueMessage("Nice work, that would be the fastest way we can go about looking for the Governor."),
                 CompyFalseMessage("That's not the fastest way. Asking each table and looking for the Governor's name will take a very long time to do."),
                 false
@@ -292,7 +290,7 @@ struct MovieNight: Storiable {
                 false
             ),
             UserConversationMessage("I see, well then I will reserve the seats."),
-            CompyConversationMessage("In what way will you seat them User, together or separated?"),
+            CompyConversationMessage("In what way will you seat them %@, together or separated?"),
             SingleChoiceMessage(
                 "How will you seat everyone inside the cinema?",
                 [
@@ -301,7 +299,7 @@ struct MovieNight: Storiable {
                 ],
                 "Seat everyone together so that nobody is left separated.",
                 CompyTrueMessage("Great idea! We certainly wouldn't want anyone to be left separated."),
-                CompyFalseMessage("Some of your friends will be seating by themselves. We certainly wouldn't want anyone to be left separated."),
+                CompyFalseMessage("Some of your friends will be seating by themselves. We wouldn't want anyone to be left out."),
                 false
             ),
             CompyConversationMessage("You can seat them so that everyone is seated next to each other."),
@@ -322,11 +320,11 @@ struct MovieNight: Storiable {
             CompyConversationMessage("When we try to plan on how the seating is going to be, It can also explain a concept in programming which is array."),
             CompyConversationMessage("In an array, a group of items of the same type can be stored inside one Array."),
             CompyConversationMessage("We also need to ‘reserve space' for the array. The amount of space needed depends on how many items we would want to store inside of it."),
-            CompyConversationMessage("The way computer store array in memory is that it needs to store each item adjacent to each other, and each will be given their own address in the memory, similar to how we managed to buy the tickets and each of us get assigned our own seat number for example, C5, B7, and so on."),
+            CompyConversationMessage("The way computer store array in its memory is that it needs to store each item adjacent to each other, and each will be given their own address in the memory, similar to how we managed to buy the tickets and each of us get assigned our own seat number for example, C5, B7, and so on."),
             CompyConversationMessage("In an array, each item will be assigned an index, starting from 0 for the first item, 1 for the next item, and so on."),
             CompyConversationMessage("By doing this, it will be easier for the computer to look for the items as it only needs to know the address of the first item, and when it needs to find the other item, it will only need to add the index of the item itself."),
             CompyConversationMessage("Let's see what other example we can think of to understand more about this concept."),
-            CompyConversationMessage("Right now you're inside your bedroom, trying to clean and tidy things up, until you notice that there were many books of novel series that has been lying on the floor. Each of them were related to each other as."),
+            CompyConversationMessage("Right now you're inside your bedroom, trying to clean and tidy things up, until you notice that there were many books of novel series that has been lying on the floor. Each of them were related to each other."),
             CompyConversationMessage("You have a book shelf with some part of it getting occupied by another book that you own."),
             CompyConversationMessage("Now let's try to tidy the books."),
             SingleChoiceMessage(
@@ -336,11 +334,11 @@ struct MovieNight: Storiable {
                     "Group the novel in the order of the chapter, and place them in a group inside a blank space that will fit them all."
                 ],
                     "Group the novel in the order of the chapter, and place them in a group inside a blank space that will fit them all.",
-                CompyTrueMessage("C: You are absolutely correct. We have to put the books in a group based on the order of the chapter because every chapter is related to one another."),
-                CompyFalseMessage("C: That's not the way to do it. Each novels are related to each other. That is why we need to put the books in a group based on the order of the chapter."),
+                CompyTrueMessage("You are absolutely correct. We have to put the books in a group based on the order of the chapter because every chapter is related to one another."),
+                CompyFalseMessage("That's not the way to do it. Each novels are related to each other. That is why we need to put the books in a group based on the order of the chapter."),
                 false
             ),
-            CompyConversationMessage("We've finished putting the books back in the shelf. Then a few days later, you decided to continue to read the same novel series, this time you would want to read chapter 5."),
+            CompyConversationMessage("We've finished putting the books back in the shelf. Then a few days later, you decided to continue reading the same novel series, this time you would want to read chapter 5."),
             CompyConversationMessage("You know exactly where you last put the first chapter of the novel series."),
             CompyConversationMessage("How will you look for the novel?"),
             SingleChoiceMessage(
@@ -350,8 +348,8 @@ struct MovieNight: Storiable {
                     "Start to look from the top of the book shelf all the way down to the bottom of it until you find the right novel book."
                 ],
                 "Look for the first chapter of the novel series, and then proceed to count up from there in order to find the 5th chapter.",
-                CompyTrueMessage("That's what I'm talking about. Good job on finding the book. Since we put the novel series in group and ordered it based on the chapter days before, we know that it will be located near the first one. From then onward we only need to count up to the 5th chapter."),
-                CompyFalseMessage("That is not the most efficient way of looking for the book. Since we put the novel series in group and ordered it based on the chapter days before, we know that it will be located near the first one. From then onward we only need to count up to the 5th chapter."),
+                CompyTrueMessage("That's what I'm talking about. Good job on finding the book. Since we put the novel series in a group and ordered it based on the chapter days before, we know that it will be located near the first one. From then onward we only need to count up to the 5th chapter."),
+                CompyFalseMessage("That is not the most efficient way of looking for the book. Since we put the novel series in a group and ordered it based on the chapter days before, we know that it will be located near the first one. From then onward we only need to count up to the 5th chapter."),
                 false
             ),
         ])
