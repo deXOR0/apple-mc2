@@ -21,7 +21,7 @@
                                 <rect key="frame" x="20" y="568" width="350" height="242"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="C9i-TE-EbY">
-                                <rect key="frame" x="20" y="215" width="350" height="476"/>
+                                <rect key="frame" x="20" y="225.66666666666666" width="350" height="465.33333333333337"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Fn1-wl-bcr">
                                     <size key="itemSize" width="170" height="215"/>
@@ -90,11 +90,12 @@
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="J5O-2U-kd5"/>
                                 </connections>
                             </collectionView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Start the journey to understand more about computational thinking by choosing one of the story below!" translatesAutoresizingMaskIntoConstraints="NO" id="bab-TT-ZWD">
-                                <rect key="frame" x="20" y="108" width="350" height="77"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bab-TT-ZWD">
+                                <rect key="frame" x="20" y="108" width="350" height="87.666666666666686"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Computational Thinking is a way of us to breaking down a task into simple enough steps that even a computer would understand. Choose one of the story below to begin with!</string>
                                 <color key="textColor" red="0.29645065739999998" green="0.39120422710000002" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmJ-QP-IVM">
