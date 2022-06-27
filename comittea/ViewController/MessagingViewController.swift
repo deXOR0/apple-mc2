@@ -12,21 +12,19 @@ import UIKit
 // TODO: add asset on header
 // TODO: handle repeating message
 class MessagingViewController: UIViewController {
-
-    @IBAction func skipBtn(_ sender: Any) {
-        performSegue(withIdentifier: "gotoIntermezzo", sender: self)
-    }
     
-    var storyTitle: String = ""
-    var chapter: Chapter = Chapter("", "","", [Message]())
-    var messages: [Message] = [Message]()
+    @IBOutlet weak var messagingTableView: UITableView!
+    var initialPopup: UIAlertController!
+    
     var visibleMessages = 0
     
     /// True if user can continue the story by tapping on screen.
     /// Set to false when there is ActivityMessage
     var canContinueStory = true
     
-    @IBOutlet weak var messagingTableView: UITableView!
+    var storyTitle: String = ""
+    var chapter: Chapter = Chapter("", "","", [Message]())
+    var messages: [Message] = [Message]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +32,8 @@ class MessagingViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.title = chapter.title
         self.messages = chapter.messages
+        
+        showInitialPopup()
         
         messagingTableView.dataSource = self
         messagingTableView.delegate = self
@@ -44,12 +44,6 @@ class MessagingViewController: UIViewController {
         messagingTableView.register(UINib(nibName: "MultiSelectMessageTableViewCell", bundle: nil), forCellReuseIdentifier: "MultiSelectMessageTableViewCellID")
         messagingTableView.register(UINib(nibName: "ReorderMessageTableViewCell", bundle: nil), forCellReuseIdentifier: "ReorderMessageTableViewCellID")
         
-    }
-    
-    @objc func onScreenTapped(_ gesture: UITapGestureRecognizer) {
-        guard canContinueStory else { return }
-        
-        showNextMessage()
     }
     
     func showNextMessage() {
@@ -68,6 +62,38 @@ class MessagingViewController: UIViewController {
         }
         
         
+    }
+    
+    func showInitialPopup() {
+        initialPopup = UIAlertController(
+            title: "Tap the screen to continue the story",
+            message: "",
+            preferredStyle: .alert)
+
+        self.present(initialPopup, animated: true) {
+            let gr = UITapGestureRecognizer(target: self, action: #selector(self.dismissInitialPopup))
+            
+            self.initialPopup.view.superview?.subviews.first.map {
+                view in
+                view.isUserInteractionEnabled = true
+                view.addGestureRecognizer(gr)
+            }
+        }
+        
+    }
+    
+    @objc func onScreenTapped(_ sender: UITapGestureRecognizer) {
+        guard canContinueStory else { return }
+        
+        showNextMessage()
+    }
+    
+    @objc func dismissInitialPopup(_ sender: UITapGestureRecognizer){
+        initialPopup.dismiss(animated: true)
+    }
+
+    @IBAction func skipBtn(_ sender: Any) {
+        performSegue(withIdentifier: "gotoIntermezzo", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
