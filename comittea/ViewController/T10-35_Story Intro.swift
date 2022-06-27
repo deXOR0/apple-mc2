@@ -35,7 +35,10 @@ class T10_35_Story_Intro: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.user.loadSavedUserData()
-        self.ChapTableView.reloadData()
+        
+        DispatchQueue.main.async {
+            self.ChapTableView.reloadData()
+        }
     }
     
     func loadStoryData() {

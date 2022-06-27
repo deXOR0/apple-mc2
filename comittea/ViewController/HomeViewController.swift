@@ -18,13 +18,21 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         user.loadSavedUserData()
         
+        stories.removeAll()
         StaticStoriesData.stories.forEach { story in
             stories.append(HomeCollection(title: story.title, image: story.logo, progress: calculateStoryProgress(chapters: user.progress[story.title]!)))
         }
         
         userGreetingLabel.text = "Hey, \(user.name)"
+        
+        DispatchQueue.main.async {
+            self.homeCollView.reloadData()
+        }
     }
     
     func calculateStoryProgress(chapters: [String:User.State]) -> Float {
@@ -34,7 +42,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 chapterDoneCount += 1
             }
         }
-        return  Float(chapterDoneCount) / Float(chapters.count)
+        return Float(chapterDoneCount) / Float(chapters.count)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

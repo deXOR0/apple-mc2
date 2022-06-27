@@ -53,7 +53,9 @@ class T10_36_Story_Intermezzo: UIViewController {
         var user = User()
         user.loadSavedUserData()
         user.progress[self.storyTitle]![self.chapter.title] = User.State.complete
-        user.progress[self.storyTitle]![self.chapter.nextChapterTitle] = User.State.unlocked
+        if self.chapter.nextChapterTitle != "" {
+            user.progress[self.storyTitle]![self.chapter.nextChapterTitle] = User.State.unlocked
+        }
         user.save()
     }
     
