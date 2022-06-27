@@ -19,42 +19,7 @@ class MessagingViewController: UIViewController {
     
     var storyTitle: String = ""
     var chapter: Chapter = Chapter("", "","", [Message]())
-    var messages: [Message] = [
-        NarrationMessage("What a boring weekend I am having right now. Just sitting and doing nothing. Suddenly it hits me, I could go to the movies with my friends. I ask Cody to help me plan my movie night."),
-        CompyConversationMessage("You’re going to the movies?"),
-        UserConversationMessage("Yes I am."),
-        MultiSelectMessage(
-            "What’s the task that need to be done for watching in cinema? ",
-            ["Choosing Movie",
-             "Gather friends",
-             "Buying tickets online",
-             "Meet up with friends",
-             "Watch the movie",
-             "Taking seats at the cinema",
-            ],
-            ["Choosing Movie", "Gather friends"],
-            CompyTrueMessage("Yoi betul"),
-            CompyFalseMessage("Lho")),
-        ReorderMessage(
-            "What’s the task that need to be done for watching in cinema? ",
-            ["Choosing Movie",
-             "Gather friends",
-             "Buying tickets online",
-             "Meet up with friends",
-             "Watch the movie",
-             "Taking seats at the cinema",
-            ],
-            ["Choosing Movie", "Gather friends"],
-            CompyTrueMessage("Yoi betul"),
-            CompyFalseMessage("Lho")),
-        SingleChoiceMessage(
-            "Do you think it is necessary to list and reorder the tasks that we wanted to do?",
-            ["A. Yes it is", "B. I don’t think so"],
-            "A. Yes it is",
-            CompyTrueMessage("Yoi"),
-            CompyFalseMessage("Salah lu cuk")),
-
-    ]
+    var messages: [Message] = [Message]()
     var visibleMessages = 0
     
     /// True if user can continue the story by tapping on screen.
@@ -68,6 +33,7 @@ class MessagingViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.title = chapter.title
+        self.messages = chapter.messages
         
         messagingTableView.dataSource = self
         messagingTableView.delegate = self
@@ -87,16 +53,21 @@ class MessagingViewController: UIViewController {
     }
     
     func showNextMessage() {
-        guard visibleMessages < messages.count else { return }
-        
-        let lastIndex = IndexPath(row: visibleMessages, section: 0)
-        
-        visibleMessages += 1
-        
-        DispatchQueue.main.async {
-            self.messagingTableView.insertRows(at: [lastIndex], with: .fade)
-            self.messagingTableView.scrollToRow(at: lastIndex, at: .bottom, animated: true)
+        if visibleMessages < messages.count {
+            let lastIndex = IndexPath(row: visibleMessages, section: 0)
+                    
+                    visibleMessages += 1
+                    
+                    DispatchQueue.main.async {
+                        self.messagingTableView.insertRows(at: [lastIndex], with: .fade)
+                        self.messagingTableView.scrollToRow(at: lastIndex, at: .bottom, animated: true)
+                    }
         }
+        else {
+            performSegue(withIdentifier: "gotoIntermezzo", sender: self)
+        }
+        
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -151,9 +122,18 @@ extension MessagingViewController: UITableViewDataSource, UITableViewDelegate {
             cell.configure(with: message) { [weak self] selectedAnswer in
                 message.selectedAnswer = selectedAnswer
                 self?.messages[index] = message
-                let nextMessage: TextMessage = message.checkAnswer(selectedAnswer)
-                    ? message.trueResponse
-                    : message.falseResponse
+                var nextMessage: Message
+                if message.checkAnswer(selectedAnswer) {
+                    nextMessage = message.trueResponse
+                }
+                else {
+                    if message.repeating {
+                        nextMessage = SingleChoiceMessage(message.falseResponse.text, message.options, message.answer, message.trueResponse, message.falseResponse, true)
+                    }
+                    else {
+                        nextMessage = message.falseResponse
+                    }
+                }
                 self?.messages.insert(nextMessage, at: index + 1)
                 self?.showNextMessage()
             }
@@ -169,9 +149,18 @@ extension MessagingViewController: UITableViewDataSource, UITableViewDelegate {
             cell.configure(with: message) { [weak self] selectedAnswer in
                 message.selectedAnswer = selectedAnswer
                 self?.messages[index] = message
-                let nextMessage: TextMessage = message.checkAnswer(selectedAnswer)
-                    ? message.trueResponse
-                    : message.falseResponse
+                var nextMessage: Message
+                if message.checkAnswer(selectedAnswer) {
+                    nextMessage = message.trueResponse
+                }
+                else {
+                    if message.repeating {
+                        nextMessage = ReorderMessage(message.falseResponse.text, message.options, message.answer, message.trueResponse, message.falseResponse, true)
+                    }
+                    else {
+                        nextMessage = message.falseResponse
+                    }
+                }
                 self?.messages.insert(nextMessage, at: index + 1)
                 self?.showNextMessage()
             }
@@ -187,9 +176,18 @@ extension MessagingViewController: UITableViewDataSource, UITableViewDelegate {
             cell.configure(with: message) { [weak self] selectedAnswer in
                 message.selectedAnswer = selectedAnswer
                 self?.messages[index] = message
-                let nextMessage: TextMessage = message.checkAnswer(selectedAnswer)
-                    ? message.trueResponse
-                    : message.falseResponse
+                var nextMessage: Message
+                if message.checkAnswer(selectedAnswer) {
+                    nextMessage = message.trueResponse
+                }
+                else {
+                    if message.repeating {
+                        nextMessage = MultiSelectMessage(message.falseResponse.text, message.options, message.answer, message.trueResponse, message.falseResponse, true)
+                    }
+                    else {
+                        nextMessage = message.falseResponse
+                    }
+                }
                 self?.messages.insert(nextMessage, at: index + 1)
                 self?.showNextMessage()
             }
