@@ -35,19 +35,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TtB-aY-tgv">
-                                                    <rect key="frame" x="10" y="329" width="370" height="56"/>
+                                                    <rect key="frame" x="10" y="329" width="370" height="54"/>
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                                                     <color key="textColor" red="0.29645065739999998" green="0.39120422710000002" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <color key="highlightedColor" red="0.29645065739999998" green="0.39120422710000002" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5XX-pI-MZo" customClass="AnimationView" customModule="Lottie">
-                                                    <rect key="frame" x="10" y="30" width="370" height="250"/>
+                                                    <rect key="frame" x="10" y="30" width="370" height="300"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="250" id="ZYi-q8-aNL"/>
+                                                        <constraint firstAttribute="height" constant="300" id="ZYi-q8-aNL"/>
                                                     </constraints>
                                                 </view>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" pagingEnabled="YES" contentInsetAdjustmentBehavior="never" editable="NO" text="lorem" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsp-ys-iue">
-                                                    <rect key="frame" x="10" y="405" width="370" height="80"/>
+                                                    <rect key="frame" x="10" y="403" width="370" height="80"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="80" id="Nl4-Uh-7Jf"/>
@@ -66,8 +66,8 @@
                                                 <constraint firstItem="5XX-pI-MZo" firstAttribute="top" secondItem="6g0-uI-mBl" secondAttribute="top" constant="30" id="TZ2-fQ-Qmj"/>
                                                 <constraint firstAttribute="trailing" secondItem="TtB-aY-tgv" secondAttribute="trailing" constant="10" id="aJJ-R7-gi4"/>
                                                 <constraint firstItem="5XX-pI-MZo" firstAttribute="centerX" secondItem="6g0-uI-mBl" secondAttribute="centerX" id="kO0-AQ-ywQ"/>
-                                                <constraint firstAttribute="bottom" secondItem="bsp-ys-iue" secondAttribute="bottom" constant="8" id="qTZ-Sn-d39"/>
-                                                <constraint firstItem="TtB-aY-tgv" firstAttribute="top" secondItem="5XX-pI-MZo" secondAttribute="bottom" constant="49" id="vkC-WU-kjY"/>
+                                                <constraint firstAttribute="bottom" secondItem="bsp-ys-iue" secondAttribute="bottom" constant="10" id="qTZ-Sn-d39"/>
+                                                <constraint firstItem="TtB-aY-tgv" firstAttribute="top" secondItem="5XX-pI-MZo" secondAttribute="bottom" constant="-1" id="vkC-WU-kjY"/>
                                                 <constraint firstItem="TtB-aY-tgv" firstAttribute="leading" secondItem="6g0-uI-mBl" secondAttribute="leading" constant="10" id="zgw-1M-lRw"/>
                                             </constraints>
                                         </collectionViewCellContentView>
