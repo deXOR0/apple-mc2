@@ -34,11 +34,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="493"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TtB-aY-tgv">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TtB-aY-tgv">
                                                     <rect key="frame" x="10" y="329" width="370" height="56"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="56" id="hcf-3U-k9k"/>
-                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                                                     <color key="textColor" red="0.29645065739999998" green="0.39120422710000002" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <color key="highlightedColor" red="0.29645065739999998" green="0.39120422710000002" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

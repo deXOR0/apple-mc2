@@ -29,10 +29,32 @@
 		A1472099285CAE080058C5E3 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1472098285CAE080058C5E3 /* OnboardingViewController.swift */; };
 		A147209B285CAE1F0058C5E3 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = A147209A285CAE1F0058C5E3 /* OnboardingSlide.swift */; };
 		A147209D285CAE250058C5E3 /* UserCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A147209C285CAE250058C5E3 /* UserCallViewController.swift */; };
-		A14720A5285CAFB50058C5E3 /* StaticStoriesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A147209E285CAFB50058C5E3 /* StaticStoriesData.swift */; };
 		A14720A6285CAFB50058C5E3 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14720A0285CAFB50058C5E3 /* Story.swift */; };
 		A14720A7285CAFB50058C5E3 /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14720A2285CAFB50058C5E3 /* Chapter.swift */; };
 		A14720A8285CAFB50058C5E3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14720A4285CAFB50058C5E3 /* User.swift */; };
+		A1DCBB4F28695F910044EA62 /* StoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCBB4A28695F910044EA62 /* StoryProtocol.swift */; };
+		A1DCBB5028695F910044EA62 /* MovieNight.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCBB4B28695F910044EA62 /* MovieNight.swift */; };
+		A1DCBB5128695F910044EA62 /* Supermarket.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCBB4C28695F910044EA62 /* Supermarket.swift */; };
+		A1DCBB5228695F910044EA62 /* TheSecretary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCBB4D28695F910044EA62 /* TheSecretary.swift */; };
+		A1DCBB5328695F910044EA62 /* StaticStoriesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCBB4E28695F910044EA62 /* StaticStoriesData.swift */; };
+		A1DCBB5528695F9D0044EA62 /* ActivityMessageCellConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCBB5428695F9D0044EA62 /* ActivityMessageCellConfigurable.swift */; };
+		A1DCBB6328695FA90044EA62 /* ReorderMessageOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCBB5728695FA90044EA62 /* ReorderMessageOptionView.swift */; };
+		A1DCBB6428695FA90044EA62 /* ReorderMessageOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1DCBB5828695FA90044EA62 /* ReorderMessageOptionCell.xib */; };
+		A1DCBB6528695FA90044EA62 /* ReorderMessageOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCBB5928695FA90044EA62 /* ReorderMessageOptionCell.swift */; };
+		A1DCBB6628695FA90044EA62 /* ReorderMessageOptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1DCBB5A28695FA90044EA62 /* ReorderMessageOptionView.xib */; };
+		A1DCBB6728695FA90044EA62 /* ReorderMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1DCBB5B28695FA90044EA62 /* ReorderMessageTableViewCell.xib */; };
+		A1DCBB6828695FA90044EA62 /* ReorderMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCBB5C28695FA90044EA62 /* ReorderMessageTableViewCell.swift */; };
+		A1DCBB6928695FA90044EA62 /* ReorderMessageTableViewCell+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCBB5D28695FA90044EA62 /* ReorderMessageTableViewCell+TableView.swift */; };
+		A1DCBB6A28695FA90044EA62 /* MultiSelectMessageOptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1DCBB5F28695FA90044EA62 /* MultiSelectMessageOptionView.xib */; };
+		A1DCBB6B28695FA90044EA62 /* MultiSelectMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1DCBB6028695FA90044EA62 /* MultiSelectMessageTableViewCell.xib */; };
+		A1DCBB6C28695FA90044EA62 /* MultiSelectMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCBB6128695FA90044EA62 /* MultiSelectMessageTableViewCell.swift */; };
+		A1DCBB6D28695FA90044EA62 /* MultiSelectMessageOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCBB6228695FA90044EA62 /* MultiSelectMessageOptionView.swift */; };
+		A1DCBB6F28695FE10044EA62 /* ActivityMessageState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCBB6E28695FE10044EA62 /* ActivityMessageState.swift */; };
+		A1DCBB74286960DF0044EA62 /* +UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCBB73286960DF0044EA62 /* +UIStackView.swift */; };
+		A1DCBB76286960F30044EA62 /* TextMessageTableViewCellConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCBB75286960F30044EA62 /* TextMessageTableViewCellConfig.swift */; };
+		A1DCBB7A286962310044EA62 /* Chat.json in Resources */ = {isa = PBXBuildFile; fileRef = A1DCBB78286962310044EA62 /* Chat.json */; };
+		A1DCBB7B286962310044EA62 /* Compy.json in Resources */ = {isa = PBXBuildFile; fileRef = A1DCBB79286962310044EA62 /* Compy.json */; };
+		A1E2232928696541006DCA34 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A1E2232828696541006DCA34 /* Lottie */; };
 		A1F0791C2862B2580003B57B /* CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F0790A2862B2580003B57B /* CustomFonts.swift */; };
 		A1F0791D2862B2580003B57B /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F0790B2862B2580003B57B /* CustomColors.swift */; };
 		A1F0791E2862B2580003B57B /* Montserrat-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1F0790E2862B2580003B57B /* Montserrat-LightItalic.ttf */; };
@@ -95,10 +117,31 @@
 		A1472098285CAE080058C5E3 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		A147209A285CAE1F0058C5E3 /* OnboardingSlide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		A147209C285CAE250058C5E3 /* UserCallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCallViewController.swift; sourceTree = "<group>"; };
-		A147209E285CAFB50058C5E3 /* StaticStoriesData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticStoriesData.swift; sourceTree = "<group>"; };
 		A14720A0285CAFB50058C5E3 /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		A14720A2285CAFB50058C5E3 /* Chapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter.swift; sourceTree = "<group>"; };
 		A14720A4285CAFB50058C5E3 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A1DCBB4A28695F910044EA62 /* StoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryProtocol.swift; sourceTree = "<group>"; };
+		A1DCBB4B28695F910044EA62 /* MovieNight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieNight.swift; sourceTree = "<group>"; };
+		A1DCBB4C28695F910044EA62 /* Supermarket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Supermarket.swift; sourceTree = "<group>"; };
+		A1DCBB4D28695F910044EA62 /* TheSecretary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheSecretary.swift; sourceTree = "<group>"; };
+		A1DCBB4E28695F910044EA62 /* StaticStoriesData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticStoriesData.swift; sourceTree = "<group>"; };
+		A1DCBB5428695F9D0044EA62 /* ActivityMessageCellConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityMessageCellConfigurable.swift; sourceTree = "<group>"; };
+		A1DCBB5728695FA90044EA62 /* ReorderMessageOptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReorderMessageOptionView.swift; sourceTree = "<group>"; };
+		A1DCBB5828695FA90044EA62 /* ReorderMessageOptionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReorderMessageOptionCell.xib; sourceTree = "<group>"; };
+		A1DCBB5928695FA90044EA62 /* ReorderMessageOptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReorderMessageOptionCell.swift; sourceTree = "<group>"; };
+		A1DCBB5A28695FA90044EA62 /* ReorderMessageOptionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReorderMessageOptionView.xib; sourceTree = "<group>"; };
+		A1DCBB5B28695FA90044EA62 /* ReorderMessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReorderMessageTableViewCell.xib; sourceTree = "<group>"; };
+		A1DCBB5C28695FA90044EA62 /* ReorderMessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReorderMessageTableViewCell.swift; sourceTree = "<group>"; };
+		A1DCBB5D28695FA90044EA62 /* ReorderMessageTableViewCell+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReorderMessageTableViewCell+TableView.swift"; sourceTree = "<group>"; };
+		A1DCBB5F28695FA90044EA62 /* MultiSelectMessageOptionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiSelectMessageOptionView.xib; sourceTree = "<group>"; };
+		A1DCBB6028695FA90044EA62 /* MultiSelectMessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiSelectMessageTableViewCell.xib; sourceTree = "<group>"; };
+		A1DCBB6128695FA90044EA62 /* MultiSelectMessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectMessageTableViewCell.swift; sourceTree = "<group>"; };
+		A1DCBB6228695FA90044EA62 /* MultiSelectMessageOptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectMessageOptionView.swift; sourceTree = "<group>"; };
+		A1DCBB6E28695FE10044EA62 /* ActivityMessageState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityMessageState.swift; sourceTree = "<group>"; };
+		A1DCBB73286960DF0044EA62 /* +UIStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "+UIStackView.swift"; sourceTree = "<group>"; };
+		A1DCBB75286960F30044EA62 /* TextMessageTableViewCellConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextMessageTableViewCellConfig.swift; sourceTree = "<group>"; };
+		A1DCBB78286962310044EA62 /* Chat.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Chat.json; sourceTree = "<group>"; };
+		A1DCBB79286962310044EA62 /* Compy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Compy.json; sourceTree = "<group>"; };
 		A1F0790A2862B2580003B57B /* CustomFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFonts.swift; sourceTree = "<group>"; };
 		A1F0790B2862B2580003B57B /* CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		A1F0790E2862B2580003B57B /* Montserrat-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-LightItalic.ttf"; sourceTree = "<group>"; };
@@ -143,6 +186,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1E2232928696541006DCA34 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				A1F0793C2862B2A90003B57B /* XibView.swift */,
+				A1DCBB73286960DF0044EA62 /* +UIStackView.swift */,
 				98D78341285AD8FD00542D64 /* Cell */,
 			);
 			path = CustomComponent;
@@ -161,8 +206,8 @@
 		98D7833E285AD8A000542D64 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A1DCBB4928695F910044EA62 /* StoryData */,
 				A14720A1285CAFB50058C5E3 /* Chapter */,
-				A147209E285CAFB50058C5E3 /* StaticStoriesData.swift */,
 				A147209F285CAFB50058C5E3 /* Story */,
 				A14720A3285CAFB50058C5E3 /* User */,
 				A147209A285CAE1F0058C5E3 /* OnboardingSlide.swift */,
@@ -204,7 +249,10 @@
 		98D78341285AD8FD00542D64 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				A1DCBB5428695F9D0044EA62 /* ActivityMessageCellConfigurable.swift */,
 				A1F0792C2862B2650003B57B /* SingleChoiceMessage */,
+				A1DCBB5E28695FA90044EA62 /* MultiSelectMessage */,
+				A1DCBB5628695FA90044EA62 /* ReorderMessage */,
 				A1F079312862B2650003B57B /* TextMessage */,
 				A1472094285CADF10058C5E3 /* OnboardingCollectionViewCell.swift */,
 				98D78342285AD92600542D64 /* Cell.md */,
@@ -242,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				98D78348285ADBFB00542D64 /* ActivityMessage.swift */,
+				A1DCBB6E28695FE10044EA62 /* ActivityMessageState.swift */,
 				98D7835A285ADEB600542D64 /* SingleChoiceMessage.swift */,
 				98D7835C285AE5DC00542D64 /* MultiSelectMessage.swift */,
 				98D7835E285AE6D500542D64 /* ReorderMessage.swift */,
@@ -273,12 +322,59 @@
 			path = User;
 			sourceTree = "<group>";
 		};
+		A1DCBB4928695F910044EA62 /* StoryData */ = {
+			isa = PBXGroup;
+			children = (
+				A1DCBB4A28695F910044EA62 /* StoryProtocol.swift */,
+				A1DCBB4B28695F910044EA62 /* MovieNight.swift */,
+				A1DCBB4C28695F910044EA62 /* Supermarket.swift */,
+				A1DCBB4D28695F910044EA62 /* TheSecretary.swift */,
+				A1DCBB4E28695F910044EA62 /* StaticStoriesData.swift */,
+			);
+			path = StoryData;
+			sourceTree = "<group>";
+		};
+		A1DCBB5628695FA90044EA62 /* ReorderMessage */ = {
+			isa = PBXGroup;
+			children = (
+				A1DCBB5C28695FA90044EA62 /* ReorderMessageTableViewCell.swift */,
+				A1DCBB5D28695FA90044EA62 /* ReorderMessageTableViewCell+TableView.swift */,
+				A1DCBB5B28695FA90044EA62 /* ReorderMessageTableViewCell.xib */,
+				A1DCBB5728695FA90044EA62 /* ReorderMessageOptionView.swift */,
+				A1DCBB5828695FA90044EA62 /* ReorderMessageOptionCell.xib */,
+				A1DCBB5928695FA90044EA62 /* ReorderMessageOptionCell.swift */,
+				A1DCBB5A28695FA90044EA62 /* ReorderMessageOptionView.xib */,
+			);
+			path = ReorderMessage;
+			sourceTree = "<group>";
+		};
+		A1DCBB5E28695FA90044EA62 /* MultiSelectMessage */ = {
+			isa = PBXGroup;
+			children = (
+				A1DCBB6128695FA90044EA62 /* MultiSelectMessageTableViewCell.swift */,
+				A1DCBB6028695FA90044EA62 /* MultiSelectMessageTableViewCell.xib */,
+				A1DCBB5F28695FA90044EA62 /* MultiSelectMessageOptionView.xib */,
+				A1DCBB6228695FA90044EA62 /* MultiSelectMessageOptionView.swift */,
+			);
+			path = MultiSelectMessage;
+			sourceTree = "<group>";
+		};
+		A1DCBB77286962310044EA62 /* LottieFiles */ = {
+			isa = PBXGroup;
+			children = (
+				A1DCBB78286962310044EA62 /* Chat.json */,
+				A1DCBB79286962310044EA62 /* Compy.json */,
+			);
+			path = LottieFiles;
+			sourceTree = "<group>";
+		};
 		A1F079092862B2580003B57B /* Theme */ = {
 			isa = PBXGroup;
 			children = (
 				A1F0790A2862B2580003B57B /* CustomFonts.swift */,
 				A1F0790B2862B2580003B57B /* CustomColors.swift */,
 				A1F0790C2862B2580003B57B /* Fonts */,
+				A1DCBB77286962310044EA62 /* LottieFiles */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -315,10 +411,10 @@
 		A1F0792C2862B2650003B57B /* SingleChoiceMessage */ = {
 			isa = PBXGroup;
 			children = (
-				A1F0792D2862B2650003B57B /* SingleChoiceMessageOptionView.xib */,
 				A1F0792E2862B2650003B57B /* SingleChoiceMessageTableViewCell.swift */,
-				A1F0792F2862B2650003B57B /* SingleChoiceMessageOptionView.swift */,
 				A1F079302862B2650003B57B /* SingleChoiceMessageTableViewCell.xib */,
+				A1F0792F2862B2650003B57B /* SingleChoiceMessageOptionView.swift */,
+				A1F0792D2862B2650003B57B /* SingleChoiceMessageOptionView.xib */,
 			);
 			path = SingleChoiceMessage;
 			sourceTree = "<group>";
@@ -327,6 +423,7 @@
 			isa = PBXGroup;
 			children = (
 				A1F079322862B2650003B57B /* TextMessageTableViewCell.swift */,
+				A1DCBB75286960F30044EA62 /* TextMessageTableViewCellConfig.swift */,
 			);
 			path = TextMessage;
 			sourceTree = "<group>";
@@ -380,6 +477,9 @@
 			dependencies = (
 			);
 			name = comittea;
+			packageProductDependencies = (
+				A1E2232828696541006DCA34 /* Lottie */,
+			);
 			productName = comittea;
 			productReference = FA2C015A2848F86100F09D9E /* comittea.app */;
 			productType = "com.apple.product-type.application";
@@ -408,6 +508,9 @@
 				Base,
 			);
 			mainGroup = FA2C01512848F86100F09D9E;
+			packageReferences = (
+				A1E2232728696541006DCA34 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = FA2C015B2848F86100F09D9E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -430,6 +533,7 @@
 				FA2C016A2848F86400F09D9E /* Assets.xcassets in Resources */,
 				A1F0792A2862B2580003B57B /* Montserrat-Italic.ttf in Resources */,
 				A1F079272862B2580003B57B /* Montserrat-SemiBold.ttf in Resources */,
+				A1DCBB6A28695FA90044EA62 /* MultiSelectMessageOptionView.xib in Resources */,
 				A1F079242862B2580003B57B /* Montserrat-Bold.ttf in Resources */,
 				A1F0793B2862B2750003B57B /* Messaging.storyboard in Resources */,
 				A1F079292862B2580003B57B /* Montserrat-Regular.ttf in Resources */,
@@ -437,16 +541,22 @@
 				A1F079232862B2580003B57B /* Montserrat-Thin.ttf in Resources */,
 				A1F0792B2862B2580003B57B /* Montserrat-SemiBoldItalic.ttf in Resources */,
 				FA2C01652848F86100F09D9E /* Main.storyboard in Resources */,
+				A1DCBB6728695FA90044EA62 /* ReorderMessageTableViewCell.xib in Resources */,
 				318CDD60285C33520076CE9C /* T10-36_Story Intermezzo.storyboard in Resources */,
 				A1F079282862B2580003B57B /* Montserrat-Black.ttf in Resources */,
+				A1DCBB6B28695FA90044EA62 /* MultiSelectMessageTableViewCell.xib in Resources */,
 				A1F079332862B2650003B57B /* SingleChoiceMessageOptionView.xib in Resources */,
+				A1DCBB6428695FA90044EA62 /* ReorderMessageOptionCell.xib in Resources */,
 				A1F079252862B2580003B57B /* Montserrat-MediumItalic.ttf in Resources */,
 				A1F079362862B2650003B57B /* SingleChoiceMessageTableViewCell.xib in Resources */,
 				A1F0791F2862B2580003B57B /* Montserrat-Medium.ttf in Resources */,
+				A1DCBB6628695FA90044EA62 /* ReorderMessageOptionView.xib in Resources */,
+				A1DCBB7B286962310044EA62 /* Compy.json in Resources */,
 				317F469C285EDC60002BCB88 /* T10-35_Story Intro.storyboard in Resources */,
 				A1F079222862B2580003B57B /* Montserrat-ThinItalic.ttf in Resources */,
 				317F4698285EDACB002BCB88 /* ChapterCell.xib in Resources */,
 				A1F0791E2862B2580003B57B /* Montserrat-LightItalic.ttf in Resources */,
+				A1DCBB7A286962310044EA62 /* Chat.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,36 +571,50 @@
 				FA786B90285DD09A008700B3 /* HomeViewController.swift in Sources */,
 				FA2C01622848F86100F09D9E /* ViewController.swift in Sources */,
 				A1F0791D2862B2580003B57B /* CustomColors.swift in Sources */,
+				A1DCBB5028695F910044EA62 /* MovieNight.swift in Sources */,
+				A1DCBB6D28695FA90044EA62 /* MultiSelectMessageOptionView.swift in Sources */,
+				A1DCBB5328695F910044EA62 /* StaticStoriesData.swift in Sources */,
 				A147209D285CAE250058C5E3 /* UserCallViewController.swift in Sources */,
+				A1DCBB76286960F30044EA62 /* TextMessageTableViewCellConfig.swift in Sources */,
+				A1DCBB4F28695F910044EA62 /* StoryProtocol.swift in Sources */,
 				FA2C015E2848F86100F09D9E /* AppDelegate.swift in Sources */,
 				98D78355285ADE3300542D64 /* NarrationMessage.swift in Sources */,
 				FA786B92285DD39F008700B3 /* HomeCollectionViewCell.swift in Sources */,
 				A1472095285CADF10058C5E3 /* OnboardingCollectionViewCell.swift in Sources */,
 				FA786B94285DE2F7008700B3 /* HomeCollection.swift in Sources */,
+				A1DCBB6C28695FA90044EA62 /* MultiSelectMessageTableViewCell.swift in Sources */,
 				98D7835D285AE5DC00542D64 /* MultiSelectMessage.swift in Sources */,
 				98D78347285ADBAB00542D64 /* TextMessage.swift in Sources */,
 				98D78345285ADB6600542D64 /* Message.swift in Sources */,
 				A1F079352862B2650003B57B /* SingleChoiceMessageOptionView.swift in Sources */,
+				A1DCBB6828695FA90044EA62 /* ReorderMessageTableViewCell.swift in Sources */,
+				A1DCBB6528695FA90044EA62 /* ReorderMessageOptionCell.swift in Sources */,
+				A1DCBB5528695F9D0044EA62 /* ActivityMessageCellConfigurable.swift in Sources */,
 				317F469A285EDC47002BCB88 /* T10-35_Story Intro.swift in Sources */,
 				A1472099285CAE080058C5E3 /* OnboardingViewController.swift in Sources */,
 				FA2C01602848F86100F09D9E /* SceneDelegate.swift in Sources */,
+				A1DCBB74286960DF0044EA62 /* +UIStackView.swift in Sources */,
 				98D78349285ADBFB00542D64 /* ActivityMessage.swift in Sources */,
 				A1F079372862B2650003B57B /* TextMessageTableViewCell.swift in Sources */,
 				98D7834B285ADCE100542D64 /* CompyTrueMessage.swift in Sources */,
 				FA2C01682848F86100F09D9E /* comittea.xcdatamodeld in Sources */,
 				A14720A7285CAFB50058C5E3 /* Chapter.swift in Sources */,
 				318CDD5E285C33300076CE9C /* T10-36_Story Intermezzo.swift in Sources */,
+				A1DCBB6328695FA90044EA62 /* ReorderMessageOptionView.swift in Sources */,
 				A1F079392862B26D0003B57B /* MessagingViewController.swift in Sources */,
+				A1DCBB6928695FA90044EA62 /* ReorderMessageTableViewCell+TableView.swift in Sources */,
 				98D7835B285ADEB600542D64 /* SingleChoiceMessage.swift in Sources */,
 				A1F079342862B2650003B57B /* SingleChoiceMessageTableViewCell.swift in Sources */,
 				A147209B285CAE1F0058C5E3 /* OnboardingSlide.swift in Sources */,
 				98D7834F285ADD5A00542D64 /* CompyFalseMessage.swift in Sources */,
 				98D78357285ADE6F00542D64 /* CompyConversationMessage.swift in Sources */,
-				A14720A5285CAFB50058C5E3 /* StaticStoriesData.swift in Sources */,
 				A14720A8285CAFB50058C5E3 /* User.swift in Sources */,
+				A1DCBB6F28695FE10044EA62 /* ActivityMessageState.swift in Sources */,
 				98D78359285ADE8700542D64 /* UserConversationMessage.swift in Sources */,
+				A1DCBB5228695F910044EA62 /* TheSecretary.swift in Sources */,
 				A1F0791C2862B2580003B57B /* CustomFonts.swift in Sources */,
 				98D7835F285AE6D500542D64 /* ReorderMessage.swift in Sources */,
+				A1DCBB5128695F910044EA62 /* Supermarket.swift in Sources */,
 				A1F0793D2862B2A90003B57B /* XibView.swift in Sources */,
 				A14720A6285CAFB50058C5E3 /* Story.swift in Sources */,
 			);
@@ -639,7 +763,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FZ22T3BM95;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = comittea/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -668,7 +792,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FZ22T3BM95;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = comittea/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -712,6 +836,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A1E2232728696541006DCA34 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A1E2232828696541006DCA34 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1E2232728696541006DCA34 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		FA2C01662848F86100F09D9E /* comittea.xcdatamodeld */ = {
