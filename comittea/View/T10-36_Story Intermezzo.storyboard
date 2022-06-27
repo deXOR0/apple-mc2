@@ -55,7 +55,7 @@
                                     <action selector="nextChapterBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="VKj-Do-y3f"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4UG-YF-srd">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4UG-YF-srd">
                                 <rect key="frame" x="77.666666666666686" y="179" width="235" height="226"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="226" id="RH2-GR-C5r"/>
