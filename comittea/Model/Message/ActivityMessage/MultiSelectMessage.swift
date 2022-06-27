@@ -17,6 +17,8 @@ struct MultiSelectMessage: ActivityMessage {
     
     var answer: [String]
     
+    var selectedAnswer: [String]?
+    
     var trueResponse: CompyTrueMessage
     
     var falseResponse: CompyFalseMessage
@@ -25,7 +27,7 @@ struct MultiSelectMessage: ActivityMessage {
     
     init(_ prompt: String, _ options: [String], _ answer: [String], _ trueResponse: CompyTrueMessage, _ falseResponse: CompyFalseMessage, _ repeating: Bool = false) {
         self.prompt = prompt
-        self.options = options
+        self.options = options.shuffled()
         self.answer = answer
         self.trueResponse = trueResponse
         self.falseResponse = falseResponse
@@ -51,4 +53,7 @@ struct MultiSelectMessage: ActivityMessage {
         return true
     }
     
+    func checkSingleAnswer(_ selectedAnswer: String) -> Bool {
+        return self.answer.contains(selectedAnswer)
+    }
 }

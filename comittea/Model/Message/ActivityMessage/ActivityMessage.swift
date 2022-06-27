@@ -13,6 +13,7 @@ protocol ActivityMessage: Message {
     var prompt: String { get }
     var options: [String] { get }
     var answer: Answer { get }
+    var selectedAnswer: Answer? { get set }
     var trueResponse: CompyTrueMessage { get }
     var falseResponse: CompyFalseMessage { get }
     var repeating: Bool { get }

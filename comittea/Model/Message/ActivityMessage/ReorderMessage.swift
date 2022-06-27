@@ -17,6 +17,8 @@ struct ReorderMessage: ActivityMessage {
     
     var answer: [String]
     
+    var selectedAnswer: [String]?
+    
     var trueResponse: CompyTrueMessage
     
     var falseResponse: CompyFalseMessage
@@ -25,7 +27,7 @@ struct ReorderMessage: ActivityMessage {
     
     init(_ prompt: String, _ options: [String], _ answer: [String], _ trueResponse: CompyTrueMessage, _ falseResponse: CompyFalseMessage, _ repeating: Bool = false) {
         self.prompt = prompt
-        self.options = options
+        self.options = options.shuffled()
         self.answer = answer
         self.trueResponse = trueResponse
         self.falseResponse = falseResponse
@@ -43,4 +45,9 @@ struct ReorderMessage: ActivityMessage {
         return selectedAnswer == self.answer
     }
     
+    func checkSingleAnswer(_ selectedAnswer: String, at index: Int) -> Bool {
+        guard index < answer.count else { return false }
+        
+        return self.answer[index] == selectedAnswer
+    }
 }

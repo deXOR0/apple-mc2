@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="KGk-i7-Jjw" customClass="ReorderMessageOptionCell" customModule="comittea" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJX-ii-YJf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="39"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abd-1Z-GiU">
+                                <rect key="frame" x="10" y="0.0" width="250" height="39"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="abd-1Z-GiU" firstAttribute="leading" secondItem="tJX-ii-YJf" secondAttribute="leading" constant="10" id="0Rg-nB-xsB"/>
+                            <constraint firstItem="abd-1Z-GiU" firstAttribute="top" secondItem="tJX-ii-YJf" secondAttribute="top" id="Agb-IO-Pa2"/>
+                            <constraint firstAttribute="trailing" secondItem="abd-1Z-GiU" secondAttribute="trailing" constant="60" id="EeD-P2-BPZ"/>
+                            <constraint firstAttribute="bottom" secondItem="abd-1Z-GiU" secondAttribute="bottom" id="sxc-qc-TWx"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" name="LightGray"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="tJX-ii-YJf" secondAttribute="trailing" id="dXS-st-yxB"/>
+                    <constraint firstAttribute="bottom" secondItem="tJX-ii-YJf" secondAttribute="bottom" constant="5" id="ddO-1d-6V1"/>
+                    <constraint firstItem="tJX-ii-YJf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="hFU-2l-cMZ"/>
+                    <constraint firstItem="tJX-ii-YJf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="v2C-50-IY9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="5"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="optionBackground" destination="tJX-ii-YJf" id="FKI-P6-kZY"/>
+                <outlet property="optionLabel" destination="abd-1Z-GiU" id="9wk-1o-my9"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="96.428571428571431"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="LightGray">
+            <color red="0.90600001811981201" green="0.90600001811981201" blue="0.90600001811981201" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

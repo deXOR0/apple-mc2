@@ -9,9 +9,9 @@ import Foundation
 import UIKit
 
 extension UIColor {
-    static let myLightOrange = UIColor(named: "LightOrange")
-    static let myBlue = UIColor(named: "Blue")
-    static let myLightGray = UIColor(named: "LightGray")
-    static let myGreen: UIColor = #colorLiteral(red: 0.3764705882, green: 0.8862745098, blue: 0.1960784314, alpha: 1)
-    static let myRed: UIColor = #colorLiteral(red: 1, green: 0.462745098, blue: 0.462745098, alpha: 1)
+    static let myLightOrange = UIColor(named: "LightOrange") ?? .white
+    static let myBlue: UIColor = UIColor(named: "Blue")!
+    static let myLightGray = UIColor(named: "LightGray") ?? .white
+    static let myGreen = UIColor(named: "Green") ?? .white
+    static let myRed = UIColor(named: "Red") ?? .white
 }

@@ -7,16 +7,16 @@
 
 import UIKit
 
-// TODO: refactor to use polymorphism
 class TextMessageTableViewCell: UITableViewCell {
     
-    enum TextMessageType {
-        case narration
-        case compy
-        case user
+    var config: TextMessageTableViewCellConfig? {
+        didSet {
+            guard let config = config else { return }
+            config.setStyle(forCell: self)
+            config.setMessageBackgroundConstraints(forCell: self)
+        }
     }
-    
-    var type: TextMessageType = .compy
+    var messageBackgroundConstraints = [NSLayoutConstraint]()
     
     lazy var messageLabel: UILabel = {
         var l = UILabel()
@@ -31,59 +31,32 @@ class TextMessageTableViewCell: UITableViewCell {
         return v
     }()
     
-    override func layoutSubviews() {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
         messageBackground.addSubview(messageLabel)
         contentView.addSubview(messageBackground)
         
+        setMessageLabelConstraints()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setMessageLabelConstraints() {
         NSLayoutConstraint.activate([
-            messageLabel.leadingAnchor.constraint(equalTo: messageBackground.leadingAnchor, constant: 10),
-            messageLabel.trailingAnchor.constraint(equalTo: messageBackground.trailingAnchor, constant: -10),
-            messageLabel.topAnchor.constraint(equalTo: messageBackground.topAnchor, constant: 10),
-            messageLabel.bottomAnchor.constraint(equalTo: messageBackground.bottomAnchor, constant: -10),
-            
-            messageBackground.topAnchor.constraint(equalTo: contentView.topAnchor),
+            messageLabel.leadingAnchor.constraint(equalTo: messageBackground.leadingAnchor, constant: 12),
+            messageLabel.trailingAnchor.constraint(equalTo: messageBackground.trailingAnchor, constant: -12),
+            messageLabel.topAnchor.constraint(equalTo: messageBackground.topAnchor, constant: 12),
+            messageLabel.bottomAnchor.constraint(equalTo: messageBackground.bottomAnchor, constant: -12),
         ])
-        
-        switch (type) {
-        case .narration:
-            messageLabel.textColor = .black
-            messageLabel.font = .medium10
-            messageBackground.backgroundColor = .myLightOrange
-            messageBackground.layer.cornerRadius = 5
-            
-            NSLayoutConstraint.activate([
-                messageBackground.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
-                messageBackground.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-                messageBackground.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            ])
-        case .compy:
-            messageLabel.textColor = .white
-            messageLabel.font = .medium12
-            messageBackground.backgroundColor = .myBlue
-            messageBackground.layer.cornerRadius = 15
-            
-            NSLayoutConstraint.activate([
-                messageBackground.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5),
-                messageBackground.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-                messageBackground.trailingAnchor.constraint(lessThanOrEqualTo: contentView.trailingAnchor, constant: 115),
-            ])
-        case .user:
-            messageLabel.textColor = .black
-            messageLabel.font = .medium12
-            messageBackground.backgroundColor = .myLightGray
-            messageBackground.layer.cornerRadius = 15
-            
-            NSLayoutConstraint.activate([
-                messageBackground.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5),
-                messageBackground.leadingAnchor.constraint(greaterThanOrEqualTo: contentView.leadingAnchor, constant: 115),
-                messageBackground.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            ])
-        }
     }
     
     override func prepareForReuse() {
-        messageLabel.removeFromSuperview()
-        messageBackground.removeFromSuperview()
+        // Deactivate constraints from view before reuse
+        // so they don't stack
+        NSLayoutConstraint.deactivate(messageBackgroundConstraints)
     }
     
 }

@@ -15,6 +15,6 @@ protocol XibView {
 extension XibView where Self: UIView {
     static func fromXib() -> Self? {
         let nib = UINib(nibName: nibName, bundle: nil)
-        return nib.instantiate(withOwner: nil).first as? Self
+        return nib.instantiate(withOwner: self).first as? Self
     }
 }
