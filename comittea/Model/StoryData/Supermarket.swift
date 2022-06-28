@@ -208,7 +208,7 @@ struct Supermarket: Storiable {
                 CompyFalseMessage("Are you sure you will choose them from the bottom of the rack? Isn't it will be wasting time? When choosing banana, we will choose that placed in the top. It will be wasting time a lot if we must pick the banana from the bottom of the rack. The top banana is the last banana to be placed. So, the top banana is the most fresh one, right? That's the concept of Stack, Last in First Out. The last banana that be placed, is the first Banana that we will take."),
                 false),
         ]),
-        Chapter("Pay Lane", "Chapter_PayLine", "", [
+        Chapter("Pay Lane", "Chapter_PayLane", "", [
             NarrationMessage("Congratulations! You have done took the stuffs that you need to buy. Now, let's pay it in the cashier"),
             CompyConversationMessage("Wow, that's a lot of cashier here"),
             CompyConversationMessage("The cashier also divided by the category of payment method"),

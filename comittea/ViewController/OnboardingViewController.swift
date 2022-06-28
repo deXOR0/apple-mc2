@@ -30,9 +30,9 @@ class OnboardingViewController: UIViewController, UICollectionViewDelegate, UICo
     override func viewDidLoad() {
         super.viewDidLoad()
         slides = [
-            OnboardingSlide(title: "Hello", description: "I’m Compy! I will help you to improve your logical thinking, and makes you understand the basic concept of programming easier. ", animationName: "Compy"),
-            OnboardingSlide(title: "Understand With Story", description: "With relatable slice of life story, we will learn computational thinking in an interactive way and you also contributed to the story!", animationName:"Chat"),
-            OnboardingSlide(title: "Computational Thinking", description: "A way of us to breaking down a task into simple enough steps that even a computer would understand. ", animationName:"Chat")
+            OnboardingSlide(title: "Hello", description: "I’m Compy! I will help you to improve your logical thinking, and makes you understand the basic concept of programming easier. ", animationName: "OnBoard1"),
+            OnboardingSlide(title: "Understand With Story", description: "With relatable slice of life story, we will learn computational thinking in an interactive way and you also contributed to the story!", animationName:"OnBoard2"),
+            OnboardingSlide(title: "Computational Thinking", description: "A way of us to breaking down a task into simple enough steps that even a computer would understand. ", animationName:"OnBoard3")
 
         ]
         pageControl.numberOfPages = slides.count
