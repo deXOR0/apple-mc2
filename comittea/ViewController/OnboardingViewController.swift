@@ -53,7 +53,8 @@ class OnboardingViewController: UIViewController, UICollectionViewDelegate, UICo
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        pageControl?.currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
+        currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
+        pageControl?.currentPage = currentPage
     }
     
     @IBAction func skipButtonClicked(_ sender: Any) {
