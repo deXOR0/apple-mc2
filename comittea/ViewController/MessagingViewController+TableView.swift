@@ -40,6 +40,29 @@ extension MessagingViewController: UITableViewDataSource, UITableViewDelegate {
             return cell
         }
         
+        if var message = messages[index] as? SingleChoiceHiLoMessage {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SingleChoiceMessageTableViewCellID", for: indexPath) as! SingleChoiceMessageTableViewCell
+            
+            cell.configure(with: message) { [weak self] selectedAnswer in
+                var tempMessage = message
+                tempMessage.selectedAnswer = selectedAnswer
+                self?.messages[index] = tempMessage
+                
+                var nextMessage: Message
+                if message.checkAnswer(selectedAnswer) {
+                    nextMessage = message.trueResponse
+                } else {
+                    message.selectedAnswer = selectedAnswer
+                    nextMessage = message.buildNextMessage()
+                }
+                
+                self?.messages.insert(nextMessage, at: index + 1)
+                self?.showNextMessage()
+            }
+            
+            return cell
+        }
+        
         if let message = messages[index] as? ReorderMessage {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ReorderMessageTableViewCellID", for: indexPath) as! ReorderMessageTableViewCell
             

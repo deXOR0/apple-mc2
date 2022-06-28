@@ -165,12 +165,15 @@ struct TheSecretary: Storiable {
             CompyConversationMessage("But what if the numbers are in order?"),
             CompyConversationMessage("1, 8, 19, 31, 43, 75, 88, 96, 100, 223"),
             CompyConversationMessage("Now, instead of telling you that you're wrong when you choose the wrong number, I can tell you to go higher or lower."),
-            SingleChoiceMessage(
+            SingleChoiceHiLoMessage(
                 "Let's play another game.",
                 ["1", "8", "19", "31", "43", "75", "88", "96", "100", "223"],
                 "100",
                 CompyTrueMessage("Congratulation! You guessed correctly!"),
-                CompyFalseMessage("Go lower!"),
+                [
+                    SingleChoiceHiLoMessage.AnswerState.higher: "Go higher!",
+                    SingleChoiceHiLoMessage.AnswerState.lower: "Go lower!"
+                ],
                 true
             ),
             UserConversationMessage("Hey! That's actually much easier!"),

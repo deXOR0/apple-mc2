@@ -53,6 +53,22 @@ class SingleChoiceMessageTableViewCell: UITableViewCell, ActivityMessageCellConf
         }
     }
     
+    func configure(with message: SingleChoiceHiLoMessage, didActivityFinishedCallback: @escaping (String) -> Void) {
+        state = .ongoing
+        messageLabel.text = message.prompt
+        options = message.options
+        checkSingleAnswer = message.checkAnswer
+        self.didActivityFinishedCallback = didActivityFinishedCallback
+        
+        // if activity has selectedAnswer, then finish activity immediately
+        // with no callback
+        if let prevSelectedAnswer = message.selectedAnswer {
+            selectedAnswer = prevSelectedAnswer
+            self.didActivityFinishedCallback = nil
+            finishActivity(withAnswer: prevSelectedAnswer)
+        }
+    }
+    
     func finishActivity(withAnswer answer: String) {
         guard let isCorrect = checkSingleAnswer?(answer) else { return }
         
