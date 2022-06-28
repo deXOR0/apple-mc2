@@ -31,6 +31,7 @@ class MessagingViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         showInitialPopup()
+        setupBackButton()
         
         messagingTableView.dataSource = self
         messagingTableView.delegate = self
@@ -49,6 +50,25 @@ class MessagingViewController: UIViewController {
         self.visibleMessages = 0
         self.canContinueStory = true
         self.messagingTableView.reloadData()
+    }
+    
+    func setupBackButton() {
+        let backButton = UIButton(type: .custom)
+//        backButton.setImage(UIImage(named: "BackButton"), for: .normal)
+        backButton.setTitle("Back", for: .normal)
+        backButton.setTitleColor(backButton.tintColor, for: .normal)
+        backButton.addTarget(self, action: #selector(self.backAction(_:)), for: .touchUpInside)
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
+    }
+    
+    @IBAction func backAction(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Reminder", message: "Are you sure you want to go back? You will lose your progress", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { _ in
+            let _ = self.navigationController?.popViewController(animated: true)
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     func showNextMessage() {
