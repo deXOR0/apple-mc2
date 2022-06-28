@@ -14,6 +14,7 @@
 		318CDD5E285C33300076CE9C /* T10-36_Story Intermezzo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318CDD5D285C33300076CE9C /* T10-36_Story Intermezzo.swift */; };
 		318CDD60285C33520076CE9C /* T10-36_Story Intermezzo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 318CDD5F285C33520076CE9C /* T10-36_Story Intermezzo.storyboard */; };
 		984194E1286ABD560013CDAA /* MessagingViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984194E0286ABD560013CDAA /* MessagingViewController+TableView.swift */; };
+		984194E5286ABF4F0013CDAA /* SingleChoiceHiLoMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984194E4286ABF4F0013CDAA /* SingleChoiceHiLoMessage.swift */; };
 		98D78345285ADB6600542D64 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D78344285ADB6600542D64 /* Message.swift */; };
 		98D78347285ADBAB00542D64 /* TextMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D78346285ADBAB00542D64 /* TextMessage.swift */; };
 		98D78349285ADBFB00542D64 /* ActivityMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D78348285ADBFB00542D64 /* ActivityMessage.swift */; };
@@ -102,6 +103,7 @@
 		318CDD5D285C33300076CE9C /* T10-36_Story Intermezzo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "T10-36_Story Intermezzo.swift"; sourceTree = "<group>"; };
 		318CDD5F285C33520076CE9C /* T10-36_Story Intermezzo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "T10-36_Story Intermezzo.storyboard"; sourceTree = "<group>"; };
 		984194E0286ABD560013CDAA /* MessagingViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MessagingViewController+TableView.swift"; sourceTree = "<group>"; };
+		984194E4286ABF4F0013CDAA /* SingleChoiceHiLoMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleChoiceHiLoMessage.swift; sourceTree = "<group>"; };
 		98D78342285AD92600542D64 /* Cell.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Cell.md; sourceTree = "<group>"; };
 		98D78343285AD93C00542D64 /* Model.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Model.md; sourceTree = "<group>"; };
 		98D78344285ADB6600542D64 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -297,6 +299,7 @@
 				98D78348285ADBFB00542D64 /* ActivityMessage.swift */,
 				A1DCBB6E28695FE10044EA62 /* ActivityMessageState.swift */,
 				98D7835A285ADEB600542D64 /* SingleChoiceMessage.swift */,
+				984194E4286ABF4F0013CDAA /* SingleChoiceHiLoMessage.swift */,
 				98D7835C285AE5DC00542D64 /* MultiSelectMessage.swift */,
 				98D7835E285AE6D500542D64 /* ReorderMessage.swift */,
 			);
@@ -584,6 +587,7 @@
 				A1DCBB5328695F910044EA62 /* StaticStoriesData.swift in Sources */,
 				A147209D285CAE250058C5E3 /* UserCallViewController.swift in Sources */,
 				A1DCBB76286960F30044EA62 /* TextMessageTableViewCellConfig.swift in Sources */,
+				984194E5286ABF4F0013CDAA /* SingleChoiceHiLoMessage.swift in Sources */,
 				A1DCBB4F28695F910044EA62 /* StoryProtocol.swift in Sources */,
 				FA2C015E2848F86100F09D9E /* AppDelegate.swift in Sources */,
 				98D78355285ADE3300542D64 /* NarrationMessage.swift in Sources */,
