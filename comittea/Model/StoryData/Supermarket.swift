@@ -19,7 +19,7 @@ struct Supermarket: Storiable {
             UserConversationMessage("Not yet ☹️"),
             CompyConversationMessage("Don't worry! You have me. I will help you to make a list"),
             MultiSelectMessage(
-                "Which one do you think it's better?",
+                "Choose 10 things that you should buy in monthly groceries shopping",
                 [
                     "Sugar",
                     "Cooking oil",
@@ -67,7 +67,7 @@ struct Supermarket: Storiable {
                 CompyConversationMessage("Really? You sure you can handle it?"),
                 SingleChoiceMessage(
                     "Which one do you think it's better?",
-                    ["Bring the shopping bag", "Bring the shopping bag", "Just bring the groceries with bare hands",],
+                    ["Bring the shopping bag", "Just bring the groceries with bare hands",],
                     "Bring the shopping bag",
                     CompyTrueMessage("That's right! You didn't want your hands bothered with many things, do you? We just have two hands, how we can handle ten items in our hands. We can solve the problem by bring the shopping bag. With the shopping bag, we can just put all of the items together and easily packed. Unconsciously, you have solved the problem with decomposition, it's when you breaking down a complex problem into smaller part to carry it."),
                     CompyFalseMessage("Are you sure you can bring the ten items just with your bare hands? Imagine you bring the egg, apple, milk, cereals with only one hand. It seems troublesome. You can put the groceries items in the shopping bag and it's simply packed, problem solved. Your hands won't be bothered with many things."),
@@ -119,7 +119,7 @@ struct Supermarket: Storiable {
             NarrationMessage("You go to supermarket with your car. Now, you are already here, at the supermarket. Let's park your car and get ready to enter the supermarket."),
             CompyConversationMessage("Let's park your car!"),
             UserConversationMessage("Working on it!"),
-            CompyConversationMessage(" Hey. %@. Everytime you park your car, you've never been in trouble for illegal parking, have you?"),
+            CompyConversationMessage("Hey. %@. Everytime you park your car, you've never been in trouble for illegal parking, have you?"),
             UserConversationMessage("Of course. I am an obedient citizen."),
             CompyConversationMessage("Good, good! That means you can always find the parking area."),
             UserConversationMessage("I am. I'm always neat in parking my car."),
