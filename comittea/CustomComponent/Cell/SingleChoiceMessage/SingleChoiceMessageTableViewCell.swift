@@ -9,7 +9,7 @@ import UIKit
 
 class SingleChoiceMessageTableViewCell: UITableViewCell, ActivityMessageCellConfigurable {
     
-    typealias M = SingleChoiceMessage
+    typealias ActivityMessageType = SingleChoiceMessage
     
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var messageOptionsStack: UIStackView!

@@ -9,7 +9,7 @@ import UIKit
 
 class MultiSelectMessageTableViewCell: UITableViewCell, ActivityMessageCellConfigurable {
     
-    typealias M = MultiSelectMessage
+    typealias ActivityMessageType = MultiSelectMessage
 
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var messageOptionsStack: UIStackView!

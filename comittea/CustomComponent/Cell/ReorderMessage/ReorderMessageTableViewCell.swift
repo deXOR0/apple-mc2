@@ -9,7 +9,7 @@ import UIKit
 
 class ReorderMessageTableViewCell: UITableViewCell, ActivityMessageCellConfigurable {
     
-    typealias M = ReorderMessage
+    typealias ActivityMessageType = ReorderMessage
     
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var messageOptionsTable: UITableView!

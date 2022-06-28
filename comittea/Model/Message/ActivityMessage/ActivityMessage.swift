@@ -10,7 +10,7 @@ import Foundation
 protocol ActivityMessage: Message {
     associatedtype Answer
     
-    var prompt: String { get }
+    var prompt: String { get set }
     var options: [String] { get }
     var answer: Answer { get }
     var selectedAnswer: Answer? { get set }

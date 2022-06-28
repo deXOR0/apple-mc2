@@ -50,6 +50,7 @@ class T10_35_Story_Intro: UIViewController {
             let destinationVC = segue.destination as? MessagingViewController
             destinationVC?.storyTitle = self.storyTitle
             destinationVC?.chapter = self.selectedChapter
+            destinationVC?.userName = self.user.name
         }
     }
     
