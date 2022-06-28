@@ -52,8 +52,6 @@
 		A1DCBB6F28695FE10044EA62 /* ActivityMessageState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCBB6E28695FE10044EA62 /* ActivityMessageState.swift */; };
 		A1DCBB74286960DF0044EA62 /* +UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCBB73286960DF0044EA62 /* +UIStackView.swift */; };
 		A1DCBB76286960F30044EA62 /* TextMessageTableViewCellConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCBB75286960F30044EA62 /* TextMessageTableViewCellConfig.swift */; };
-		A1DCBB7A286962310044EA62 /* Chat.json in Resources */ = {isa = PBXBuildFile; fileRef = A1DCBB78286962310044EA62 /* Chat.json */; };
-		A1DCBB7B286962310044EA62 /* Compy.json in Resources */ = {isa = PBXBuildFile; fileRef = A1DCBB79286962310044EA62 /* Compy.json */; };
 		A1E2232928696541006DCA34 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A1E2232828696541006DCA34 /* Lottie */; };
 		A1F0791C2862B2580003B57B /* CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F0790A2862B2580003B57B /* CustomFonts.swift */; };
 		A1F0791D2862B2580003B57B /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F0790B2862B2580003B57B /* CustomColors.swift */; };
@@ -79,6 +77,9 @@
 		A1F079392862B26D0003B57B /* MessagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F079382862B26D0003B57B /* MessagingViewController.swift */; };
 		A1F0793B2862B2750003B57B /* Messaging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1F0793A2862B2750003B57B /* Messaging.storyboard */; };
 		A1F0793D2862B2A90003B57B /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F0793C2862B2A90003B57B /* XibView.swift */; };
+		FA25EA68286AA7A1009F4141 /* OnBoard1.json in Resources */ = {isa = PBXBuildFile; fileRef = FA25EA65286AA7A1009F4141 /* OnBoard1.json */; };
+		FA25EA69286AA7A1009F4141 /* OnBoard2.json in Resources */ = {isa = PBXBuildFile; fileRef = FA25EA66286AA7A1009F4141 /* OnBoard2.json */; };
+		FA25EA6A286AA7A1009F4141 /* OnBoard3.json in Resources */ = {isa = PBXBuildFile; fileRef = FA25EA67286AA7A1009F4141 /* OnBoard3.json */; };
 		FA2C015E2848F86100F09D9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C015D2848F86100F09D9E /* AppDelegate.swift */; };
 		FA2C01602848F86100F09D9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C015F2848F86100F09D9E /* SceneDelegate.swift */; };
 		FA2C01622848F86100F09D9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C01612848F86100F09D9E /* ViewController.swift */; };
@@ -140,8 +141,6 @@
 		A1DCBB6E28695FE10044EA62 /* ActivityMessageState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityMessageState.swift; sourceTree = "<group>"; };
 		A1DCBB73286960DF0044EA62 /* +UIStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "+UIStackView.swift"; sourceTree = "<group>"; };
 		A1DCBB75286960F30044EA62 /* TextMessageTableViewCellConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextMessageTableViewCellConfig.swift; sourceTree = "<group>"; };
-		A1DCBB78286962310044EA62 /* Chat.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Chat.json; sourceTree = "<group>"; };
-		A1DCBB79286962310044EA62 /* Compy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Compy.json; sourceTree = "<group>"; };
 		A1F0790A2862B2580003B57B /* CustomFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFonts.swift; sourceTree = "<group>"; };
 		A1F0790B2862B2580003B57B /* CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		A1F0790E2862B2580003B57B /* Montserrat-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-LightItalic.ttf"; sourceTree = "<group>"; };
@@ -166,6 +165,9 @@
 		A1F079382862B26D0003B57B /* MessagingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagingViewController.swift; sourceTree = "<group>"; };
 		A1F0793A2862B2750003B57B /* Messaging.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Messaging.storyboard; sourceTree = "<group>"; };
 		A1F0793C2862B2A90003B57B /* XibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
+		FA25EA65286AA7A1009F4141 /* OnBoard1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = OnBoard1.json; sourceTree = "<group>"; };
+		FA25EA66286AA7A1009F4141 /* OnBoard2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = OnBoard2.json; sourceTree = "<group>"; };
+		FA25EA67286AA7A1009F4141 /* OnBoard3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = OnBoard3.json; sourceTree = "<group>"; };
 		FA2C015A2848F86100F09D9E /* comittea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = comittea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2C015D2848F86100F09D9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA2C015F2848F86100F09D9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -362,8 +364,9 @@
 		A1DCBB77286962310044EA62 /* LottieFiles */ = {
 			isa = PBXGroup;
 			children = (
-				A1DCBB78286962310044EA62 /* Chat.json */,
-				A1DCBB79286962310044EA62 /* Compy.json */,
+				FA25EA65286AA7A1009F4141 /* OnBoard1.json */,
+				FA25EA66286AA7A1009F4141 /* OnBoard2.json */,
+				FA25EA67286AA7A1009F4141 /* OnBoard3.json */,
 			);
 			path = LottieFiles;
 			sourceTree = "<group>";
@@ -537,9 +540,11 @@
 				A1F079242862B2580003B57B /* Montserrat-Bold.ttf in Resources */,
 				A1F0793B2862B2750003B57B /* Messaging.storyboard in Resources */,
 				A1F079292862B2580003B57B /* Montserrat-Regular.ttf in Resources */,
+				FA25EA69286AA7A1009F4141 /* OnBoard2.json in Resources */,
 				A1F079202862B2580003B57B /* Montserrat-BoldItalic.ttf in Resources */,
 				A1F079232862B2580003B57B /* Montserrat-Thin.ttf in Resources */,
 				A1F0792B2862B2580003B57B /* Montserrat-SemiBoldItalic.ttf in Resources */,
+				FA25EA6A286AA7A1009F4141 /* OnBoard3.json in Resources */,
 				FA2C01652848F86100F09D9E /* Main.storyboard in Resources */,
 				A1DCBB6728695FA90044EA62 /* ReorderMessageTableViewCell.xib in Resources */,
 				318CDD60285C33520076CE9C /* T10-36_Story Intermezzo.storyboard in Resources */,
@@ -550,13 +555,12 @@
 				A1F079252862B2580003B57B /* Montserrat-MediumItalic.ttf in Resources */,
 				A1F079362862B2650003B57B /* SingleChoiceMessageTableViewCell.xib in Resources */,
 				A1F0791F2862B2580003B57B /* Montserrat-Medium.ttf in Resources */,
+				FA25EA68286AA7A1009F4141 /* OnBoard1.json in Resources */,
 				A1DCBB6628695FA90044EA62 /* ReorderMessageOptionView.xib in Resources */,
-				A1DCBB7B286962310044EA62 /* Compy.json in Resources */,
 				317F469C285EDC60002BCB88 /* T10-35_Story Intro.storyboard in Resources */,
 				A1F079222862B2580003B57B /* Montserrat-ThinItalic.ttf in Resources */,
 				317F4698285EDACB002BCB88 /* ChapterCell.xib in Resources */,
 				A1F0791E2862B2580003B57B /* Montserrat-LightItalic.ttf in Resources */,
-				A1DCBB7A286962310044EA62 /* Chat.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
