@@ -167,7 +167,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bottom" width="399" height="257"/>
+        <image name="bottom" width="390" height="255"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
