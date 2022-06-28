@@ -9,11 +9,11 @@ import Foundation
 import UIKit
 
 protocol ActivityMessageCellConfigurable: UITableViewCell {
-    associatedtype M: ActivityMessage
+    associatedtype ActivityMessageType: ActivityMessage
     
-    func configure(with message: M, didActivityFinishedCallback: @escaping (M.Answer) -> Void)
+    func configure(with message: ActivityMessageType, didActivityFinishedCallback: @escaping (ActivityMessageType.Answer) -> Void)
     
-    func finishActivity(withAnswer answer: M.Answer)
+    func finishActivity(withAnswer answer: ActivityMessageType.Answer)
 }
 
 

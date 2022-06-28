@@ -27,7 +27,7 @@ class CompyMessageConfig: TextMessageTableViewCellConfig {
             cell.messageBackground.topAnchor.constraint(equalTo: cell.contentView.topAnchor),
             cell.messageBackground.bottomAnchor.constraint(equalTo: cell.contentView.bottomAnchor, constant: -5),
             cell.messageBackground.leadingAnchor.constraint(equalTo: cell.contentView.leadingAnchor),
-            cell.messageBackground.trailingAnchor.constraint(lessThanOrEqualTo: cell.contentView.trailingAnchor, constant: 115),
+            cell.messageBackground.trailingAnchor.constraint(lessThanOrEqualTo: cell.contentView.trailingAnchor, constant: -115),
         ]
         
         NSLayoutConstraint.activate(cell.messageBackgroundConstraints)

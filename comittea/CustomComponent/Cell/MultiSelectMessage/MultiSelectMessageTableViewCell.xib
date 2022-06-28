@@ -26,10 +26,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="be1-5w-LqA">
-                        <rect key="frame" x="137.5" y="23" width="249.5" height="271"/>
+                        <rect key="frame" x="137.5" y="23" width="249.5" height="266"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyk-Ns-AIe">
-                                <rect key="frame" x="75" y="229" width="100" height="30"/>
+                                <rect key="frame" x="75" y="224" width="100" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="3xY-Z9-JAX"/>
                                     <constraint firstAttribute="height" constant="30" id="5fV-Y8-xAn"/>
@@ -48,7 +48,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9pN-Bo-zNe">
-                                <rect key="frame" x="12" y="40" width="225.5" height="181"/>
+                                <rect key="frame" x="12" y="40" width="225.5" height="176"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" name="LightGray"/>
@@ -82,7 +82,7 @@
                     <constraint firstItem="Thf-RI-hi4" firstAttribute="centerX" secondItem="be1-5w-LqA" secondAttribute="centerX" id="Sok-hS-vNf"/>
                     <constraint firstAttribute="trailing" secondItem="be1-5w-LqA" secondAttribute="trailing" id="XIN-DS-Z41"/>
                     <constraint firstItem="be1-5w-LqA" firstAttribute="top" secondItem="Thf-RI-hi4" secondAttribute="bottom" constant="8" id="fdD-jD-kxG"/>
-                    <constraint firstAttribute="bottom" secondItem="be1-5w-LqA" secondAttribute="bottom" id="xUq-Zu-YUL"/>
+                    <constraint firstAttribute="bottom" secondItem="be1-5w-LqA" secondAttribute="bottom" constant="5" id="xUq-Zu-YUL"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
