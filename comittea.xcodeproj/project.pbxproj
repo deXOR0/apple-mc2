@@ -13,6 +13,7 @@
 		317F469C285EDC60002BCB88 /* T10-35_Story Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 317F469B285EDC60002BCB88 /* T10-35_Story Intro.storyboard */; };
 		318CDD5E285C33300076CE9C /* T10-36_Story Intermezzo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318CDD5D285C33300076CE9C /* T10-36_Story Intermezzo.swift */; };
 		318CDD60285C33520076CE9C /* T10-36_Story Intermezzo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 318CDD5F285C33520076CE9C /* T10-36_Story Intermezzo.storyboard */; };
+		984194E1286ABD560013CDAA /* MessagingViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984194E0286ABD560013CDAA /* MessagingViewController+TableView.swift */; };
 		98D78345285ADB6600542D64 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D78344285ADB6600542D64 /* Message.swift */; };
 		98D78347285ADBAB00542D64 /* TextMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D78346285ADBAB00542D64 /* TextMessage.swift */; };
 		98D78349285ADBFB00542D64 /* ActivityMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D78348285ADBFB00542D64 /* ActivityMessage.swift */; };
@@ -100,6 +101,7 @@
 		317F469B285EDC60002BCB88 /* T10-35_Story Intro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "T10-35_Story Intro.storyboard"; sourceTree = "<group>"; };
 		318CDD5D285C33300076CE9C /* T10-36_Story Intermezzo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "T10-36_Story Intermezzo.swift"; sourceTree = "<group>"; };
 		318CDD5F285C33520076CE9C /* T10-36_Story Intermezzo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "T10-36_Story Intermezzo.storyboard"; sourceTree = "<group>"; };
+		984194E0286ABD560013CDAA /* MessagingViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MessagingViewController+TableView.swift"; sourceTree = "<group>"; };
 		98D78342285AD92600542D64 /* Cell.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Cell.md; sourceTree = "<group>"; };
 		98D78343285AD93C00542D64 /* Model.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Model.md; sourceTree = "<group>"; };
 		98D78344285ADB6600542D64 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 		98D78340285AD8CF00542D64 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				984194E0286ABD560013CDAA /* MessagingViewController+TableView.swift */,
 				A1F079382862B26D0003B57B /* MessagingViewController.swift */,
 				317F4699285EDC47002BCB88 /* T10-35_Story Intro.swift */,
 				A147209C285CAE250058C5E3 /* UserCallViewController.swift */,
@@ -577,6 +580,7 @@
 				A1F0791D2862B2580003B57B /* CustomColors.swift in Sources */,
 				A1DCBB5028695F910044EA62 /* MovieNight.swift in Sources */,
 				A1DCBB6D28695FA90044EA62 /* MultiSelectMessageOptionView.swift in Sources */,
+				984194E1286ABD560013CDAA /* MessagingViewController+TableView.swift in Sources */,
 				A1DCBB5328695F910044EA62 /* StaticStoriesData.swift in Sources */,
 				A147209D285CAE250058C5E3 /* UserCallViewController.swift in Sources */,
 				A1DCBB76286960F30044EA62 /* TextMessageTableViewCellConfig.swift in Sources */,
