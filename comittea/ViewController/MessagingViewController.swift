@@ -29,8 +29,6 @@ class MessagingViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.title = chapter.title
-        self.messages = chapter.messages
         
         showInitialPopup()
         
@@ -43,6 +41,14 @@ class MessagingViewController: UIViewController {
         messagingTableView.register(UINib(nibName: "MultiSelectMessageTableViewCell", bundle: nil), forCellReuseIdentifier: "MultiSelectMessageTableViewCellID")
         messagingTableView.register(UINib(nibName: "ReorderMessageTableViewCell", bundle: nil), forCellReuseIdentifier: "ReorderMessageTableViewCellID")
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.title = chapter.title
+        self.messages = chapter.messages
+        self.visibleMessages = 0
+        self.canContinueStory = true
+        self.messagingTableView.reloadData()
     }
     
     func showNextMessage() {

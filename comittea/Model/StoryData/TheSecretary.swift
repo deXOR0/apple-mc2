@@ -9,7 +9,7 @@ import Foundation
 
 struct TheSecretary: Storiable {
     let story = Story("The Secretary", "The mayor is a very busy man, he has a lot of responsibilities. As time goes on, his workload seems to keep increasing. He decided that he needed help and hired you as his secretary. As a secretary, you're responsible for managing the mayor's schedule, setting up meetings, retrieving documents, etc.", "Story_Logo_Secretary", "Story_Background_The Secretary", [
-        Chapter("Where are my Documents?", "Chapter_Documents", "Must Go Faster!",
+        Chapter("Find Documents", "Chapter_Documents", "Must Go Faster!",
         [
             CompyConversationMessage("Hey, %@! So how was your first day being the mayor's secretary?"),
             UserConversationMessage("It's pretty cool I guess. But..."),
@@ -35,24 +35,14 @@ struct TheSecretary: Storiable {
                     "Look for the number, and read the content of the document",
                     "Retrieve the document if it matches the number and topic given.",
                     "Otherwise, if it doesn't match, move on to the next document",
-                    "Give the document to the mayor",
-                    "Get the document number and topic from the mayor",
-                    "Pick a starting position",
-                    "Look at the document number written on the cover",
-                    "Retrieve the document if it matches the number",
-                    "Otherwise, if the document number is lower than the number being asked, ignore that document and all   the numbers below it. If the document number is higher than the number being asked, ignore that document  and all the numbers above it. Pick a starting position and repeat the steps above.",
                     "Give the document to the mayor"
                 ],
                 [
                     "Get the document number and topic from the mayor",
-                    "Start from the leftmost pile", "Look for the number, and read the content of the document",
+                    "Start from the leftmost pile",
+                    "Look for the number, and read the content of the document",
                     "Retrieve the document if it matches the number and topic given.",
                     "Otherwise, if it doesn't match, move on to the next document",
-                    "Give the document to the mayor",
-                    "Get the document number and topic from the mayor",
-                    "Pick a starting position", "Look at the document number written on the cover",
-                    "Retrieve the document if it matches the number",
-                    "Otherwise, if the document number is lower than the number being asked, ignore that document and all   the numbers below it. If the document number is higher than the number being asked, ignore that document  and all the numbers above it. Pick a starting position and repeat the steps above.",
                     "Give the document to the mayor"
                 ],
                 CompyTrueMessage("You are absolutely correct! When performing a task, you have to do it in an orderly fashion, you cannot skip a step, or start from the bottom and work your way backward."),
@@ -70,42 +60,42 @@ struct TheSecretary: Storiable {
                 """),
                 false
             ),
-            CompyConversationMessage("This problem is known as searching. It is when you have a collection of items and you     need to find or retrieve a specific item from the collection."),
-            CompyConversationMessage("What you just did is called a \"Linear Search\". Meaning you look for the item by     sequentially checking each item from the collection until the correct item is found."),
-            UserConversationMessage("Yeah, but it's a hassle to have to check each documents one by one. Sometimes I even   miss it and I have got to start over again."),
+            CompyConversationMessage("This problem is known as searching. It is when you have a collection of items and you need to find or retrieve a specific item from the collection."),
+            CompyConversationMessage("What you just did is called a \"Linear Search\". Meaning you look for the item by sequentially checking each item from the collection until the correct item is found."),
+            UserConversationMessage("Yeah, but it's a hassle to have to check each documents one by one. Sometimes I even miss it and I have got to start over again."),
             SingleChoiceMessage(
-                "Do you think it is necessary to check each document one by one when looking for the        document in the     pile?",
+                "Do you think it is necessary to check each document one by one when looking for the document in the pile?",
                 ["Yes", "No"],
                 "Yes",
-                CompyTrueMessage("Yes, it is actually necessary in this case, because the documents are scattered and not   stored in order. If you skip around or look for it randomly, you might miss the document that you're looking  for."),
-                CompyFalseMessage("Unfortunately, you do need to check each document in this case, because the documents are    scattered and not stored in order. If you skip around or look for it randomly, you might miss the document     that you're looking for."),
+                CompyTrueMessage("Yes, it is actually necessary in this case, because the documents are scattered and not stored in order. If you skip around or look for it randomly, you might miss the document that you're looking for."),
+                CompyFalseMessage("Unfortunately, you do need to check each document in this case, because the documents are scattered and not stored in order. If you skip around or look for it randomly, you might miss the document that you're looking for."),
                 false
             ),
-            CompyConversationMessage("Now as you can see, you have successfully broken down a task into smaller tasks. In   computer science, this is known as \"decomposition\"."),
+            CompyConversationMessage("Now as you can see, you have successfully broken down a task into smaller tasks. In computer science, this is known as \"decomposition\"."),
             UserConversationMessage("Oh... It has a name?"),
-            CompyConversationMessage("Of course! Decomposition is one of the fundamental to computational thinking. Doing   this helps us to start planning on how we can solve a problem more efficiently."),
+            CompyConversationMessage("Of course! Decomposition is one of the fundamental to computational thinking. Doing this helps us to start planning on how we can solve a problem more efficiently."),
             CompyConversationMessage("Not only can we start arranging the task that needs to be done, but we can also   prioritize which one we need to do first."),
-            CompyConversationMessage("It is such a useful skill to have especially in programming where one program could   have varieties of features, we need to break down what we need to be working on first and prioritize which    feature is the most critical in order for the program to function properly."),
+            CompyConversationMessage("It is such a useful skill to have especially in programming where one program could have varieties of features, we need to break down what we need to be working on first and prioritize which feature is the most critical in order for the program to function properly."),
             UserConversationMessage("Thanks Compy! I'll keep that in mind!"),
             NarrationMessage("A few days later"),
             CompyConversationMessage("Hey, %@! How's it been?"),
-            UserConversationMessage("Hi Compy! It's been going well. As time goes on I realize that the document's numbers  on the cover is unique. It never repeats!"),
+            UserConversationMessage("Hi Compy! It's been going well. As time goes on I realize that the document's numbers on the cover is unique. It never repeats!"),
             SingleChoiceMessage(
-                "Knowing this, after getting an order of \"Please bring me the document numbered 346 on nuclear power   generator proposal\", what would you do?",
+                "Knowing this, after getting an order of \"Please bring me the document numbered 346 on nuclear power generator proposal\", what would you do?",
                 [
                     "Look at the number on the cover and read the content of the document",
                     "Look at only the number on the cover of the document"
                 ],
                 "Look at only the number on the cover of the document",
-                CompyTrueMessage("You're right! Knowing that the document number is unique, you won't need to waste your    time reading the content of the document, assuming that the mayor always gives you the correct number, which   he always does, by the way, you can decide whether or not it is the correct document just from the number on  the cover, which saves you and the mayor lots of time."),
-                CompyFalseMessage("You could still do that, but reading the content of the document takes a lot of time.    Meanwhile, you know that the document number is unique. You won't need to waste your time reading the  content of the document, assuming that the mayor always gives you the correct number, which he always does,  by the way, you can decide whether or not it is the correct document just from the number on the cover,  which saves you and the mayor lots of time."),
+                CompyTrueMessage("You're right! Knowing that the document number is unique, you won't need to waste your time reading the content of the document, assuming that the mayor always gives you the correct number, which he always does, by the way, you can decide whether or not it is the correct document just from the number on the cover, which saves you and the mayor lots of time."),
+                CompyFalseMessage("You could still do that, but reading the content of the document takes a lot of time. Meanwhile, you know that the document number is unique. You won't need to waste your time reading the content of the document, assuming that the mayor always gives you the correct number, which he always does, by the way, you can decide whether or not it is the correct document just from the number on the cover, which saves you and the mayor lots of time."),
                 false
             ),
-            UserConversationMessage("So now I can simplify the task. I'm no longer searching for a document, but instead    searching for a number."),
-            UserConversationMessage("This simplifies and speeds up the process because I no longer have to look inside the  document or care about what it says, the only thing I care about is the number written on the cover of the   document."),
-            UserConversationMessage("Other details associated with the document itself become irrelevant and can be     disregarded."),
-            CompyConversationMessage("Pretty smart! In computer science, this process is known as abstraction. Abstraction  is a skill in which a person is able to decide what details needed to be highlighted and others that can be  ignored."),
-            CompyConversationMessage("As an example, you abstracted the process of looking for a document to looking for a  number. So now if you are given the task \"Please bring me the document numbered 111 on wireless communication   tower zoning\", you can just focus on searching the number 111."),
+            UserConversationMessage("So now I can simplify the task. I'm no longer searching for a document, but instead searching for a number."),
+            UserConversationMessage("This simplifies and speeds up the process because I no longer have to look inside the document or care about what it says, the only thing I care about is the number written on the cover of the document."),
+            UserConversationMessage("Other details associated with the document itself become irrelevant and can be disregarded."),
+            CompyConversationMessage("Pretty smart! In computer science, this process is known as abstraction. Abstraction is a skill in which a person is able to decide what details needed to be highlighted and others that can be ignored."),
+            CompyConversationMessage("As an example, you abstracted the process of looking for a document to looking for a number. So now if you are given the task \"Please bring me the document numbered 111 on wireless communication tower zoning\", you can just focus on searching the number 111."),
             SingleChoiceMessage(
                 "Let's review what we've learned so far. Breaking down a problem into smaller problems in order to help plan a solution efficiently is known as what?",
                 ["Abstraction", "Algorithm", "Decomposition"],
@@ -129,7 +119,7 @@ struct TheSecretary: Storiable {
             UserConversationMessage("Thanks Compy! I couldn't have done it without you."),
             UserConversationMessage("Previously, you made me realize that I don't have to read through the document since there is a pattern of document numbers and document topics being correlated to one another."),
             CompyConversationMessage("Happy to help!"),
-            CompyConversationMessage("This, by the way, is known as _pattern recognition_ in computer science. It involves finding the similarities or patterns among small, decomposed problems that can help us solve more complex problems more efficiently."),
+            CompyConversationMessage("This, by the way, is known as \"pattern recognition\" in computer science. It involves finding the similarities or patterns among small, decomposed problems that can help us solve more complex problems more efficiently."),
             UserConversationMessage("Cool!"),
             UserConversationMessage("But still, I feel like my job can be done so much faster."),
             CompyConversationMessage("How so?"),
@@ -177,7 +167,7 @@ struct TheSecretary: Storiable {
             CompyConversationMessage("Now, instead of telling you that you're wrong when you choose the wrong number, I can tell you to go higher or lower."),
             SingleChoiceMessage(
                 "Let's play another game.",
-                ["1", "223", "31", "1", "8", "19", "31", "43", "75", "88", "96", "100", "223"],
+                ["1", "8", "19", "31", "43", "75", "88", "96", "100", "223"],
                 "100",
                 CompyTrueMessage("Congratulation! You guessed correctly!"),
                 CompyFalseMessage("Go lower!"),
@@ -192,7 +182,7 @@ struct TheSecretary: Storiable {
                 "Knowing what we know from the guessing game, how would we approach the problem of searching for a document now, assuming that the documents are stored in order?",
                 [
                     "Get the document number and topic from the mayor",
-                    "Start from the leftmost pile",
+                    "Pick a starting position",
                     "Look for the number, and read the content of the document",
                     "Retrieve the document if it matches the number and topic given.",
                     "Otherwise, if it doesn't match, move on to the next document",
@@ -201,12 +191,13 @@ struct TheSecretary: Storiable {
                     "Pick a starting position",
                     "Look at the document number written on the cover",
                     "Retrieve the document if it matches the number",
-                    "Otherwise, if the document number is lower than the number being asked, ignore that document and all the numbers below it. If the document number is higher than the number being asked, ignore that document and all the numbers above it. Pick a starting position and repeat the steps above.",
+                    "Otherwise, if the document number is lower than the number being asked, ignore that document and all the numbers below it. Same goes if the number is higher.",
+                    "Pick another starting position and repeat the steps above.",
                     "Give the document to the mayor"
                 ],
                 [
                     "Get the document number and topic from the mayor",
-                    "Start from the leftmost pile",
+                    "Pick a starting position",
                     "Look for the number, and read the content of the document",
                     "Retrieve the document if it matches the number and topic given.",
                     "Otherwise, if it doesn't match, move on to the next document",
@@ -215,7 +206,8 @@ struct TheSecretary: Storiable {
                     "Pick a starting position",
                     "Look at the document number written on the cover",
                     "Retrieve the document if it matches the number",
-                    "Otherwise, if the document number is lower than the number being asked, ignore that document and all the numbers below it. If the document number is higher than the number being asked, ignore that document and all the numbers above it. Pick a starting position and repeat the steps above.",
+                    "Otherwise, if the document number is lower than the number being asked, ignore that document and all the numbers below it. Same goes if the number is higher.",
+                    "Pick another starting position and repeat the steps above.",
                     "Give the document to the mayor"
                 ],
                 CompyTrueMessage("You are absolutely correct! When performing a task, you have to do it in an orderly fashion, you cannot skip a step, or start from the bottom and work your way backward."),
@@ -225,7 +217,8 @@ struct TheSecretary: Storiable {
                 - Pick a starting position
                 - Look at the document number written on the cover
                 - Retrieve the document if it matches the number
-                - Otherwise, if the document number is lower than the number being asked, ignore that document and all the numbers below it. If the document number is higher, ignore that document and all the numbers above it. Pick a starting position and repeat the steps above.
+                - Otherwise, if the document number is lower than the number being asked, ignore that document and all the numbers below it. Same goes if the number is higher.
+                - Pick another starting position and repeat the steps above.
                 - Give the document to the mayor
                 When performing a task, you have to do it in an orderly fashion, you cannot skip a step, or start from the bottom and work your way backward.
                 """),
