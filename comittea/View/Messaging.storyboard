@@ -69,13 +69,7 @@
                             <constraint firstItem="u0H-GI-i2v" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="sIz-5j-eN1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Perlu diatur programmatically" id="gVV-JN-nzT">
-                        <barButtonItem key="rightBarButtonItem" title="Skip" id="mUV-el-qVb">
-                            <connections>
-                                <action selector="skipBtn:" destination="Y6W-OH-hqX" id="hqc-21-yrw"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Perlu diatur programmatically" id="gVV-JN-nzT"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="messagingTableView" destination="Gom-fm-Fk6" id="o9l-la-c7S"/>

@@ -11,6 +11,7 @@ import UIKit
 // TODO: add popup on back
 class MessagingViewController: UIViewController {
     
+    
     @IBOutlet weak var messagingTableView: UITableView!
     var initialPopup: UIAlertController!
     
@@ -41,6 +42,7 @@ class MessagingViewController: UIViewController {
         messagingTableView.register(UINib(nibName: "SingleChoiceMessageTableViewCell", bundle: nil), forCellReuseIdentifier: "SingleChoiceMessageTableViewCellID")
         messagingTableView.register(UINib(nibName: "MultiSelectMessageTableViewCell", bundle: nil), forCellReuseIdentifier: "MultiSelectMessageTableViewCellID")
         messagingTableView.register(UINib(nibName: "ReorderMessageTableViewCell", bundle: nil), forCellReuseIdentifier: "ReorderMessageTableViewCellID")
+        messagingTableView.register(UINib(nibName: "ChapterNextBtn", bundle: nil), forCellReuseIdentifier: "NextBtnCellID")
         
     }
     
@@ -72,7 +74,7 @@ class MessagingViewController: UIViewController {
     }
     
     func showNextMessage() {
-        if visibleMessages < messages.count {
+//        if visibleMessages < messages.count {
             let lastIndex = IndexPath(row: visibleMessages, section: 0)
                     
             visibleMessages += 1
@@ -82,9 +84,9 @@ class MessagingViewController: UIViewController {
                 self.messagingTableView.scrollToRow(
                     at: lastIndex, at: .bottom, animated: true)
             }
-        } else {
-            performSegue(withIdentifier: "gotoIntermezzo", sender: self)
-        }
+//        } else {
+            // performSegue(withIdentifier: "gotoIntermezzo", sender: self)
+//        }
     }
     
     func showInitialPopup() {
@@ -107,15 +109,13 @@ class MessagingViewController: UIViewController {
     @objc func onScreenTapped(_ sender: UITapGestureRecognizer) {
         guard canContinueStory else { return }
         
-        showNextMessage()
+        if visibleMessages < messages.count + 1 {
+            showNextMessage()
+        }
     }
     
     @objc func dismissInitialPopup(_ sender: UITapGestureRecognizer){
         initialPopup.dismiss(animated: true)
-    }
-
-    @IBAction func skipBtn(_ sender: Any) {
-        performSegue(withIdentifier: "gotoIntermezzo", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
