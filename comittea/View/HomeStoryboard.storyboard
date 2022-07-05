@@ -29,7 +29,7 @@
                                 <rect key="frame" x="20" y="568" width="350" height="242"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="C9i-TE-EbY">
-                                <rect key="frame" x="20" y="223" width="350" height="468"/>
+                                <rect key="frame" x="20" y="240" width="350" height="451"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Fn1-wl-bcr">
                                     <size key="itemSize" width="170" height="215"/>
@@ -99,9 +99,9 @@
                                 </connections>
                             </collectionView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bab-TT-ZWD">
-                                <rect key="frame" x="20" y="108.66666666666669" width="350" height="84.333333333333314"/>
+                                <rect key="frame" x="20" y="108.66666666666669" width="350" height="101.33333333333331"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Computational Thinking is a way of us to breaking down a task into simple enough steps that even a computer would understand. Choose one of the story below to begin with!</string>
+                                <string key="text">Computational Thinking is a process in which we break down an objective into simple enough tasks that even computers would understand. Choose one of the story below to begin with!</string>
                                 <color key="textColor" red="0.29645065739999998" green="0.39120422710000002" blue="0.8078432083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

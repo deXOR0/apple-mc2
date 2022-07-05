@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Group 90.png",
+      "filename" : "Chapter_Problems_Locked.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Group 90@2x.png",
+      "filename" : "Chapter_Problems_Locked@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Group 90@3.png",
+      "filename" : "Chapter_Problems_Locked@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
