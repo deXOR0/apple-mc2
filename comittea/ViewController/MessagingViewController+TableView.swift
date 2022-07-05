@@ -17,6 +17,15 @@ extension MessagingViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let index = indexPath.row
         
+        
+        if index == messages.count{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "NextBtnCellID", for: indexPath) as! ChapterNextBtn
+            cell.onTapped = {
+                [weak self] in self?.performSegue(withIdentifier: "gotoIntermezzo", sender: self!)
+            }
+            return cell
+        }
+        
         // If the last visible message is TextMessage, then user can continue story
         // else if last visible message is ActivityMessage, user can't continue story
         let isLastVisibleMessage = (index == visibleMessages - 1)
