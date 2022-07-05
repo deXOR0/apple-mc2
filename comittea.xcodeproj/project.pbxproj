@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3136A9A92873E0E200832318 /* ChapterNextBtn.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3136A9A72873E0E200832318 /* ChapterNextBtn.xib */; };
+		3136A9AA2873E0E200832318 /* ChapterNextBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3136A9A82873E0E200832318 /* ChapterNextBtn.swift */; };
 		317F4697285EDACB002BCB88 /* ChapterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F4695285EDACB002BCB88 /* ChapterCell.swift */; };
 		317F4698285EDACB002BCB88 /* ChapterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 317F4696285EDACB002BCB88 /* ChapterCell.xib */; };
 		317F469A285EDC47002BCB88 /* T10-35_Story Intro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317F4699285EDC47002BCB88 /* T10-35_Story Intro.swift */; };
@@ -96,6 +98,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3136A9A72873E0E200832318 /* ChapterNextBtn.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChapterNextBtn.xib; sourceTree = "<group>"; };
+		3136A9A82873E0E200832318 /* ChapterNextBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChapterNextBtn.swift; sourceTree = "<group>"; };
 		317F4695285EDACB002BCB88 /* ChapterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterCell.swift; sourceTree = "<group>"; };
 		317F4696285EDACB002BCB88 /* ChapterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChapterCell.xib; sourceTree = "<group>"; };
 		317F4699285EDC47002BCB88 /* T10-35_Story Intro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "T10-35_Story Intro.swift"; sourceTree = "<group>"; };
@@ -199,9 +203,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3136A9A62873E0E200832318 /* ChapterNextBtn */ = {
+			isa = PBXGroup;
+			children = (
+				3136A9A72873E0E200832318 /* ChapterNextBtn.xib */,
+				3136A9A82873E0E200832318 /* ChapterNextBtn.swift */,
+			);
+			name = ChapterNextBtn;
+			path = Cell/ChapterNextBtn;
+			sourceTree = "<group>";
+		};
 		98D7833D285AD88100542D64 /* CustomComponent */ = {
 			isa = PBXGroup;
 			children = (
+				3136A9A62873E0E200832318 /* ChapterNextBtn */,
 				A1F0793C2862B2A90003B57B /* XibView.swift */,
 				A1DCBB73286960DF0044EA62 /* +UIStackView.swift */,
 				98D78341285AD8FD00542D64 /* Cell */,
@@ -553,6 +568,7 @@
 				FA25EA6A286AA7A1009F4141 /* OnBoard3.json in Resources */,
 				FA2C01652848F86100F09D9E /* Main.storyboard in Resources */,
 				A1DCBB6728695FA90044EA62 /* ReorderMessageTableViewCell.xib in Resources */,
+				3136A9A92873E0E200832318 /* ChapterNextBtn.xib in Resources */,
 				318CDD60285C33520076CE9C /* T10-36_Story Intermezzo.storyboard in Resources */,
 				A1F079282862B2580003B57B /* Montserrat-Black.ttf in Resources */,
 				A1DCBB6B28695FA90044EA62 /* MultiSelectMessageTableViewCell.xib in Resources */,
@@ -613,6 +629,7 @@
 				A14720A7285CAFB50058C5E3 /* Chapter.swift in Sources */,
 				318CDD5E285C33300076CE9C /* T10-36_Story Intermezzo.swift in Sources */,
 				A1DCBB6328695FA90044EA62 /* ReorderMessageOptionView.swift in Sources */,
+				3136A9AA2873E0E200832318 /* ChapterNextBtn.swift in Sources */,
 				A1F079392862B26D0003B57B /* MessagingViewController.swift in Sources */,
 				A1DCBB6928695FA90044EA62 /* ReorderMessageTableViewCell+TableView.swift in Sources */,
 				98D7835B285ADEB600542D64 /* SingleChoiceMessage.swift in Sources */,
