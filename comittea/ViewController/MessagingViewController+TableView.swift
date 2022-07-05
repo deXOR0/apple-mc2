@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import CoreHaptics
 
 extension MessagingViewController: UITableViewDataSource, UITableViewDelegate {
     
@@ -35,6 +36,13 @@ extension MessagingViewController: UITableViewDataSource, UITableViewDelegate {
         
         if let message = messages[index] as? TextMessage {
             let cell = tableView.dequeueReusableCell(withIdentifier: "TextMessageTableViewCellID", for: indexPath) as! TextMessageTableViewCell
+            
+            if let falseMessage = message as? CompyFalseMessage {
+                Haptics.vibrate(.error)
+            }
+            else if let trueMessage = message as? CompyTrueMessage {
+                Haptics.vibrate(.success)
+            }
             
             configureTextMessageCell(cell, with: message, at: index)
             
